@@ -3,1498 +3,1004 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hoa Sen Travel - Nhà Thầu Lữ Hành & Sự Kiện MICE Đẳng Cấp Quốc Tế</title>
+    <title>Hoa Sen Travel - Gắn Kết Những Trải Nghiệm Thuần Khiết</title>
     <!-- Tailwind CSS CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600&display=swap" rel="stylesheet">
-    <!-- Lucide Icons -->
-    <script src="https://unpkg.com/lucide@latest"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     
+    <!-- Custom Style & Tailwind Config -->
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    colors: {
-                        hsv: {
-                            blue: '#004B87',       // Xanh đại dương thương hiệu lữ hành uy tín
-                            darkBlue: '#002F6C',   // Xanh navy sẫm cực kỳ vững chãi, uy tín pháp lý
-                            gold: '#D9B310',       // Vàng sen tinh tế quý phái làm điểm nhấn thượng lưu
-                            lightGold: '#FBF4E0',  // Màu vàng nhạt nền ấm
-                            lightBg: '#F8FAFC',    // Nền xám nhạt Slate dịu mắt
-                            textDark: '#0F172A',   // Chữ xám tối tiêu chuẩn dễ đọc
-                            accentBlue: '#0284C7'  // Xanh trời tươi sáng cho phân khúc trẻ trung
-                        }
-                    },
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
-                        serif: ['Playfair Display', 'serif']
+                    },
+                    colors: {
+                        brand: {
+                            deep: '#0F2C59',      /* Xanh dương đậm nhận diện logo */
+                            primary: '#1E40AF',   /* Xanh dương chính */
+                            gold: '#DAC0A3',      /* Vàng gold đẳng cấp */
+                            light: '#F8F0E5',     /* Nền sáng tinh khiết */
+                            dark: '#0B132B'       /* Nền tối sâu thẳm */
+                        }
                     }
                 }
             }
         }
     </script>
     <style>
-        .premium-shadow {
-            box-shadow: 0 10px 40px -10px rgba(0, 75, 135, 0.08), 0 2px 20px -2px rgba(0, 75, 135, 0.03);
+        /* Smooth zoom effects and premium custom gradients */
+        .premium-gradient {
+            background: linear-gradient(135deg, #0F2C59 0%, #0B132B 100%);
         }
-        .gold-glow:hover {
-            border-color: #D9B310;
-            box-shadow: 0 0 20px rgba(217, 179, 16, 0.2);
+        .gold-gradient-text {
+            background: linear-gradient(90deg, #F3F4F6 0%, #DAC0A3 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
         }
-        .glass-header {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-        }
-        /* Custom scrollbar matching blue/white theme */
-        ::-webkit-scrollbar {
-            width: 6px;
-            height: 6px;
-        }
-        ::-webkit-scrollbar-track {
-            background: #F1F5F9;
-        }
-        ::-webkit-scrollbar-thumb {
-            background: #004B87;
-            border-radius: 99px;
-        }
-        ::-webkit-scrollbar-thumb:hover {
-            background: #002F6C;
-        }
-        /* Smooth scale animation for elements */
-        .hover-lift {
-            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), box-shadow 0.3s ease;
-        }
-        .hover-lift:hover {
-            transform: translateY(-5px);
+        .glass-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
         }
     </style>
 </head>
-<body class="font-sans text-hsv-textDark bg-hsv-lightBg antialiased min-h-screen flex flex-col overflow-x-hidden">
+<body class="bg-gray-50 text-gray-800 font-sans antialiased overflow-x-hidden">
 
-    <!-- Topbar Info banner -->
-    <div class="bg-hsv-darkBlue text-white text-[11px] py-2.5 px-4 border-b border-white/10 z-50 relative">
-        <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-2">
-            <div class="flex items-center gap-4">
-                <span class="flex items-center gap-1.5 text-blue-100">
-                    <i data-lucide="shield-check" class="w-3.5 h-3.5 text-emerald-400"></i>
-                    Nhà thầu lữ hành pháp lý mộc đỏ: <strong class="text-white font-semibold">MST 0106914229</strong>
-                </span>
-            </div>
-            <div class="flex items-center gap-4 text-blue-100">
-                <span class="flex items-center gap-1">
-                    <i data-lucide="phone" class="w-3.5 h-3.5 text-hsv-gold"></i>
-                    Hotline Doanh Nghiệp & MICE: <strong>085 256 6616</strong> 
-                </span>
-                <span class="hidden md:inline text-white/20">|</span>
-                <span class="hidden md:flex items-center gap-1">
-                    <i data-lucide="map-pin" class="w-3.5 h-3.5 text-hsv-gold"></i>
-                    CN Quảng Ninh: Eco Stop Tuần Châu, Hạ Long 
-                </span>
+    <!-- PRE-HEADER BAR (Hotline & Mail) -->
+    <div class="bg-brand-deep text-white text-xs py-2 px-4 md:px-12 flex justify-between items-center border-b border-white/10">
+        <div class="flex items-center space-x-6">
+            <span><i class="fa-solid fa-phone mr-2 text-brand-gold"></i> Hotline: <a href="tel:0852566616" class="hover:text-brand-gold transition">085 256 6616</a></span>
+            <span class="hidden md:inline"><i class="fa-solid fa-envelope mr-2 text-brand-gold"></i> Email: <a href="mailto:admin.hoasentravel@gmail.com" class="hover:text-brand-gold transition">admin.hoasentravel@gmail.com</a></span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="hidden lg:inline text-gray-300">MST: 0106914229 | Khởi tạo từ 2015</span>
+            <div class="flex space-x-3">
+                <a href="#" class="hover:text-brand-gold"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-brand-gold"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" class="hover:text-brand-gold"><i class="fa-brands fa-linkedin"></i></a>
             </div>
         </div>
     </div>
 
-    <!-- Main Navigation Header (HST-MAIN-NAV) -->
-    <header class="sticky top-0 z-40 glass-header border-b border-slate-100 shadow-sm transition-all duration-300">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-20">
-                <!-- Brand Identity -->
-                <a href="#" class="flex items-center gap-3 group">
-                    <div class="w-11 h-11 bg-hsv-blue rounded-xl flex items-center justify-center text-white shadow-md transition-transform group-hover:scale-105">
-                        <!-- Precise Lotus SVG representing corporate identity -->
-                        <svg class="w-8 h-8 fill-current text-white" viewBox="0 0 24 24">
-                            <path d="M12 2C11.5 4 9.5 7.5 7 9.5C6 10.3 4.5 10.5 3 10.5C5 11.5 7.5 12 9.5 13.5C10 13.8 10.5 14.5 10.5 15.5C10.5 17 9.5 19.5 8 21C10 20.5 12.5 19 13.5 17C14 16.5 14.5 15.5 15 15.5C16.5 15.5 19 16.5 21 18C20 16 18.5 13.5 16 11.5C15 10.7 13.5 10.5 12 10.5V2z"/>
-                        </svg>
-                    </div>
-                    <div>
-                        <span class="block font-serif text-lg sm:text-xl font-bold tracking-wide text-hsv-darkBlue leading-none">HOA SEN TRAVEL</span>
-                        <span class="block text-[9px] uppercase tracking-widest text-hsv-gold font-bold mt-1">Hệ Thống Lữ Hành Chất Lượng Cao</span> 
-                    </div>
-                </a>
-
-                <!-- Desktop Menu Options -->
-                <nav class="hidden lg:flex items-center gap-8">
-                    <a href="#services-section" class="text-xs font-bold text-slate-600 hover:text-hsv-blue transition uppercase tracking-wider">Hệ Sinh Thái</a>
-                    <a href="#packages-section" class="text-xs font-bold text-slate-600 hover:text-hsv-blue transition uppercase tracking-wider">Gói Tour & Combo</a>
-                    <a href="#executed-section" class="text-xs font-bold text-slate-600 hover:text-hsv-blue transition uppercase tracking-wider">Hành Trình Thực Tế</a>
-                    <a href="#calculator-section" class="text-xs font-bold text-slate-600 hover:text-hsv-blue transition uppercase tracking-wider">Tự Lập Dự Toán</a>
-                    <a href="#trust-section" class="text-xs font-bold text-slate-600 hover:text-hsv-blue transition uppercase tracking-wider">Hồ Sơ Năng Lực</a>
-                </nav>
-
-                <div class="flex items-center gap-3">
-                    <a href="#calculator-section" class="hidden sm:inline-flex items-center gap-1.5 px-4.5 py-2.5 bg-hsv-gold hover:bg-yellow-500 text-hsv-darkBlue rounded-xl text-xs font-bold transition shadow-sm">
-                        <i data-lucide="calculator" class="w-3.5 h-3.5"></i>
-                        Thiết Kế Giá
-                    </a>
-                    <a href="tel:0852566616" class="flex items-center gap-1.5 px-4.5 py-2.5 bg-hsv-blue hover:bg-hsv-darkBlue text-white rounded-xl text-xs font-bold transition shadow-sm">
-                        <i data-lucide="phone-call" class="w-3.5 h-3.5"></i>
-                        Liên Hệ 24/7
-                    </a>
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-sm transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- LOGO AREA -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 bg-gradient-to-tr from-brand-deep to-brand-primary rounded-xl flex items-center justify-center text-white shadow-md shadow-brand-deep/20">
+                    <!-- Elegant SVG Lotus representing "Hoa Sen" -->
+                    <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current text-brand-gold" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12,2C11.5,4 10,7 8,9C6,11 3.5,11.5 2,12C3.5,12.5 6,13 8,15C10,17 11.5,20 12,22C12.5,20 14,17 16,15C18,13 20.5,12.5 22,12C20.5,11.5 18,11 16,9C14,7 12.5,4 12,2Z"/>
+                    </svg>
                 </div>
+                <div>
+                    <span class="block text-lg font-extrabold text-brand-deep tracking-wider uppercase leading-none">Hoa Sen</span>
+                    <span class="block text-xs font-bold text-gray-500 uppercase tracking-widest mt-1">Travel & Services</span>
+                </div>
+            </a>
+
+            <!-- DESKTOP MENU -->
+            <nav class="hidden lg:flex space-x-8 text-sm font-semibold text-brand-deep">
+                <a href="#he-sinh-thai" class="hover:text-brand-primary transition">Hệ Sinh Thái</a>
+                <a href="#ve-chung-toi" class="hover:text-brand-primary transition">Về Chúng Tôi</a>
+                <a href="#bo-suu-tap" class="hover:text-brand-primary transition">Tour Độc Bản</a>
+                <a href="#nha-hang-hoa-sen" class="hover:text-brand-primary transition">Nhà Hàng Hoa Sen</a>
+                <a href="#tu-van" class="hover:text-brand-primary transition">Đặt Lịch & Liên Hệ</a>
+            </nav>
+
+            <!-- CALL TO ACTION -->
+            <div class="hidden lg:flex items-center space-x-4">
+                <a href="#tu-van" class="bg-brand-deep hover:bg-brand-primary text-white px-5 py-2.5 rounded-full font-bold text-sm transition-all duration-300 transform hover:scale-105 shadow-md shadow-brand-deep/15">
+                    Yêu Cầu Báo Giá <i class="fa-solid fa-paper-plane ml-2"></i>
+                </a>
+            </div>
+
+            <!-- MOBILE MENU BUTTON -->
+            <button id="mobile-menu-btn" class="lg:hidden text-brand-deep hover:text-brand-primary focus:outline-none" aria-label="Toggle Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- MOBILE DRAWER -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-deep text-white border-t border-white/10 absolute left-0 right-0 py-6 px-4 space-y-4 shadow-xl">
+            <a href="#he-sinh-thai" class="block py-2 text-gray-200 hover:text-brand-gold transition font-medium">Hệ Sinh Thái</a>
+            <a href="#ve-chung-toi" class="block py-2 text-gray-200 hover:text-brand-gold transition font-medium">Về Chúng Tôi</a>
+            <a href="#bo-suu-tap" class="block py-2 text-gray-200 hover:text-brand-gold transition font-medium">Tour Độc Bản</a>
+            <a href="#nha-hang-hoa-sen" class="block py-2 text-gray-200 hover:text-brand-gold transition font-medium">Nhà Hàng Hoa Sen</a>
+            <a href="#tu-van" class="block py-2 text-gray-200 hover:text-brand-gold transition font-medium">Đặt Lịch & Liên Hệ</a>
+            <div class="pt-4 border-t border-white/10">
+                <a href="#tu-van" class="block text-center bg-brand-gold text-brand-deep font-bold py-3 rounded-xl transition">
+                    Thiết kế Tour / Báo giá ngay
+                </a>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section with Search Widget -->
-    <section class="relative bg-slate-900 text-white min-h-[90vh] flex items-center overflow-hidden">
-        <!-- Visual background overlay -->
+    <!-- HERO SECTION WITH ROTATING BG SLIDER -->
+    <section class="relative min-h-[85vh] flex items-center justify-center premium-gradient text-white overflow-hidden">
+        <!-- Interactive Carousel Backgrounds -->
         <div class="absolute inset-0 z-0">
-            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1920&q=80" alt="Corporate Sea" class="w-full h-full object-cover object-center opacity-30">
-            <div class="absolute inset-0 bg-gradient-to-b from-hsv-darkBlue/90 via-hsv-darkBlue/80 to-hsv-lightBg"></div>
+            <div id="hero-bg-1" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: linear-gradient(rgba(11, 19, 43, 0.65), rgba(11, 19, 43, 0.85)), url('https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=1920');"></div>
+            <div id="hero-bg-2" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: linear-gradient(rgba(11, 19, 43, 0.65), rgba(11, 19, 43, 0.85)), url('https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&q=80&w=1920');"></div>
+            <div id="hero-bg-3" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: linear-gradient(rgba(11, 19, 43, 0.65), rgba(11, 19, 43, 0.85)), url('https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=1920');"></div>
         </div>
 
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 w-full flex flex-col justify-center items-center text-center space-y-10">
-            <div class="space-y-4 max-w-4xl">
-                <span class="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-hsv-gold/20 border border-hsv-gold/40 text-hsv-gold text-xs font-bold uppercase tracking-widest animate-pulse">
-                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> GẮN KẾT NHỮNG TRẢI NGHIỆM THUẦN KHIẾT
-                </span>
-                <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight">
-                    Kiến Tạo Hành Trình Tinh Hoa <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-yellow-200 via-hsv-gold to-yellow-100">Nâng Tầm Trải Nghiệm Lữ Hành</span>
-                </h1>
-                <p class="text-sm sm:text-base text-slate-200 max-w-2xl mx-auto leading-relaxed">
-                    Đại diện pháp lý uy tín bởi TGĐ Lý Hồng Nhất . Đối tác chiến lược hàng đầu của các tập đoàn đa quốc gia, ngân hàng, tổ chức hành chính trong nước & quốc tế về nghỉ dưỡng cao cấp và sự kiện MICE quy mô lớn .
-                </p>
-            </div>
-
-            <!-- Dynamic Search Panel for Agency -->
-            <div class="bg-white/95 backdrop-blur-md p-6 rounded-3xl border border-white/20 shadow-2xl w-full max-w-5xl text-left text-hsv-textDark grid grid-cols-1 md:grid-cols-4 gap-4 items-end relative z-20">
-                <div class="space-y-1.5">
-                    <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
-                        <i data-lucide="map-pin" class="w-3.5 h-3.5 text-hsv-blue"></i> Điểm Đến / Phân Khúc
-                    </label>
-                    <select id="search-dest" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-hsv-blue text-hsv-textDark">
-                        <option value="all">Tất cả điểm đến (Hạ Long, Cô Tô, Sapa...)</option>
-                        <option value="halong_coto">Hạ Long - Đảo Ngọc Cô Tô (Nghỉ mát biển)</option>
-                        <option value="yentu">Yên Tử Trầm Mặc (Tâm linh, dưỡng sinh)</option>
-                        <option value="sapa">Sapa Mây Ngàn (Chinh phục Fansipan)</option>
-                    </select>
-                </div>
-
-                <div class="space-y-1.5">
-                    <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
-                        <i data-lucide="users" class="w-3.5 h-3.5 text-hsv-blue"></i> Hình Thức Đoàn
-                    </label>
-                    <select id="search-type" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-hsv-blue text-hsv-textDark">
-                        <option value="all">Mọi loại hình lữ hành</option>
-                        <option value="corporate">Đoàn Doanh Nghiệp (MICE & Team Building)</option>
-                        <option value="family">Combo Gia Đình & Nhóm Nhỏ (VIP / Bespoke)</option>
-                        <option value="cruise">Du Thuyền Di Sản 5★ (Thượng Lưu)</option>
-                    </select>
-                </div>
-
-                <div class="space-y-1.5">
-                    <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider flex items-center gap-1.5">
-                        <i data-lucide="calendar" class="w-3.5 h-3.5 text-hsv-blue"></i> Thời Gian / Ngân Sách
-                    </label>
-                    <select id="search-budget" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-xs font-semibold focus:outline-none focus:border-hsv-blue text-hsv-textDark">
-                        <option value="all">Tất cả mức ngân sách</option>
-                        <option value="economy">Tiết Kiệm (Dưới 2.000.000đ)</option>
-                        <option value="standard">Tiêu Chuẩn (2.000.000đ - 3.500.000đ)</option>
-                        <option value="premium">Thương Gia (Trên 3.500.000đ)</option>
-                    </select>
-                </div>
-
-                <button onclick="handleQuickSearch()" class="w-full py-3.5 bg-hsv-blue hover:bg-hsv-darkBlue text-white font-bold rounded-xl text-xs uppercase tracking-widest transition shadow-md flex items-center justify-center gap-2">
-                    <i data-lucide="search" class="w-4 h-4 text-hsv-gold"></i> Tìm Kiếm Hành Trình
-                </button>
-            </div>
-
-            <!-- Quick stats from Profile Page 7 -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pt-8 w-full max-w-4xl border-t border-white/10 z-10">
-                <div class="space-y-1">
-                    <div class="text-3xl font-black text-hsv-gold font-serif">9+ Năm</div>
-                    <div class="text-[10px] text-slate-300 uppercase tracking-widest font-semibold">Kinh Nghiệm Thực Chiến</div> 
-                </div>
-                <div class="space-y-1">
-                    <div class="text-3xl font-black text-hsv-gold font-serif">10.000+</div>
-                    <div class="text-[10px] text-slate-300 uppercase tracking-widest font-semibold">Khách Hàng Hài Lòng</div> 
-                </div>
-                <div class="space-y-1">
-                    <div class="text-3xl font-black text-hsv-gold font-serif">500+/Năm</div>
-                    <div class="text-[10px] text-slate-300 uppercase tracking-widest font-semibold">Đoàn Cao Cấp Điều Phối</div> 
-                </div>
-                <div class="space-y-1">
-                    <div class="text-3xl font-black text-hsv-gold font-serif">20+</div>
-                    <div class="text-[10px] text-slate-300 uppercase tracking-widest font-semibold">Điểm Đến Độc Quyền</div> 
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: Corporate Services (HST-PORTAL Core Pillars) -->
-    <section id="services-section" class="py-20 bg-white text-left">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-            <div class="text-center max-w-3xl mx-auto space-y-3">
-                <span class="text-hsv-blue font-bold text-xs tracking-widest uppercase block">HỆ SINH THÁI TỰ CHỦ HOÀN HẢO</span>
-                <h2 class="font-serif text-3xl font-bold text-hsv-darkBlue">Lĩnh Vực Hoạt Động & Năng Lực Hậu Cần</h2>
-                <div class="w-16 h-0.5 bg-hsv-gold mx-auto"></div>
-                <p class="text-xs text-slate-400 max-w-xl mx-auto leading-relaxed">
-                    Sự khác biệt vượt trội của Hoa Sen Travel nằm ở năng lực hậu cần tự chủ trực tiếp tại Quảng Ninh & Hà Nội, tối ưu hóa 100% chi phí trung gian lữ hành .
-                </p>
-            </div>
-
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Service 1: Bespoke Tour -->
-                <div class="p-6 rounded-3xl bg-slate-50 hover:bg-hsv-lightGold/10 border border-slate-200/50 hover-lift space-y-4">
-                    <div class="w-12 h-12 bg-hsv-blue rounded-2xl flex items-center justify-center text-white shadow-md">
-                        <i data-lucide="compass" class="w-6 h-6 text-hsv-gold"></i>
-                    </div>
-                    <h3 class="font-serif text-lg font-bold text-hsv-darkBlue">Thiết Kế Tour Cao Cấp (Bespoke Tour)</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Lịch trình may đo cá nhân hóa sâu sắc, thiết kế giãn cách khoa học bồi dưỡng thể trạng, thích ứng chuẩn xác theo thói quen và độ tuổi từng đoàn lữ hành .
-                    </p>
-                </div>
-
-                <!-- Service 2: MICE & Events -->
-                <div class="p-6 rounded-3xl bg-slate-50 hover:bg-hsv-lightGold/10 border border-slate-200/50 hover-lift space-y-4">
-                    <div class="w-12 h-12 bg-hsv-blue rounded-2xl flex items-center justify-center text-white shadow-md">
-                        <i data-lucide="users" class="w-6 h-6 text-hsv-gold"></i>
-                    </div>
-                    <h3 class="font-serif text-lg font-bold text-hsv-darkBlue">Sự Kiện MICE & Hội Thảo Doanh Nghiệp</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Cung cấp giải pháp tổ chức trọn gói: Sân khấu riêng biệt, thiết kế backdrop, kịch bản giao lưu văn nghệ, âm thanh ánh sáng bãi biển và MC kết nối chuyên nghiệp.
-                    </p>
-                </div>
-
-                <!-- Service 3: Heritage Cruising -->
-                <div class="p-6 rounded-3xl bg-slate-50 hover:bg-hsv-lightGold/10 border border-slate-200/50 hover-lift space-y-4">
-                    <div class="w-12 h-12 bg-hsv-blue rounded-2xl flex items-center justify-center text-white shadow-md">
-                        <i data-lucide="ship" class="w-6 h-6 text-hsv-gold"></i>
-                    </div>
-                    <h3 class="font-serif text-lg font-bold text-hsv-darkBlue">Siêu Du Thuyền Di Sản Vịnh Hạ Long</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Liên minh độc quyền hợp tác sâu sắc với chuỗi siêu du thuyền chuẩn 5★. Cam kết đem lại mức chiết khấu cực sâu cho các đoàn khách doanh nghiệp lớn .
-                    </p>
-                </div>
-
-                <!-- Service 4: Luxury Restaurants -->
-                <div class="p-6 rounded-3xl bg-slate-50 hover:bg-hsv-lightGold/10 border border-slate-200/50 hover-lift space-y-4">
-                    <div class="w-12 h-12 bg-hsv-blue rounded-2xl flex items-center justify-center text-white shadow-md">
-                        <i data-lucide="utensils" class="w-6 h-6 text-hsv-gold"></i>
-                    </div>
-                    <h3 class="font-serif text-lg font-bold text-hsv-darkBlue">Hệ Thống Nhà Hàng Ẩm Thực Hoa Sen</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Sở hữu chuỗi nhà hàng ẩm thực độc lập tại Quảng Ninh, trực tiếp chế biến thực phẩm hải sản tươi rói bồi bổ, đảm bảo tuyệt đối an toàn vệ sinh thực phẩm .
-                    </p>
-                </div>
-
-                <!-- Service 5: VIP Fleet -->
-                <div class="p-6 rounded-3xl bg-slate-50 hover:bg-hsv-lightGold/10 border border-slate-200/50 hover-lift space-y-4">
-                    <div class="w-12 h-12 bg-hsv-blue rounded-2xl flex items-center justify-center text-white shadow-md">
-                        <i data-lucide="bus" class="w-6 h-6 text-hsv-gold"></i>
-                    </div>
-                    <h3 class="font-serif text-lg font-bold text-hsv-darkBlue">Đội Xe VIP Universe & Limousine</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Chủ động vận chuyển toàn đoàn bằng xe Universe 45 chỗ đời mới hiện đại, an toàn tuyệt đối, cùng dàn limousine sang trọng đưa đón cán bộ chuyên nghiệp .
-                    </p>
-                </div>
-
-                <!-- Service 6: On-site branch -->
-                <div class="p-6 rounded-3xl bg-slate-50 hover:bg-hsv-lightGold/10 border border-slate-200/50 hover-lift space-y-4">
-                    <div class="w-12 h-12 bg-hsv-blue rounded-2xl flex items-center justify-center text-white shadow-md">
-                        <i data-lucide="navigation" class="w-6 h-6 text-hsv-gold"></i>
-                    </div>
-                    <h3 class="font-serif text-lg font-bold text-hsv-darkBlue">Chi Nhánh Thực Địa Túc Trực 24/7</h3>
-                    <p class="text-xs text-slate-500 leading-relaxed">
-                        Văn phòng đặt ngay Eco Stop Tuần Châu, sẵn sàng xử lý, điều phối tất cả phát sinh, cung ứng thực địa an tâm tối đa suốt hành trình lữ hành .
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: Elite Tour Packages & Combos (HST-PACKAGES Filterable Grid) -->
-    <section id="packages-section" class="py-20 bg-hsv-lightBg text-left">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-                <div class="space-y-3">
-                    <span class="text-hsv-blue font-bold text-xs tracking-widest uppercase block">HÀNH TRÌNH CHỌN LỌC ĐỘC QUYỀN</span>
-                    <h2 class="font-serif text-3xl font-bold text-hsv-darkBlue">Các Chương Trình Tour & Combo Tiêu Biểu</h2>
-                    <p class="text-xs text-slate-400">Các phương án du lịch trọn gói được thiết kế tinh tế, tối ưu hóa chi phí vận hành trực tiếp .</p>
-                </div>
-
-                <!-- Filter Controls -->
-                <div class="flex flex-wrap gap-2">
-                    <button onclick="filterPackages('all', this)" class="pkg-filter-btn px-4 py-2 bg-hsv-blue text-white rounded-xl text-xs font-bold shadow-sm transition">Tất Cả</button>
-                    <button onclick="filterPackages('mice', this)" class="pkg-filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-xl text-xs font-bold transition border border-slate-200">Doanh Nghiệp & MICE</button>
-                    <button onclick="filterPackages('combo', this)" class="pkg-filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-xl text-xs font-bold transition border border-slate-200">Combo Cao Cấp</button>
-                    <button onclick="filterPackages('cruise', this)" class="pkg-filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-xl text-xs font-bold transition border border-slate-200">Du Thuyền Di Sản</button>
-                </div>
-            </div>
-
-            <!-- Packages Grid -->
-            <div class="grid md:grid-cols-3 gap-8" id="packages-grid">
-                
-                <!-- Card 1: MICE -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/50 hover-lift flex flex-col justify-between" data-category="mice">
-                    <div>
-                        <div class="h-48 bg-slate-200 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="MICE tour">
-                            <div class="absolute top-4 left-4 bg-hsv-blue text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hạ Long - Cô Tô</div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <div class="flex items-center gap-1.5 text-[10px] text-hsv-gold font-bold uppercase tracking-wider">
-                                <i data-lucide="award" class="w-3.5 h-3.5"></i> B2B Doanh Nghiệp Lớn
-                            </div>
-                            <h4 class="font-serif text-lg font-bold text-hsv-darkBlue leading-tight">Gói "Bứt Phá Giới Hạn - Gắn Kết Thành Công"</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed">Kỳ nghỉ hè MICE thiết kế giãn cách khoa học: Hoạt động Team Building ngoài bãi biển hoành tráng và Đêm tiệc Gala Dinner tri ân bùng nổ cảm xúc .</p>
-                            <ul class="text-[11px] text-slate-600 space-y-1.5 pt-2 border-t border-slate-100">
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Đưa đón toàn đoàn xe VIP Universe 45 đời mới </li>
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Thực đơn hải sản bồi dưỡng cực dồi dào </li>
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Full kịch bản, thiết kế sân khấu bãi biển</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="p-6 border-t border-slate-100 flex items-center justify-between">
-                        <div>
-                            <span class="text-[9px] text-slate-400 block uppercase font-bold">Giá trọn gói từ</span>
-                            <span class="text-base font-black text-hsv-blue">2.550.000đ/Khách</span> 
-                        </div>
-                        <button onclick="triggerBookingModal('Gói MICE Bứt Phá Giới Hạn - Hạ Long Cô Tô')" class="px-4 py-2 bg-hsv-blue hover:bg-hsv-darkBlue text-white text-xs font-bold rounded-xl transition">Liên Hệ Đệ Trình</button>
-                    </div>
-                </div>
-
-                <!-- Card 2: Combo -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/50 hover-lift flex flex-col justify-between" data-category="combo">
-                    <div>
-                        <div class="h-48 bg-slate-200 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1548013146-72479768bada?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Spiritual tour">
-                            <div class="absolute top-4 left-4 bg-hsv-blue text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Yên Tử - Hạ Long</div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <div class="flex items-center gap-1.5 text-[10px] text-hsv-gold font-bold uppercase tracking-wider">
-                                <i data-lucide="heart" class="w-3.5 h-3.5"></i> Chăm sóc sức khỏe dưỡng sinh
-                            </div>
-                            <h4 class="font-serif text-lg font-bold text-hsv-darkBlue leading-tight">Gói "Tái Tạo Năng Lượng - Thân Tâm An Lạc"</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed">Hành trình trải nghiệm thiền trà tĩnh lặng, bồi bổ tinh thần tại Yên Tử thiêng liêng, kết hợp khám phá ẩm thực dưỡng sinh phục hồi thể trạng tối ưu .</p>
-                            <ul class="text-[11px] text-slate-600 space-y-1.5 pt-2 border-t border-slate-100">
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Trải nghiệm thiền trà dưỡng sinh cùng chuyên gia</li>
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Vé cáp treo khứ hồi Chùa Đồng thiêng liêng</li>
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Lưu trú Resort dưỡng sinh sang trọng tĩnh lặng</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="p-6 border-t border-slate-100 flex items-center justify-between">
-                        <div>
-                            <span class="text-[9px] text-slate-400 block uppercase font-bold">Giá trọn gói từ</span>
-                            <span class="text-base font-black text-hsv-blue">2.350.000đ/Khách</span> 
-                        </div>
-                        <button onclick="triggerBookingModal('Gói Chăm Sóc Sức Khỏe - Thân Tâm An Lạc')" class="px-4 py-2 bg-hsv-blue hover:bg-hsv-darkBlue text-white text-xs font-bold rounded-xl transition">Liên Hệ Đệ Trình</button>
-                    </div>
-                </div>
-
-                <!-- Card 3: Cruise -->
-                <div class="bg-white rounded-3xl overflow-hidden border border-slate-200/50 hover-lift flex flex-col justify-between" data-category="cruise">
-                    <div>
-                        <div class="h-48 bg-slate-200 relative overflow-hidden">
-                            <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80" class="w-full h-full object-cover" alt="Luxury cruise">
-                            <div class="absolute top-4 left-4 bg-hsv-blue text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Hạ Long Cruise</div>
-                        </div>
-                        <div class="p-6 space-y-3">
-                            <div class="flex items-center gap-1.5 text-[10px] text-hsv-gold font-bold uppercase tracking-wider">
-                                <i data-lucide="crown" class="w-3.5 h-3.5"></i> Siêu Du Thuyền 5★
-                            </div>
-                            <h4 class="font-serif text-lg font-bold text-hsv-darkBlue leading-tight">Combo "Thương Gia Độc Bản - Hội Nghị Di Sản"</h4>
-                            <p class="text-xs text-slate-500 leading-relaxed">Trải nghiệm du ngoạn di sản Vịnh Hạ Long trên siêu du thuyền đẳng cấp nhất, setup khánh tiết hội họp, vinh danh VIP và dạ tiệc hải sản tôm hùm thượng vị .</p>
-                            <ul class="text-[11px] text-slate-600 space-y-1.5 pt-2 border-t border-slate-100">
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Dạ tiệc hải sản tôm hùm bông nướng phô mai đút lò </li>
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Đưa đón dàn Limousine VIP riêng biệt chuyên nghiệp </li>
-                                <li class="flex items-center gap-1.5"><i data-lucide="check" class="w-4 h-4 text-emerald-500 shrink-0"></i> Phòng khánh khuyết hội thảo hiện đại trên tàu</li>
-                            </ul>
-                        </div>
-                    </div>
-                    <div class="p-6 border-t border-slate-100 flex items-center justify-between">
-                        <div>
-                            <span class="text-[9px] text-slate-400 block uppercase font-bold">Giá trọn gói từ</span>
-                            <span class="text-base font-black text-hsv-blue">3.850.000đ/Khách</span>
-                        </div>
-                        <button onclick="triggerBookingModal('Combo Siêu Du Thuyền Thương Gia')" class="px-4 py-2 bg-hsv-blue hover:bg-hsv-darkBlue text-white text-xs font-bold rounded-xl transition">Liên Hệ Đệ Trình</button>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: Executed Programs / Case Studies Portfolio (HST-SEEDING Core) -->
-    <section id="executed-section" class="py-20 bg-white text-left">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
-                <div class="space-y-3">
-                    <span class="text-hsv-blue font-bold text-xs tracking-widest uppercase block">NĂNG LỰC ĐÃ KIỂM CHỨNG</span>
-                    <h2 class="font-serif text-3xl font-bold text-hsv-darkBlue">Hành Trình Đã Triển Khai Thực Tế</h2>
-                    <p class="text-xs text-slate-400">Hình ảnh chân thực và lời tri ân quý giá từ các tập đoàn và mỏ than vừa đồng hành cùng Hoa Sen Travel .</p>
-                </div>
-
-                <button onclick="toggleAdminPanel()" class="px-4 py-2 border border-hsv-blue/20 bg-white hover:bg-hsv-blue/5 text-hsv-blue text-[11px] font-bold rounded-xl transition flex items-center gap-1.5">
-                    <i data-lucide="plus-circle" class="w-4 h-4 text-hsv-gold"></i>
-                    Chạy thử: Thêm hành trình mới
-                </button>
-            </div>
-
-            <!-- Executed portfolio grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-8" id="executed-grid">
-                <!-- Javascript will inject items here. Defaults are corporate portfolios from HSNL page 4 & 7 -->
-            </div>
-        </div>
-    </section>
-
-    <!-- Executed Program Admin Simulated Panel Drawer (HST-SEEDING demo) -->
-    <div id="admin-panel-drawer" class="fixed bottom-0 inset-x-0 z-50 bg-white border-t-2 border-hsv-blue shadow-2xl p-6 transform translate-y-full transition-transform duration-300 hidden">
-        <div class="max-w-3xl mx-auto space-y-4">
-            <div class="flex justify-between items-center pb-2 border-b border-slate-100">
-                <h4 class="font-bold text-xs text-hsv-blue uppercase tracking-widest flex items-center gap-2">
-                    <i data-lucide="settings" class="w-4 h-4 text-hsv-gold"></i> Bảng quản trị giả lập Admin (Cập nhật Live)
-                </h4>
-                <button onclick="toggleAdminPanel()" class="text-slate-400 hover:text-slate-600">
-                    <i data-lucide="x" class="w-5 h-5"></i>
-                </button>
-            </div>
-            <p class="text-[10px] text-slate-400 leading-relaxed">
-                * Đây là bảng điều khiển giả lập tính năng **HST-SEEDING** để anh Khiêm chạy thử cập nhật sự kiện lữ hành của Hoa Sen Travel. Khi anh nhập dữ liệu bất kỳ ở dưới và bấm gửi, nhật ký thực tế ở trên sẽ tự động vẽ thêm thẻ mới trực tiếp mà không cần sửa code!
-            </p>
-            <form id="frm-mock-admin" onsubmit="addMockDiaryEntry(event)" class="grid sm:grid-cols-12 gap-4 text-left">
-                <div class="sm:col-span-8 space-y-1">
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase">Tên Cơ Quan / Đối Tác</label>
-                    <input type="text" id="adm-title" required placeholder="Ví dụ: Tập Đoàn Samsung Việt Nam - Hội Nghị MICE Hạ Long" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs">
-                </div>
-                <div class="sm:col-span-4 space-y-1">
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase">Quy Mô / Thời Gian</label>
-                    <input type="text" id="adm-meta" required placeholder="Quy mô: 350 khách • Tháng 06/2026" class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs">
-                </div>
-                <div class="sm:col-span-12 space-y-1">
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase">Chi Tiết Chương Trình Thực Tế</label>
-                    <textarea id="adm-desc" required rows="2" placeholder="Tóm tắt ngắn gọn hoạt động thi đấu Team Building, thực đơn phục hồi sức khỏe hay đêm Gala Dinner tri ân..." class="w-full bg-slate-50 border border-slate-200 rounded-lg px-3 py-2 text-xs"></textarea>
-                </div>
-                <div class="sm:col-span-12 flex justify-end gap-3 pt-2">
-                    <button type="button" onclick="toggleAdminPanel()" class="px-4 py-2 border border-slate-200 text-slate-500 text-[11px] font-bold rounded-lg bg-white">Hủy bỏ</button>
-                    <button type="submit" class="px-5 py-2 bg-hsv-blue text-white text-[11px] font-bold rounded-lg hover:bg-hsv-darkBlue transition flex items-center gap-1">
-                        <i data-lucide="check" class="w-4 h-4"></i> Đăng hành trình mới lên Web
-                    </button>
-                </div>
-            </form>
-        </div>
-    </div>
-
-    <!-- SECTION: Interactive Self-Service Tour Planner (HST-ARCHITECT Core) -->
-    <section id="calculator-section" class="py-20 bg-hsv-lightBg text-left">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
-            <div class="text-center max-w-3xl mx-auto space-y-3">
-                <span class="text-hsv-blue font-bold text-xs tracking-widest uppercase block">CÔNG CỤ THIẾT KẾ & DỰ TOÁN ĐỘNG TỰ ĐỘNG</span>
-                <h2 class="font-serif text-3xl font-bold text-hsv-darkBlue">Hệ Thống Tự Thiết Kế Báo Giá Lữ Hành 2026</h2>
-                <div class="w-16 h-0.5 bg-hsv-gold mx-auto"></div>
-                <p class="text-xs text-slate-400">Thay đổi các thông số dưới đây để tự thiết lập lịch trình và nhận ngân sách ước tính thực tế.</p>
-            </div>
-
-            <div class="grid lg:grid-cols-12 gap-8 items-start">
-                
-                <!-- Planner controls (Left) -->
-                <div class="lg:col-span-5 bg-white p-6 rounded-3xl border border-slate-200/60 shadow-sm space-y-5">
-                    <div class="border-b border-slate-100 pb-3">
-                        <h4 class="font-bold text-xs text-hsv-darkBlue uppercase tracking-wider flex items-center gap-1.5">
-                            <i data-lucide="sliders-horizontal" class="w-4 h-4 text-hsv-blue"></i> Cấu hình chương trình mong muốn
-                        </h4>
-                    </div>
-
-                    <!-- Dest -->
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">1. Điểm Đến Hành Trình</label>
-                        <select id="sel-dest" onchange="runLiveCalculation()" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs font-semibold focus:outline-none focus:border-hsv-blue text-hsv-textDark transition">
-                            <option value="halong_tuanchau_coto" selected>Hạ Long - Đảo Ngọc Cô Tô (Biển hoang sơ, cát trắng)</option>
-                            <option value="yentu_halong">Cõi Phật Yên Tử - Vịnh Hạ Long (Tâm linh, thiền trà dưỡng sinh)</option>
-                            <option value="sapa_fansipan">Mây Ngàn Sapa - Chinh Phục Fansipan (Hùng vĩ Tây Bắc)</option>
-                        </select>
-                    </div>
-
-                    <!-- Size -->
-                    <div>
-                        <div class="flex justify-between items-center mb-1">
-                            <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">2. Quy Mô Nhân Sự</label>
-                            <span class="text-xs font-black text-hsv-blue" id="lbl-qty-workers">100 người</span>
-                        </div>
-                        <input type="range" id="rng-workers" min="15" max="1000" step="5" value="100" oninput="updateWorkersDisplay(); runLiveCalculation();" class="w-full accent-hsv-blue cursor-pointer">
-                        <div class="flex justify-between text-[8px] text-slate-400 font-bold mt-1">
-                            <span>15 người</span>
-                            <span>100 (Có chiết khấu)</span>
-                            <span>300 (Gói đặc biệt)</span>
-                            <span>1000+ người</span>
-                        </div>
-                    </div>
-
-                    <!-- Duration -->
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">3. Thời Gian Kỳ Nghỉ</label>
-                        <div class="grid grid-cols-3 gap-2">
-                            <button onclick="setPlannerDuration(2, this)" class="planner-dur-btn py-2.5 rounded-xl text-xs font-bold transition border border-slate-200 text-slate-600 bg-white">2 Ngày 1 Đêm</button>
-                            <button onclick="setPlannerDuration(3, this)" class="planner-dur-btn py-2.5 rounded-xl text-xs font-bold transition border-2 border-hsv-blue bg-hsv-blue/10 text-hsv-blue">3 Ngày 2 Đêm</button>
-                            <button onclick="setPlannerDuration(4, this)" class="planner-dur-btn py-2.5 rounded-xl text-xs font-bold transition border border-slate-200 text-slate-600 bg-white">4 Ngày 3 Đêm</button>
-                        </div>
-                    </div>
-
-                    <!-- Hotel Standard -->
-                    <div>
-                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider mb-2">4. Tiêu Chuẩn Lưu Trú</label>
-                        <div class="grid grid-cols-3 gap-2">
-                            <button onclick="setPlannerHotel(3, this)" class="planner-hot-btn py-2.5 rounded-xl text-xs font-bold transition border border-slate-200 text-slate-600 bg-white">Khách Sạn 3★</button>
-                            <button onclick="setPlannerHotel(4, this)" class="planner-hot-btn py-2.5 rounded-xl text-xs font-bold transition border-2 border-hsv-blue bg-hsv-blue/10 text-hsv-blue">Khách Sạn 4★</button>
-                            <button onclick="setPlannerHotel(5, this)" class="planner-hot-btn py-2.5 rounded-xl text-xs font-bold transition border border-slate-200 text-slate-600 bg-white">Resort 5★</button>
-                        </div>
-                    </div>
-
-                    <!-- Program Options -->
-                    <div class="space-y-2.5 pt-2 border-t border-slate-200">
-                        <label class="block text-[10px] font-bold text-slate-500 uppercase tracking-wider">5. Dịch Vụ Gắn Kết Đi Kèm</label>
-                        
-                        <label class="flex items-start gap-2.5 p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 transition cursor-pointer border border-slate-200/50">
-                            <input type="checkbox" id="chk-teambuilding" checked onchange="runLiveCalculation()" class="mt-0.5 w-4 h-4 rounded text-hsv-blue focus:ring-hsv-blue">
-                            <div>
-                                <span class="block text-xs font-bold text-hsv-darkBlue">Chương Trình Team Building Gắn Kết</span>
-                                <span class="block text-[8px] text-slate-400 mt-0.5">Hệ thống phao game hơi lớn, cờ phướn, thiết kế sân khấu, MC điều hành</span>
-                            </div>
-                        </label>
-
-                        <label class="flex items-start gap-2.5 p-2.5 rounded-xl bg-slate-50 hover:bg-slate-100 transition cursor-pointer border border-slate-200/50">
-                            <input type="checkbox" id="chk-gala" checked onchange="runLiveCalculation()" class="mt-0.5 w-4 h-4 rounded text-hsv-blue focus:ring-hsv-blue">
-                            <div>
-                                <span class="block text-xs font-bold text-hsv-darkBlue">Đêm Gala Dinner Đầy Cảm Xúc</span>
-                                <span class="block text-[8px] text-slate-400 mt-0.5">Thiết kế backdrop sân khấu, âm thanh ánh sáng tiệc mặn giao lưu</span>
-                            </div>
-                        </label>
-                    </div>
-                </div>
-
-                <!-- Live quotation summary (Right) -->
-                <div class="lg:col-span-7 space-y-6">
-                    
-                    <!-- Dynamic Price Display -->
-                    <div class="bg-hsv-blue text-white p-6 rounded-3xl shadow-lg relative overflow-hidden">
-                        <div class="absolute -right-8 -bottom-8 w-32 h-32 bg-hsv-darkBlue/40 rounded-full blur-xl"></div>
-                        <div class="relative z-10 grid md:grid-cols-12 gap-6 items-center">
-                            <div class="md:col-span-7 space-y-1">
-                                <span class="text-[9px] font-bold text-blue-200 uppercase tracking-wider block">ƯỚC TÍNH DỰ TOÁN TRỌN GÓI</span>
-                                <div class="text-2xl sm:text-3xl font-black tracking-tight" id="lbl-total-budget">
-                                    264.000.000 VNĐ
-                                </div>
-                                <span class="text-[10px] text-blue-100 flex items-center gap-1 mt-1">
-                                    <i data-lucide="info" class="w-3.5 h-3.5"></i>
-                                    Chi phí/Khách: <strong id="lbl-per-worker">2.200.000đ</strong> (Đã gồm hóa đơn thuế VAT) 
-                                </span>
-                            </div>
-                            <div class="md:col-span-5 bg-white/10 backdrop-blur-md p-3 rounded-xl border border-white/10 text-left space-y-1">
-                                <span class="text-[10px] font-bold text-hsv-gold flex items-center gap-1">
-                                    <i data-lucide="sparkles" class="w-3.5 h-3.5"></i> Quà Tặng Doanh Nghiệp
-                                </span>
-                                <p class="text-[9px] text-slate-100 leading-relaxed" id="lbl-perk-desc">
-                                    Tặng kịch bản, âm thanh điều hành bãi cát mịn, chiết khấu sâu 5%.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Dynamic Details Tabs -->
-                    <div class="bg-white rounded-3xl border border-slate-200/60 shadow-sm overflow-hidden">
-                        <div class="bg-slate-50 border-b border-slate-200/60 px-6 py-3 flex gap-2">
-                            <button onclick="switchPlannerTab('itinerary', this)" class="planner-tab-btn px-4 py-1.5 bg-white text-hsv-blue rounded-lg text-xs font-bold shadow-sm border border-slate-200/50">
-                                🗺️ Dự Thảo Lịch Trình
-                            </button>
-                            <button onclick="switchPlannerTab('menu', this)" class="planner-tab-btn px-4 py-1.5 text-slate-600 hover:bg-white rounded-lg text-xs font-bold transition">
-                                🍽️ Thực Đơn Bồi Dưỡng
-                            </button>
-                        </div>
-
-                        <!-- Tab Body -->
-                        <div class="p-6">
-                            <!-- Tab A -->
-                            <div id="planner-panel-itinerary" class="space-y-4">
-                                <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-                                    <h5 class="font-extrabold text-xs text-hsv-darkBlue uppercase tracking-wide" id="lbl-pl-itinerary-title">Lịch trình chi tiết</h5>
-                                    <span class="text-[9px] text-slate-400">Thiết kế giãn cách khoa học bồi bổ thể chất </span>
-                                </div>
-                                <div class="space-y-3 border-l-2 border-hsv-blue/20 pl-4" id="list-pl-itinerary">
-                                    <!-- JS Inject -->
-                                </div>
-                            </div>
-
-                            <!-- Tab B -->
-                            <div id="planner-panel-menu" class="hidden space-y-4">
-                                <div class="flex justify-between items-center border-b border-slate-100 pb-2">
-                                    <h5 class="font-extrabold text-xs text-hsv-darkBlue uppercase tracking-wide">Danh Sách Thực Đơn Đề Xuất Dinh Dưỡng</h5>
-                                    <span class="text-[10px] bg-hsv-blue/10 text-hsv-blue font-bold px-2 py-0.5 rounded" id="lbl-pl-menu-tier">Khách Sạn 4★</span>
-                                </div>
-                                <div class="grid sm:grid-cols-2 gap-3" id="list-pl-menu">
-                                    <!-- JS Inject -->
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Lead Capture CTA Block -->
-                    <div class="bg-hsv-lightGold/40 border border-hsv-gold/20 p-6 rounded-3xl text-center space-y-3">
-                        <h4 class="font-bold text-sm text-hsv-darkBlue">Quý Cán Bộ Công Đoàn / Doanh Nghiệp Đang Cần Đệ Trình Tờ Trình?</h4>
-                        <p class="text-xs text-slate-500 max-w-xl mx-auto">
-                            Nhập thông tin bên dưới, chúng tôi sẽ xuất bản cứng Hồ sơ năng lực kèm Tờ trình mẫu, File kế hoạch chi tiết mộc đỏ gửi thẳng về Zalo giúp anh chị dễ dàng trình duyệt chi ngân sách .
-                        </p>
-                        <button onclick="triggerPlannerModal()" class="px-8 py-3 bg-hsv-blue hover:bg-hsv-darkBlue text-white font-bold rounded-xl text-xs uppercase tracking-wider transition shadow-sm inline-flex items-center gap-1.5">
-                            <i data-lucide="file-text" class="w-4 h-4 text-hsv-gold"></i> Đăng Ký Nhận Hồ Sơ Đệ Trình Bản Cứng PDF
-                        </button>
-                    </div>
-
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: Reputation SLA & Values (SLA Trust block HSNL Page 5 & 8) -->
-    <section id="trust-section" class="py-20 bg-white text-left">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
-            <div class="text-center max-w-3xl mx-auto space-y-3">
-                <span class="text-hsv-blue font-bold text-xs tracking-widest uppercase block">ĐÁP ỨNG QUY TRÌNH QUY CHUẨN DOANH NGHIỆP</span>
-                <h2 class="font-serif text-3xl font-bold text-hsv-darkBlue">Chuẩn Chỉ Pháp Lý - Quyết Toán Minh Bạch</h2>
-                <div class="w-16 h-0.5 bg-hsv-gold mx-auto"></div>
-            </div>
-
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/40 flex gap-4 hover-lift">
-                    <div class="p-2.5 bg-emerald-50 text-emerald-600 rounded-xl shrink-0 h-11 w-11 flex items-center justify-center">
-                        <i data-lucide="file-check-2" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-xs text-hsv-darkBlue uppercase tracking-wide">Hồ Sơ Pháp Lý Độc Bản</h4>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Cung cấp đầy đủ hóa đơn VAT chuẩn, hợp đồng dịch vụ lữ hành, tờ trình Công đoàn và biên bản nghiệm thu mộc đỏ nhanh chóng phục vụ kiểm toán nội bộ .</p>
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/40 flex gap-4 hover-lift">
-                    <div class="p-2.5 bg-blue-50 text-hsv-blue rounded-xl shrink-0 h-11 w-11 flex items-center justify-center">
-                        <i data-lucide="shield-alert" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-xs text-hsv-darkBlue uppercase tracking-wide">Bảo Hiểm Toàn Diện Mức Cao Nhất</h4>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Mọi gói dịch vụ lữ hành của Hoa Sen luôn tích hợp bảo hiểm lữ hành toàn diện mức cao. Xe và du thuyền được kiểm định nghiêm ngặt an toàn kỹ thuật.</p>
-                    </div>
-                </div>
-
-                <div class="bg-slate-50 p-6 rounded-2xl border border-slate-200/40 flex gap-4 hover-lift">
-                    <div class="p-2.5 bg-amber-50 text-amber-600 rounded-xl shrink-0 h-11 w-11 flex items-center justify-center">
-                        <i data-lucide="user-check" class="w-5 h-5"></i>
-                    </div>
-                    <div class="space-y-1">
-                        <h4 class="font-bold text-xs text-hsv-darkBlue uppercase tracking-wide">Đội Ngũ Điều Phối Chuyên Nghiệp</h4>
-                        <p class="text-[11px] text-slate-500 leading-relaxed">Đội ngũ điều phối viên lữ hành và hướng dẫn viên được chọn lọc kỹ càng, am hiểu sâu sắc văn hóa địa phương, phong cách lịch thiệp, chu đáo .</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Trusted Partner Slider (Logos represented beautifully) -->
-            <div class="pt-10 border-t border-slate-100 text-center space-y-6">
-                <span class="text-[10px] font-bold text-slate-400 uppercase tracking-widest block">Đồng hành cùng sự phát triển bền vững của doanh nghiệp</span>
-                <div class="flex flex-wrap justify-center items-center gap-10 opacity-60">
-                    <span class="font-serif font-black text-slate-400 text-sm tracking-wider uppercase">SAMSUNG VINA</span>
-                    <span class="font-serif font-black text-slate-400 text-sm tracking-wider uppercase">CANON VIETNAM</span>
-                    <span class="font-serif font-black text-slate-400 text-sm tracking-wider uppercase">BIDV BANK</span>
-                    <span class="font-serif font-black text-slate-400 text-sm tracking-wider uppercase">VIETNAM AIRLINES</span>
-                    <span class="font-serif font-black text-slate-400 text-sm tracking-wider uppercase">TOYOTA VIETNAM</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- SECTION: FAQs Accordions (Matches large travel agency needs) -->
-    <section class="py-20 bg-hsv-lightBg text-left border-t border-slate-100">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-            <div class="text-center space-y-3">
-                <span class="text-hsv-blue font-bold text-xs tracking-widest uppercase block">HỖ TRỢ THÔNG TIN KHÁCH HÀNG</span>
-                <h2 class="font-serif text-3xl font-bold text-hsv-darkBlue">Câu Hỏi Thường Gặp (FAQs)</h2>
-                <div class="w-16 h-0.5 bg-hsv-gold mx-auto"></div>
-            </div>
-
-            <div class="space-y-4">
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/50 shadow-sm space-y-2">
-                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center font-bold text-xs sm:text-sm text-hsv-darkBlue text-left focus:outline-none">
-                        <span>1. Quy trình đệ trình hồ sơ thầu, tờ trình và hóa đơn VAT của Hoa Sen Travel được thực hiện thế nào?</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-hsv-gold shrink-0 transition-transform"></i>
-                    </button>
-                    <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed hidden pt-2 border-t border-slate-100">
-                        Dạ, Hoa Sen Travel thấu hiểu sâu sắc quy trình kiểm toán của các doanh nghiệp nhà nước và công đoàn. Chúng tôi sẽ cung cấp trọn bộ: Bảng dự toán mộc đỏ, Tờ trình mẫu, Dự thảo lịch trình chi tiết và Hợp đồng mẫu trong vòng 30 phút. Hóa đơn tài chính VAT sẽ được xuất nhanh chóng, chính xác theo đúng hướng dẫn tài chính của quý doanh nghiệp .
-                    </p>
-                </div>
-
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/50 shadow-sm space-y-2">
-                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center font-bold text-xs sm:text-sm text-hsv-darkBlue text-left focus:outline-none">
-                        <span>2. Gói lữ hành trọn gói có phát sinh phụ phí gì ngoài hợp đồng đã ký không?</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-hsv-gold shrink-0 transition-transform"></i>
-                    </button>
-                    <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed hidden pt-2 border-t border-slate-100">
-                        Tuyệt đối không ạ. Hoa Sen Travel cam kết chuẩn SLA minh bạch tối đa chi phí. Mọi đề mục ăn uống bồi bổ, lưu trú khách sạn, xe VIP đưa đón và nhân sự điều phối đều được gói gọn chính xác trong ngân sách báo giá đã ký kết. Không phát sinh bất cứ chi phí ẩn nào suốt hành trình .
-                    </p>
-                </div>
-
-                <div class="bg-white p-5 rounded-2xl border border-slate-200/50 shadow-sm space-y-2">
-                    <button onclick="toggleAccordion(this)" class="w-full flex justify-between items-center font-bold text-xs sm:text-sm text-hsv-darkBlue text-left focus:outline-none">
-                        <span>3. Nếu đoàn có quy mô quá lớn (trên 500 người) thì năng lực hậu cần của công ty đáp ứng thế nào?</span>
-                        <i data-lucide="plus" class="w-4 h-4 text-hsv-gold shrink-0 transition-transform"></i>
-                    </button>
-                    <p class="text-[11px] sm:text-xs text-slate-500 leading-relaxed hidden pt-2 border-t border-slate-100">
-                        Với chuỗi nhà hàng riêng phục vụ cùng lúc lên đến 1.000 khách, đội xe 45 chỗ đời mới đời cao và liên minh du thuyền di sản, Hoa Sen Travel hoàn toàn chủ động điều hành các đoàn siêu lớn an toàn, đúng giờ mà không cần gom tour hay chịu chi phí trung gian lữ hành nào .
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- AI Floating Widget & Chatbox Simulator (HST-ARCHITECT Assistant) -->
-    <div class="fixed bottom-6 right-6 z-50 flex flex-col items-end gap-3 text-left">
-        <!-- Chatbox -->
-        <div id="ai-chatbox" class="w-80 sm:w-96 bg-white rounded-3xl shadow-2xl border border-slate-200 overflow-hidden flex flex-col hidden transform scale-95 origin-bottom-right transition-transform">
-            <!-- Header -->
-            <div class="bg-hsv-blue p-4 text-white flex justify-between items-center">
-                <div class="flex items-center gap-2.5">
-                    <div class="w-8 h-8 rounded-full bg-white/20 flex items-center justify-center">
-                        <i data-lucide="bot" class="w-5 h-5 text-hsv-gold"></i>
-                    </div>
-                    <div>
-                        <strong class="text-xs block">Trợ Lý Ảo Hoa Sen</strong>
-                        <span class="text-[9px] text-blue-200 uppercase tracking-widest font-bold">Hỗ trợ nhanh 24/7</span>
-                    </div>
-                </div>
-                <button onclick="toggleAIChat()" class="text-white/80 hover:text-white">
-                    <i data-lucide="minus" class="w-5 h-5"></i>
-                </button>
-            </div>
-
-            <!-- Messages -->
-            <div id="chat-messages-area" class="p-4 h-64 overflow-y-auto space-y-3 bg-slate-50 text-xs">
-                <div class="flex items-start gap-2">
-                    <div class="w-6 h-6 rounded-full bg-hsv-blue/10 flex items-center justify-center text-hsv-blue font-bold text-[10px]">HS</div>
-                    <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 max-w-[80%] leading-relaxed text-slate-600">
-                        Chào quý khách! Tôi là trợ lý ảo lữ hành Hoa Sen. Tôi có thể giúp anh/chị lên khung lịch trình và tính nhanh báo dự toán lữ hành trọn gói cho cơ quan doanh nghiệp ngay lúc này .
-                    </div>
-                </div>
-            </div>
-
-            <!-- Suggestions -->
-            <div class="p-3 bg-white border-t border-slate-100 flex flex-wrap gap-2 justify-end" id="chat-suggested-options">
-                <button onclick="selectChatSuggestion('co_to_3n2d', 'Tư vấn gói Cô Tô 3 ngày 2 đêm')" class="px-2.5 py-1.5 bg-slate-100 hover:bg-hsv-blue/10 hover:text-hsv-blue rounded-lg text-[10px] text-slate-600 font-bold transition">
-                    📍 Gói Cô Tô 3N2Đ
-                </button>
-                <button onclick="selectChatSuggestion('uu_dai_mice', 'Ưu đãi cho đoàn MICE doanh nghiệp lớn')" class="px-2.5 py-1.5 bg-slate-100 hover:bg-hsv-blue/10 hover:text-hsv-blue rounded-lg text-[10px] text-slate-600 font-bold transition">
-                    🎁 Chiết khấu đoàn lớn
-                </button>
-                <button onclick="selectChatSuggestion('mau_to_trinh', 'Tôi cần file mẫu tờ trình công đoàn')" class="px-2.5 py-1.5 bg-slate-100 hover:bg-hsv-blue/10 hover:text-hsv-blue rounded-lg text-[10px] text-slate-600 font-bold transition">
-                    📝 Xin mẫu Tờ trình
-                </button>
-            </div>
-
-            <!-- Footer form -->
-            <form onsubmit="handleChatSubmit(event)" class="p-3 bg-white border-t border-slate-100 flex gap-2">
-                <input type="text" id="chat-input-field" required placeholder="Nhập câu hỏi của anh/chị..." class="flex-grow bg-slate-50 border border-slate-200 rounded-xl px-3 py-2 text-xs focus:outline-none focus:border-hsv-blue">
-                <button type="submit" class="p-2 bg-hsv-blue text-white rounded-xl hover:bg-hsv-darkBlue transition">
-                    <i data-lucide="send" class="w-4 h-4 text-hsv-gold"></i>
-                </button>
-            </form>
-        </div>
-
-        <!-- Toggle Button -->
-        <button onclick="toggleAIChat()" class="w-14 h-14 bg-hsv-blue hover:bg-hsv-darkBlue text-white rounded-full flex items-center justify-center shadow-2xl hover-lift border-2 border-hsv-gold focus:outline-none relative">
-            <span class="absolute top-0 right-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white animate-ping"></span>
-            <span class="absolute top-0 right-0 w-3 h-3 bg-emerald-500 rounded-full border-2 border-white"></span>
-            <i data-lucide="message-square" class="w-6 h-6 text-hsv-gold" id="btn-chat-icon"></i>
-        </button>
-    </div>
-
-    <!-- Leads captures modal popup -->
-    <div id="planner-lead-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
-        <div class="bg-white text-slate-800 max-w-md w-full p-8 rounded-3xl shadow-2xl border-t-8 border-hsv-blue space-y-5 transform scale-95 transition-transform">
-            <div class="text-center space-y-2">
-                <div class="w-12 h-12 bg-hsv-lightBg text-hsv-blue rounded-full flex items-center justify-center mx-auto">
-                    <i data-lucide="file-down" class="w-6 h-6 text-hsv-gold"></i>
-                </div>
-                <h3 class="font-bold text-lg text-hsv-darkBlue">Đăng Ký Nhận Hồ Sơ Đệ Trình</h3>
-                <p class="text-[11px] text-slate-400">
-                    Bản mộc đỏ, kèm kịch bản kế hoạch chi tiết, menu hải sản bồi bổ thực tế của Hoa Sen Travel 2026 sẽ được chuyển ngay đến số Zalo của anh chị .
-                </p>
-            </div>
-
-            <form id="frm-register-lead" onsubmit="submitPlannerLead(event)" class="space-y-4 text-left">
-                <div>
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-1">Tên Cơ Quan / Doanh Nghiệp <span class="text-rose-500">*</span></label>
-                    <input type="text" id="lead-org-name" required placeholder="Ví dụ: Công ty TNHH Canon Việt Nam" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-hsv-blue font-bold">
-                </div>
-                <div>
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-1">Họ & Tên Người Đăng Ký <span class="text-rose-500">*</span></label>
-                    <input type="text" id="lead-contact-name" required placeholder="Nhập tên người đại diện nhận hồ sơ" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-hsv-blue">
-                </div>
-                <div>
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-1">Số điện thoại / Nhận File Zalo <span class="text-rose-500">*</span></label>
-                    <input type="tel" id="lead-contact-phone" required placeholder="Nhập số điện thoại nhận file mộc đỏ" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-hsv-blue font-semibold font-mono">
-                </div>
-
-                <div class="pt-2">
-                    <button type="submit" class="w-full py-3 bg-hsv-blue hover:bg-hsv-darkBlue text-white font-bold rounded-xl text-xs uppercase tracking-wider transition shadow-md">
-                        Xác Nhận Đăng Ký
-                    </button>
-                </div>
-            </form>
-            <button onclick="closePlannerModal()" class="w-full py-1 text-slate-400 hover:text-slate-600 text-[11px] font-semibold">Hủy bỏ</button>
-        </div>
-    </div>
-
-    <!-- Success Output Modal -->
-    <div id="success-output-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
-        <div class="bg-white text-slate-800 max-w-md w-full p-8 rounded-3xl shadow-2xl border-t-8 border-emerald-500 text-center space-y-5">
-            <div class="w-14 h-14 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto">
-                <i data-lucide="check-circle" class="w-9 h-9"></i>
-            </div>
-            <div class="space-y-1.5 text-left">
-                <h3 class="font-bold text-lg text-hsv-darkBlue text-center">Đăng Ký Thành Công!</h3>
-                <p class="text-xs text-slate-400 leading-relaxed">
-                    Hệ thống đã tiếp nhận yêu cầu từ anh/chị <strong id="out-contact-name" class="text-hsv-blue">...</strong> của cơ quan <strong id="out-org-name" class="text-hsv-blue">...</strong>.
-                </p>
-                <div class="bg-emerald-50 p-3 rounded-lg border border-emerald-100 text-xs text-emerald-800 leading-relaxed">
-                    ⚡ Bảng báo giá chi phí chi tiết, dự thảo lịch trình và mẫu tờ trình của Hoa Sen Travel đang được chuyên viên soạn thảo để gửi trực tiếp qua Zalo cho anh chị sau 15-30 phút !
-                </div>
-            </div>
-            <button onclick="closeSuccessOutputModal()" class="w-full py-3 bg-hsv-darkBlue text-white font-bold rounded-xl text-xs uppercase tracking-wider transition">
-                Hoàn thành & Đóng
-            </button>
-        </div>
-    </div>
-
-    <!-- Booking details Lead modal -->
-    <div id="booking-modal" class="fixed inset-0 z-50 hidden items-center justify-center p-4 bg-slate-900/80 backdrop-blur-sm">
-        <div class="bg-white text-slate-800 max-w-md w-full p-8 rounded-3xl shadow-2xl border-t-8 border-hsv-blue space-y-5 transform scale-95 transition-transform">
-            <div class="text-center space-y-2">
-                <div class="w-12 h-12 bg-hsv-lightBg text-hsv-blue rounded-full flex items-center justify-center mx-auto">
-                    <i data-lucide="send" class="w-6 h-6 text-hsv-gold"></i>
-                </div>
-                <h3 class="font-bold text-lg text-hsv-darkBlue">Đặt Lịch Tư Vấn Tour</h3>
-                <p class="text-[11px] text-slate-400">
-                    Anh/chị đang quan tâm đến gói lữ hành: <strong id="booking-modal-package-name" class="text-hsv-blue">...</strong>. Vui lòng để lại liên hệ để nhận mộc đỏ báo giá chi tiết .
-                </p>
-            </div>
-
-            <form id="frm-register-booking" onsubmit="submitBookingLead(event)" class="space-y-4 text-left">
-                <div>
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-1">Tên Đơn Vị / Khách Hàng <span class="text-rose-500">*</span></label>
-                    <input type="text" id="booking-org-name" required placeholder="Nhập tên doanh nghiệp / Đại diện nhóm" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-hsv-blue font-bold">
-                </div>
-                <div>
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-1">Họ & Tên Người Đăng Ký <span class="text-rose-500">*</span></label>
-                    <input type="text" id="booking-contact-name" required placeholder="Họ và tên anh/chị liên hệ" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-hsv-blue">
-                </div>
-                <div>
-                    <label class="block text-[9px] font-bold text-slate-500 uppercase tracking-wider mb-1">Số điện thoại nhận File Zalo <span class="text-rose-500">*</span></label>
-                    <input type="tel" id="booking-contact-phone" required placeholder="Nhập số điện thoại nhận file" class="w-full bg-slate-50 border border-slate-200 rounded-xl px-4 py-2.5 text-xs focus:outline-none focus:border-hsv-blue font-semibold font-mono">
-                </div>
-
-                <div class="pt-2">
-                    <button type="submit" class="w-full py-3 bg-hsv-blue hover:bg-hsv-darkBlue text-white font-bold rounded-xl text-xs uppercase tracking-wider transition shadow-md">
-                        Xác Nhận Yêu Cầu
-                    </button>
-                </div>
-            </form>
-            <button onclick="closeBookingModal()" class="w-full py-1 text-slate-400 hover:text-slate-600 text-[11px] font-semibold">Hủy bỏ</button>
-        </div>
-    </div>
-
-    <!-- FOOTER: Standard Corporate Footer (HSNL Page 12) -->
-    <footer class="bg-hsv-darkBlue text-slate-400 py-12 border-t-2 border-hsv-gold">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-12 gap-8 text-xs text-left">
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <!-- Animated tag -->
+            <span class="inline-flex items-center space-x-2 bg-brand-gold/20 border border-brand-gold/30 rounded-full px-4 py-1.5 text-xs font-bold text-brand-gold uppercase tracking-widest mb-6 animate-pulse">
+                <i class="fa-solid fa-award mr-1"></i> Đối tác Lữ hành & MICE Uy Tín Hàng Đầu
+            </span>
             
-            <div class="md:col-span-6 space-y-4">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 bg-white rounded-lg flex items-center justify-center text-hsv-blue font-bold text-lg">H</div>
-                    <span class="font-serif text-white text-lg tracking-wide font-extrabold">HOA SEN TRAVEL</span>
+            <!-- Rotating Hero Titles -->
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6">
+                <span id="hero-title-main" class="block text-white">GẮN KẾT NHỮNG TRẢI NGHIỆM</span>
+                <span id="hero-title-accent" class="block mt-2 gold-gradient-text">THUẦN KHIẾT & SANG TRỌNG</span>
+            </h1>
+
+            <p class="max-w-2xl mx-auto text-lg sm:text-xl text-gray-300 font-light mb-10 leading-relaxed">
+                Chúng tôi kiến tạo các hành trình du lịch độc bản, sự kiện MICE quy mô lớn và chuỗi hệ sinh thái dịch vụ 5 sao xứng tầm vị thế thượng khách.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#he-sinh-thai" class="w-full sm:w-auto bg-brand-gold hover:bg-white text-brand-deep font-bold px-8 py-4 rounded-xl transition duration-300 transform hover:scale-105 shadow-lg shadow-brand-gold/20 flex items-center justify-center">
+                    Khám Phá Hệ Sinh Thái <i class="fa-solid fa-circle-play ml-2"></i>
+                </a>
+                <a href="#tu-van" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/20 text-white font-bold px-8 py-4 rounded-xl transition duration-300 flex items-center justify-center">
+                    Nhận Tư Vấn VIP <i class="fa-solid fa-headset ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Trust Badges -->
+            <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto text-gray-400">
+                <div class="flex items-center justify-center space-x-3">
+                    <i class="fa-solid fa-shield-halved text-2xl text-brand-gold"></i>
+                    <span class="text-xs text-left font-semibold tracking-wider uppercase">Chuẩn SLA<br><span class="text-white">Cam Kết Chất Lượng</span></span>
                 </div>
-                <p class="text-[11px] leading-relaxed max-w-sm">
-                    Đơn vị lữ hành uy tín 9 năm hoạt động. Chúng tôi đặt phát triển bền vững làm cốt lõi trong chiến lược kinh doanh của mình, luôn mang đến hiệu quả tối ưu nhất với phương châm phục vụ: Tinh Khiết - Độc Đáo - Thần Tốc .
-                </p>
-                <div class="text-[9px] text-slate-500 uppercase tracking-wider font-mono">
-                    Đại diện pháp luật: <strong class="text-slate-300">Ông Lý Hồng Nhất</strong> | Đăng ký kinh doanh: <strong class="text-slate-300">0106914229</strong> 
+                <div class="flex items-center justify-center space-x-3">
+                    <i class="fa-solid fa-award text-2xl text-brand-gold"></i>
+                    <span class="text-xs text-left font-semibold tracking-wider uppercase">9+ Năm<br><span class="text-white">Kinh Nghiệm Thực Tế</span></span>
+                </div>
+                <div class="flex items-center justify-center space-x-3">
+                    <i class="fa-solid fa-user-tie text-2xl text-brand-gold"></i>
+                    <span class="text-xs text-left font-semibold tracking-wider uppercase">Hỗ Trợ 24/7<br><span class="text-white">Tận Tâm, Chu Đáo</span></span>
+                </div>
+                <div class="flex items-center justify-center space-x-3">
+                    <i class="fa-solid fa-gem text-2xl text-brand-gold"></i>
+                    <span class="text-xs text-left font-semibold tracking-wider uppercase">Độc Bản<br><span class="text-white">Bespoke Cao Cấp</span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wave Separator -->
+        <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none z-10">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[40px] fill-gray-50">
+                <path d="M0,0V46.29c47.79,22.2,103.59,32.17,158,28,70.36-5.37,136.33-33.31,206.8-37.5C438.64,32.43,512.34,53.67,583,72.05c69.27,18,138.3,24.88,209.4,13.08,36.15-6,69.85-17.84,104.45-29.34C989.49,25,1113-14.29,1200,42.4V0Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- STATISTICS GRID -->
+    <section class="py-12 bg-gray-50 relative z-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 bg-white rounded-3xl p-8 shadow-xl shadow-gray-200/50 border border-gray-100">
+                <div class="text-center p-4 border-r border-gray-100 last:border-none">
+                    <div class="text-4xl sm:text-5xl font-black text-brand-deep mb-2" id="stat-years">9+</div>
+                    <p class="text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-widest">Năm Phát Triển</p>
+                </div>
+                <div class="text-center p-4 border-r border-gray-100 last:border-none">
+                    <div class="text-4xl sm:text-5xl font-black text-brand-deep mb-2" id="stat-tours">500+</div>
+                    <p class="text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-widest">Tour Cao Cấp/Năm</p>
+                </div>
+                <div class="text-center p-4 border-r border-gray-100 last:border-none">
+                    <div class="text-4xl sm:text-5xl font-black text-brand-deep mb-2" id="stat-clients">10,000+</div>
+                    <p class="text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-widest">Thượng Khách Phục Vụ</p>
+                </div>
+                <div class="text-center p-4 last:border-none">
+                    <div class="text-4xl sm:text-5xl font-black text-brand-gold mb-2" id="stat-satisfaction">98%</div>
+                    <p class="text-xs sm:text-sm font-bold text-gray-500 uppercase tracking-widest">Hài Lòng Tuyệt Đối</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE ECOSYSTEM EXPLORER (The Core of Option 1) -->
+    <section id="he-sinh-thai" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-primary text-sm font-extrabold uppercase tracking-widest bg-blue-50 px-4 py-2 rounded-full">Hệ Sinh Thái Dịch Vụ 5 Sao</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-deep mt-4 tracking-tight">Cổng Kết Nối Toàn Diện Hành Trình Đẳng Cấp</h2>
+                <p class="text-gray-600 mt-4 text-lg font-light">Chúng tôi đầu tư và phát triển một chuỗi giá trị dịch vụ liên kết khép kín, đảm bảo chất lượng đồng nhất từ khâu lưu trú, di chuyển đến ẩm thực tinh hoa.</p>
+            </div>
+
+            <!-- Ecosystem Navigation Tabs -->
+            <div class="flex flex-wrap justify-center gap-3 mb-12">
+                <button onclick="switchTab('tab-bespoke')" id="btn-tab-bespoke" class="tab-btn active bg-brand-deep text-white shadow-md px-6 py-3.5 rounded-2xl font-semibold text-sm transition flex items-center space-x-2">
+                    <i class="fa-solid fa-map-location-dot"></i> <span>Tour Độc Bản (Bespoke)</span>
+                </button>
+                <button onclick="switchTab('tab-mice')" id="btn-tab-mice" class="tab-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-6 py-3.5 rounded-2xl font-semibold text-sm transition flex items-center space-x-2">
+                    <i class="fa-solid fa-users-line"></i> <span>Sự Kiện & MICE</span>
+                </button>
+                <button onclick="switchTab('tab-cruise')" id="btn-tab-cruise" class="tab-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-6 py-3.5 rounded-2xl font-semibold text-sm transition flex items-center space-x-2">
+                    <i class="fa-solid fa-ship"></i> <span>Du Thuyền Hạ Long</span>
+                </button>
+                <button onclick="switchTab('tab-restaurant')" id="btn-tab-restaurant" class="tab-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-6 py-3.5 rounded-2xl font-semibold text-sm transition flex items-center space-x-2">
+                    <i class="fa-solid fa-utensils"></i> <span>Nhà Hàng & Coffee</span>
+                </button>
+                <button onclick="switchTab('tab-vip-car')" id="btn-tab-vip-car" class="tab-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-6 py-3.5 rounded-2xl font-semibold text-sm transition flex items-center space-x-2">
+                    <i class="fa-solid fa-car-side"></i> <span>Vận Chuyển VIP</span>
+                </button>
+                <button onclick="switchTab('tab-resort')" id="btn-tab-resort" class="tab-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-6 py-3.5 rounded-2xl font-semibold text-sm transition flex items-center space-x-2">
+                    <i class="fa-solid fa-hotel"></i> <span>Đại Lý Resort 5 Sao</span>
+                </button>
+            </div>
+
+            <!-- Tabs Content Area with dynamic transition shadow -->
+            <div class="bg-gray-50 rounded-3xl p-6 sm:p-10 border border-gray-100 shadow-inner min-h-[500px] flex items-center">
+                
+                <!-- TAB 1: BESPOKE TOURS -->
+                <div id="tab-bespoke" class="tab-content grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-block bg-brand-gold/20 text-brand-deep font-extrabold text-xs px-3 py-1 rounded-md uppercase tracking-wider">Mảnh Ghép 01 / Trải nghiệm Cá nhân hoá</div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">Hành Trình Du Lịch Bespoke Được Chế Tác Riêng</h3>
+                        <p class="text-gray-600 leading-relaxed font-light">Không có lịch trình định sẵn. Mỗi hành trình của bạn được đội ngũ chuyên viên am hiểu sâu sắc văn hóa địa phương nghiên cứu, tinh chỉnh để phù hợp tuyệt đối với gu thưởng lãm, nhịp độ và yêu cầu đặc quyền của riêng bạn.</p>
+                        <ul class="space-y-3 font-semibold text-brand-deep text-sm">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Cá nhân hóa sâu sắc 100% lịch trình nghỉ dưỡng</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Hướng dẫn viên am hiểu địa phương, tinh tế và tận tâm</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Tiếp cận các đặc quyền điểm đến cực kỳ giới hạn</li>
+                        </ul>
+                        <div class="pt-4">
+                            <a href="#tu-van" class="bg-brand-deep hover:bg-brand-primary text-white font-bold px-6 py-3 rounded-xl transition inline-flex items-center">
+                                Thiết kế tour riêng <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&q=80&w=800" alt="Bespoke Tour" class="rounded-2xl w-full h-[350px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/dac0a3?text=Tour+Bespoke'">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 hidden sm:flex items-center space-x-3">
+                            <i class="fa-solid fa-gem text-brand-gold text-2xl"></i>
+                            <div>
+                                <span class="block font-bold text-sm text-brand-deep">Chuẩn dịch vụ VIP</span>
+                                <span class="block text-xs text-gray-500">Bảo mật & Tinh tế</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 2: CORPORATE & MICE -->
+                <div id="tab-mice" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-block bg-brand-gold/20 text-brand-deep font-extrabold text-xs px-3 py-1 rounded-md uppercase tracking-wider">Mảnh Ghép 02 / Sức mạnh Tập Thể</div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">Hội Nghị, Hội Thảo & Team Building Đỉnh Cao</h3>
+                        <p class="text-gray-600 leading-relaxed font-light">Chúng tôi tự hào đồng hành cùng các tập đoàn lớn tổ chức những chương trình Team Building bùng nổ, đêm Gala Dinner đầy cảm xúc và những sự kiện MICE quy mô lớn lên đến hàng nghìn khách mời với quy trình vận hành thần tốc và chuẩn xác.</p>
+                        <ul class="space-y-3 font-semibold text-brand-deep text-sm">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Sân khấu hóa sự kiện & Kịch bản teambuilding độc quyền</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Thiết bị âm thanh, ánh sáng chất lượng cao</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Tối ưu hóa ngân sách doanh nghiệp cùng SLA cam kết</li>
+                        </ul>
+                        <div class="pt-4">
+                            <a href="#tu-van" class="bg-brand-deep hover:bg-brand-primary text-white font-bold px-6 py-3 rounded-xl transition inline-flex items-center">
+                                Đăng ký nhận kịch bản MICE <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800" alt="MICE Event" class="rounded-2xl w-full h-[350px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/dac0a3?text=Sự+Kiện+MICE'">
+                        <div class="absolute -bottom-6 -right-6 bg-white p-4 rounded-xl shadow-lg border border-gray-100 hidden sm:flex items-center space-x-3">
+                            <i class="fa-solid fa-users text-brand-gold text-2xl"></i>
+                            <div>
+                                <span class="block font-bold text-sm text-brand-deep">Khách hàng chính</span>
+                                <span class="block text-xs text-gray-500">Tập đoàn, Bệnh viện, FDI</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- TAB 3: HERITAGE CRUISE -->
+                <div id="tab-cruise" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-block bg-brand-gold/20 text-brand-deep font-extrabold text-xs px-3 py-1 rounded-md uppercase tracking-wider">Mảnh Ghép 03 / Di sản văn hóa</div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">Liên Minh Siêu Du Thuyền Di Sản Vịnh Hạ Long</h3>
+                        <p class="text-gray-600 leading-relaxed font-light">Cơ hội độc quyền thưởng ngoạn kỳ quan thiên nhiên thế giới trên những siêu du thuyền di sản 5 sao sang trọng nhất hành tinh. Trải nghiệm ẩm thực giữa đại dương, nghỉ đêm phòng VIP với ban công riêng lộng gió.</p>
+                        <ul class="space-y-3 font-semibold text-brand-deep text-sm">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Độc quyền hải trình di sản không trùng lặp</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Đầy đủ tiện ích: bể bơi vô cực, phòng gym, spa giữa vịnh</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Trải nghiệm đặc quyền thượng lưu</li>
+                        </ul>
+                        <div class="pt-4">
+                            <a href="#tu-van" class="bg-brand-deep hover:bg-brand-primary text-white font-bold px-6 py-3 rounded-xl transition inline-flex items-center">
+                                Khảo sát lịch trình du thuyền <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80&w=800" alt="Du Thuyền" class="rounded-2xl w-full h-[350px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/dac0a3?text=Du+Thuyền+Hạ+Long'">
+                    </div>
+                </div>
+
+                <!-- TAB 4: RESTAURANT & COFFEE -->
+                <div id="tab-restaurant" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-block bg-brand-gold/20 text-brand-deep font-extrabold text-xs px-3 py-1 rounded-md uppercase tracking-wider">Mảnh Ghép 04 / Tinh Hoa Ẩm Thực</div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">Hệ Thống Nhà Hàng Hoa Sen & Lotus Coffee</h3>
+                        <p class="text-gray-600 leading-relaxed font-light">Thưởng thức hải sản tươi ngon cao cấp, các thực đơn ẩm thực tinh tế giao thoa Á - Âu được chế biến bởi đội ngũ đầu bếp danh tiếng hàng đầu. Không gian kiến trúc đương đại lãng mạn thích hợp tiếp đãi đối tác.</p>
+                        <ul class="space-y-3 font-semibold text-brand-deep text-sm">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Menu đa dạng đặc sắc, hải sản tuyển chọn đặc quyền</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Không gian sảnh VIP sang trọng, riêng tư tối đa</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Chuỗi Lotus Coffee Shop thư thái, tĩnh lặng</li>
+                        </ul>
+                        <div class="pt-4">
+                            <a href="#nha-hang-hoa-sen" class="bg-brand-deep hover:bg-brand-primary text-white font-bold px-6 py-3 rounded-xl transition inline-flex items-center">
+                                Xem menu & Đặt bàn <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&q=80&w=800" alt="Nhà Hàng" class="rounded-2xl w-full h-[350px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/dac0a3?text=Nhà+Hàng+Hoa+Sen'">
+                    </div>
+                </div>
+
+                <!-- TAB 5: VIP TRANSPORT -->
+                <div id="tab-vip-car" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-block bg-brand-gold/20 text-brand-deep font-extrabold text-xs px-3 py-1 rounded-md uppercase tracking-wider">Mảnh Ghép 05 / Đưa đón Thượng hạng</div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">Hạm Đội Vận Tải Limousine Hạng Thương Gia</h3>
+                        <p class="text-gray-600 leading-relaxed font-light">Xóa tan mọi mệt mỏi trên hành trình di chuyển. Dòng xe VIP Dcar Limousine đỉnh cao, khoang ghế rộng rãi với trang bị sạc, ghế massage, lái xe lịch thiệp am hiểu lễ nghi ngoại giao sẽ là sự khởi đầu hoàn hảo nhất cho chuyến đi của bạn.</p>
+                        <ul class="space-y-3 font-semibold text-brand-deep text-sm">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Định hình chuẩn đưa đón VIP từ sân bay, sự kiện</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Xe đời mới, được vệ sinh và bảo dưỡng nghiêm ngặt</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Đội ngũ tài xế chuyên phục vụ khách nước ngoài và VIP</li>
+                        </ul>
+                        <div class="pt-4">
+                            <a href="#tu-van" class="bg-brand-deep hover:bg-brand-primary text-white font-bold px-6 py-3 rounded-xl transition inline-flex items-center">
+                                Đặt xe VIP đưa đón <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?auto=format&fit=crop&q=80&w=800" alt="VIP Car" class="rounded-2xl w-full h-[350px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/dac0a3?text=Vận+Chuyển+VIP'">
+                    </div>
+                </div>
+
+                <!-- TAB 6: RESORTS -->
+                <div id="tab-resort" class="tab-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-block bg-brand-gold/20 text-brand-deep font-extrabold text-xs px-3 py-1 rounded-md uppercase tracking-wider">Mảnh Ghép 06 / Lưu trú thượng hạng</div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight">Mạng Lưới Đối Tác Liên Kết Resort & Khách Sạn 5 Sao</h3>
+                        <p class="text-gray-600 leading-relaxed font-light">Chúng tôi là đại lý cấp 1 và đối tác phân phối độc quyền dịch vụ phòng nghỉ của chuỗi resort 5 sao lớn nhất tại Việt Nam (Vinpearl, Amanoi, InterContinental, JW Marriott...). Mang tới mức giá cực kỳ ưu đãi đi kèm loạt dịch vụ nâng hạng phòng đặc quyền.</p>
+                        <ul class="space-y-3 font-semibold text-brand-deep text-sm">
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Cam kết giá tốt hơn đặt trực tiếp hoặc qua các OTA</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Đặc quyền nâng cấp phòng trống, check-in sớm, check-out muộn</li>
+                            <li class="flex items-center"><i class="fa-solid fa-circle-check text-emerald-500 mr-2"></i> Hỗ trợ giải quyết sự cố thần tốc bởi tài khoản đại lý tổng</li>
+                        </ul>
+                        <div class="pt-4">
+                            <a href="#tu-van" class="bg-brand-deep hover:bg-brand-primary text-white font-bold px-6 py-3 rounded-xl transition inline-flex items-center">
+                                Khảo sát quỹ phòng trống <i class="fa-solid fa-arrow-right-long ml-2"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=800" alt="Resort" class="rounded-2xl w-full h-[350px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/dac0a3?text=Resort+5+Sao'">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT US & VISION -->
+    <section id="ve-chung-toi" class="py-24 bg-brand-light relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Visual Column -->
+                <div class="grid grid-cols-2 gap-4">
+                    <div class="space-y-4">
+                        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=600" alt="Team 1" class="rounded-2xl h-[260px] w-full object-cover shadow-lg" onerror="this.src='https://placehold.co/600x400/0b132b/dac0a3?text=Team+Du+Lịch'">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=600" alt="Team 2" class="rounded-2xl h-[180px] w-full object-cover shadow-lg" onerror="this.src='https://placehold.co/600x400/0b132b/dac0a3?text=Team+Sự+Kiện'">
+                    </div>
+                    <div class="space-y-4 pt-10">
+                        <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=600" alt="Destination 1" class="rounded-2xl h-[180px] w-full object-cover shadow-lg" onerror="this.src='https://placehold.co/600x400/0b132b/dac0a3?text=Khám+Phá'">
+                        <img src="https://images.unsplash.com/photo-1506012787146-f92b2d7d6d96?auto=format&fit=crop&q=80&w=600" alt="Destination 2" class="rounded-2xl h-[260px] w-full object-cover shadow-lg" onerror="this.src='https://placehold.co/600x400/0b132b/dac0a3?text=Vịnh+Hạ+Long'">
+                    </div>
+                </div>
+
+                <!-- Text Content Column -->
+                <div class="space-y-8">
+                    <div class="space-y-3">
+                        <span class="text-brand-primary text-sm font-extrabold uppercase tracking-widest">Lời Ngỏ Từ Ban Điều Hành</span>
+                        <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-deep tracking-tight">Khẳng Định Vị Thế Đồng Hành Trên Mọi Hành Trình</h2>
+                        <p class="text-gray-600 leading-relaxed font-light text-base sm:text-lg">
+                            Kính gửi Quý khách hàng và đối tác! <br>
+                            Trải qua quá trình hình thành và phát triển bền bỉ bền vững từ năm 2015, <strong>Hoa Sen Travel</strong> không ngừng mở rộng quy mô dịch vụ, từng bước định vị thương hiệu là đối tác uy tín số 1 của các tập đoàn FDI, doanh nghiệp lớn, tổ chức tài chính và phân khúc khách hàng VIP lữ hành quốc tế.
+                        </p>
+                    </div>
+
+                    <!-- Core Value Icons with dynamic borders -->
+                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+                        <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-deep/10 text-brand-deep rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-bullseye text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-deep">Tập trung khách hàng</h4>
+                                <p class="text-xs text-gray-500 mt-1">Lấy lợi ích, an toàn và sự thỏa mãn của khách hàng làm kim chỉ nam.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-deep/10 text-brand-deep rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-ribbon text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-deep">Cam kết Chất Lượng</h4>
+                                <p class="text-xs text-gray-500 mt-1">SLA khắt khe trong toàn chuỗi cung ứng trực tiếp.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-deep/10 text-brand-deep rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-lightbulb text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-deep">Sáng tạo không ngừng</h4>
+                                <p class="text-xs text-gray-500 mt-1">Đổi mới kịch bản, tiên phong xu hướng trải nghiệm độc đáo.</p>
+                            </div>
+                        </div>
+                        <div class="bg-white p-5 rounded-2xl border border-gray-100 shadow-sm flex items-start space-x-4">
+                            <div class="w-10 h-10 bg-brand-deep/10 text-brand-deep rounded-xl flex items-center justify-center shrink-0">
+                                <i class="fa-solid fa-handshake text-lg"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-brand-deep">Đồng Hành Bền Vững</h4>
+                                <p class="text-xs text-gray-500 mt-1">Chia sẻ lợi ích lâu dài đối với đối tác và cộng đồng bản địa.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PRESET DESTINATIONS / BESPOKE TOUR PREVIEW -->
+    <section id="bo-suu-tap" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+                <div class="max-w-2xl space-y-4">
+                    <span class="text-brand-primary text-sm font-extrabold uppercase tracking-widest bg-blue-50 px-4 py-2 rounded-full">Gợi ý hành trình 2026</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-deep tracking-tight">Những Điểm Đến Độc Quyền Được Lựa Chọn Nhiều Nhất</h2>
+                    <p class="text-gray-600 font-light text-lg">Tham khảo các cấu trúc hải trình sang trọng đã được chúng tôi kiểm duyệt tối ưu dịch vụ.</p>
+                </div>
+                <div class="mt-6 md:mt-0">
+                    <a href="#tu-van" class="text-brand-primary hover:text-brand-deep font-bold transition flex items-center group">
+                        Xem tất cả lịch trình <i class="fa-solid fa-circle-arrow-right ml-2 text-xl group-hover:translate-x-1 transition-all"></i>
+                    </a>
                 </div>
             </div>
 
-            <div class="md:col-span-3 space-y-3">
-                <h5 class="text-white font-bold uppercase tracking-widest text-hsv-gold">Trụ sở Hà Nội</h5>
-                <div class="w-6 h-0.5 bg-hsv-blue"></div>
-                <p class="text-[11px] flex items-start gap-1.5 leading-relaxed">
-                    <i data-lucide="map-pin" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
-                    55/475 Nguyễn Trãi, phường Thanh Liệt, quận Thanh Xuân, TP Hà Nội 
-                </p>
+            <!-- Grid Cards with detailed hover animations and standard Fallback Images -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- CARD 1 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-[240px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=600" alt="Ha Long" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0b132b/dac0a3?text=Hạ+Long'">
+                        <span class="absolute top-4 left-4 bg-brand-deep text-white font-bold text-xs px-3 py-1.5 rounded-full uppercase tracking-widest">VIP Hạ Long</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-bold text-brand-deep">Hải Trình Di Sản Trên Siêu Du Thuyền 5 Sao</h3>
+                        <p class="text-gray-500 text-sm font-light">Thưởng lãm kỳ quan vịnh Hạ Long - Tuần Châu, thưởng thức ẩm thực Michelin thượng hạng và lưu trú Cabin thượng hạng.</p>
+                        <div class="pt-4 border-t border-gray-100 flex justify-between items-center text-sm font-semibold text-brand-deep">
+                            <span><i class="fa-solid fa-clock text-brand-gold mr-1"></i> 3 Ngày 2 Đêm</span>
+                            <span><i class="fa-solid fa-users text-brand-gold mr-1"></i> Khách Đoàn & VIP</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 2 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-[240px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=600" alt="Quang Binh" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0b132b/dac0a3?text=Quảng+Bình'">
+                        <span class="absolute top-4 left-4 bg-brand-deep text-white font-bold text-xs px-3 py-1.5 rounded-full uppercase tracking-widest">Đặc Quyền Khám Phá</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-bold text-brand-deep">Chinh Phục Di Sản Thiên Nhiên Quảng Bình</h3>
+                        <p class="text-gray-500 text-sm font-light">Khám phá chuỗi hang động kỳ vĩ nhất thế giới, chèo thuyền Kayak trên dòng sông xanh ngắt và lưu trú resort 5 sao bờ biển.</p>
+                        <div class="pt-4 border-t border-gray-100 flex justify-between items-center text-sm font-semibold text-brand-deep">
+                            <span><i class="fa-solid fa-clock text-brand-gold mr-1"></i> 4 Ngày 3 Đêm</span>
+                            <span><i class="fa-solid fa-users text-brand-gold mr-1"></i> Doanh Nghiệp MICE</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- CARD 3 -->
+                <div class="bg-white rounded-3xl overflow-hidden shadow-xl border border-gray-100 group hover:-translate-y-2 transition-all duration-300">
+                    <div class="relative h-[240px] overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1540555700478-4be289fbecef?auto=format&fit=crop&q=80&w=600" alt="Resort" class="w-full h-full object-cover group-hover:scale-110 transition duration-500" onerror="this.src='https://placehold.co/600x400/0b132b/dac0a3?text=Resort+Phú+Quốc'">
+                        <span class="absolute top-4 left-4 bg-brand-deep text-white font-bold text-xs px-3 py-1.5 rounded-full uppercase tracking-widest">Nghỉ dưỡng VIP</span>
+                    </div>
+                    <div class="p-6 space-y-4">
+                        <h3 class="text-xl font-bold text-brand-deep">Thiên Đường Nghỉ Dưỡng Thượng Lưu Phú Quốc</h3>
+                        <p class="text-gray-500 text-sm font-light">Lưu trú Villa hồ bơi vô cực riêng tư hướng biển, thưởng ngoạn hoàng hôn trên biển và thư giãn spa cao cấp trọn gói.</p>
+                        <div class="pt-4 border-t border-gray-100 flex justify-between items-center text-sm font-semibold text-brand-deep">
+                            <span><i class="fa-solid fa-clock text-brand-gold mr-1"></i> 3 Ngày 2 Đêm</span>
+                            <span><i class="fa-solid fa-users text-brand-gold mr-1"></i> Gia Đình & Cặp Đôi</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SPECIAL SECTION: HOA SEN RESTAURANT & FINE DINING -->
+    <section id="nha-hang-hoa-sen" class="py-24 premium-gradient text-white relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                
+                <!-- Gallery Column -->
+                <div class="space-y-6">
+                    <span class="text-brand-gold text-sm font-extrabold uppercase tracking-widest bg-brand-gold/15 border border-brand-gold/20 px-4 py-2 rounded-full">Tinh hoa ẩm thực di sản</span>
+                    <h2 class="text-3xl sm:text-5xl font-extrabold tracking-tight">Nhà Hàng Hoa Sen<br><span class="gold-gradient-text">Ẩm Thực Tinh Tế - Không Gian Sang Trọng</span></h2>
+                    <p class="text-gray-300 font-light leading-relaxed">
+                        Hải sản tươi ngon phong phú của vùng vịnh biển di sản được chọn lọc nghiêm ngặt, kết hợp với tài hoa biến tấu đương đại của bếp trưởng hàng đầu, chúng tôi mang tới những bàn tiệc ấm cúng, sang trọng và chuẩn mực nhất dành cho gia đình hoặc sự kiện tiếp khách đặc thù của doanh nghiệp.
+                    </p>
+
+                    <div class="grid grid-cols-3 gap-4 pt-4">
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+                            <i class="fa-solid fa-shrimp text-2xl text-brand-gold mb-2"></i>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-gray-300">Hải Sản Tươi Ngon</span>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+                            <i class="fa-solid fa-wine-glass text-2xl text-brand-gold mb-2"></i>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-gray-300">Không Gian VIP</span>
+                        </div>
+                        <div class="bg-white/5 border border-white/10 rounded-2xl p-4 text-center">
+                            <i class="fa-solid fa-bell text-2xl text-brand-gold mb-2"></i>
+                            <span class="block text-xs font-bold uppercase tracking-wider text-gray-300">Đại Tiệc Chu Đáo</span>
+                        </div>
+                    </div>
+
+                    <!-- Open times -->
+                    <div class="bg-white/5 border border-white/10 rounded-2xl p-5 flex items-center justify-between text-sm">
+                        <span class="font-bold text-brand-gold"><i class="fa-regular fa-clock mr-2"></i> GIỜ MỞ CỬA HÀNG NGÀY:</span>
+                        <span class="font-semibold">10:00 - 22:00 (Hỗ trợ đặt sảnh tiệc riêng)</span>
+                    </div>
+                </div>
+
+                <!-- Interactive Booking Form & Display Column -->
+                <div class="bg-white text-gray-800 rounded-3xl p-8 shadow-2xl relative">
+                    <!-- Elegant background icon -->
+                    <div class="absolute top-4 right-4 text-brand-gold/15 text-7xl"><i class="fa-solid fa-utensils"></i></div>
+                    
+                    <h3 class="text-2xl font-bold text-brand-deep mb-6 flex items-center">
+                        <i class="fa-solid fa-bookmark text-brand-gold mr-3"></i> Đặt Bàn Tiệc & Nhận Thực Đơn VIP
+                    </h3>
+                    
+                    <form id="restaurant-booking-form" onsubmit="handleRestaurantBooking(event)" class="space-y-4">
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Tên khách hàng</label>
+                                <input type="text" required id="rest-name" placeholder="Nguyễn Văn A" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Số điện thoại liên hệ</label>
+                                <input type="tel" required id="rest-phone" placeholder="09xx xxx xxx" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Số lượng khách hàng</label>
+                                <select id="rest-guests" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                                    <option value="2-4">Từ 2 đến 4 người</option>
+                                    <option value="5-10">Từ 5 đến 10 người</option>
+                                    <option value="11-20">Đoàn 11 - 20 người</option>
+                                    <option value="20+">Tiệc công ty lớn (Hơn 20 người)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Thời gian đặt bàn</label>
+                                <input type="datetime-local" required id="rest-time" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+
+                        <div>
+                            <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Yêu cầu không gian hoặc Thực đơn mong muốn</label>
+                            <textarea id="rest-note" rows="3" placeholder="Ví dụ: Phòng sảnh VIP riêng tư, set hải sản tôm hùm, oyster và đồ vang đỏ..." class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold"></textarea>
+                        </div>
+
+                        <div class="pt-2">
+                            <button type="submit" class="w-full bg-brand-deep hover:bg-brand-primary text-white font-extrabold py-4 rounded-xl transition duration-300 shadow-lg shadow-brand-deep/20 flex items-center justify-center">
+                                Xác Nhận Đặt Sảnh Tiệc <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- WIZARD/FORM: INTEGRATED BESPOKE TRIP BUILDER -->
+    <section id="tu-van" class="py-24 bg-gray-50 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary text-sm font-extrabold uppercase tracking-widest bg-blue-50 px-4 py-2 rounded-full">Chế tác trải nghiệm độc bản</span>
+                <h2 class="text-3xl sm:text-5xl font-extrabold text-brand-deep mt-4 tracking-tight">Yêu Cầu Thiết Kế Lịch Trình Thần Tốc</h2>
+                <p class="text-gray-500 mt-3 font-light text-base sm:text-lg">Chúng tôi cam kết bảo mật thông tin và phản hồi đề xuất kịch bản chi tiết trong 5 phút 24/7.</p>
             </div>
 
-            <div class="md:col-span-3 space-y-3">
-                <h5 class="text-white font-bold uppercase tracking-widest text-hsv-gold">Chi nhánh Quảng Ninh</h5>
-                <div class="w-6 h-0.5 bg-hsv-blue"></div>
-                <p class="text-[11px] flex items-start gap-1.5 leading-relaxed">
-                    <i data-lucide="map-pin" class="w-4 h-4 text-blue-400 shrink-0 mt-0.5"></i>
-                    Điểm dừng nghỉ Eco - Tổ 94, khu Đồn Điền, phường Tuần Châu, TP Hạ Long 
+            <!-- Form Wrapper with Card Design -->
+            <div class="bg-white rounded-3xl p-6 sm:p-12 shadow-xl border border-gray-100 relative">
+                <!-- STEP INDICATOR -->
+                <div class="flex justify-between items-center mb-10 max-w-md mx-auto relative">
+                    <div class="absolute h-1 bg-gray-200 left-0 right-0 top-1/2 -translate-y-1/2 z-0"></div>
+                    <div id="step-line" class="absolute h-1 bg-brand-primary left-0 top-1/2 -translate-y-1/2 z-0 transition-all duration-300 w-0"></div>
+                    
+                    <div id="step-node-1" class="w-10 h-10 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold z-10 transition">1</div>
+                    <div id="step-node-2" class="w-10 h-10 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center font-bold z-10 transition">2</div>
+                    <div id="step-node-3" class="w-10 h-10 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center font-bold z-10 transition">3</div>
+                </div>
+
+                <!-- MULTI-STEP WIZARD FORM -->
+                <form id="bespoke-wizard-form" onsubmit="handleWizardSubmit(event)">
+                    
+                    <!-- STEP 1: SERVICE TYPE -->
+                    <div id="wizard-step-1" class="wizard-step space-y-6">
+                        <h3 class="text-lg font-bold text-brand-deep text-center mb-6">BƯỚC 1: BẠN CẦN THIẾT KẾ DỊCH VỤ NÀO?</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <label class="border-2 border-gray-100 hover:border-brand-primary rounded-2xl p-5 flex items-center space-x-4 cursor-pointer transition bg-gray-50/50">
+                                <input type="radio" name="service-type" value="Bespoke Tour" checked class="w-5 h-5 text-brand-primary">
+                                <div>
+                                    <span class="block font-bold text-brand-deep text-sm">Tour Độc Bản (Bespoke)</span>
+                                    <span class="block text-xs text-gray-400 mt-0.5">Lịch trình cá nhân hóa cao cấp</span>
+                                </div>
+                            </label>
+                            <label class="border-2 border-gray-100 hover:border-brand-primary rounded-2xl p-5 flex items-center space-x-4 cursor-pointer transition bg-gray-50/50">
+                                <input type="radio" name="service-type" value="MICE Event" class="w-5 h-5 text-brand-primary">
+                                <div>
+                                    <span class="block font-bold text-brand-deep text-sm">Sự Kiện & MICE Doanh Nghiệp</span>
+                                    <span class="block text-xs text-gray-400 mt-0.5">Team building, Gala dinner lớn</span>
+                                </div>
+                            </label>
+                            <label class="border-2 border-gray-100 hover:border-brand-primary rounded-2xl p-5 flex items-center space-x-4 cursor-pointer transition bg-gray-50/50">
+                                <input type="radio" name="service-type" value="Luxury Cruise" class="w-5 h-5 text-brand-primary">
+                                <div>
+                                    <span class="block font-bold text-brand-deep text-sm">Siêu Du Thuyền Hạ Long</span>
+                                    <span class="block text-xs text-gray-400 mt-0.5">Tour nghỉ đêm vịnh di sản VIP</span>
+                                </div>
+                            </label>
+                            <label class="border-2 border-gray-100 hover:border-brand-primary rounded-2xl p-5 flex items-center space-x-4 cursor-pointer transition bg-gray-50/50">
+                                <input type="radio" name="service-type" value="VIP Transport" class="w-5 h-5 text-brand-primary">
+                                <div>
+                                    <span class="block font-bold text-brand-deep text-sm">Đưa Đón VIP Hạng Thương Gia</span>
+                                    <span class="block text-xs text-gray-400 mt-0.5">Dàn limousine đưa đón 5 sao</span>
+                                </div>
+                            </label>
+                        </div>
+                        <div class="flex justify-end pt-4">
+                            <button type="button" onclick="nextStep(2)" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-8 py-3.5 rounded-xl transition shadow-lg shadow-brand-deep/10">
+                                Tiếp Tục <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: TRIP DETAILS -->
+                    <div id="wizard-step-2" class="wizard-step hidden space-y-6">
+                        <h3 class="text-lg font-bold text-brand-deep text-center mb-6">BƯỚC 2: CÁC CHI TIẾT SƠ BỘ VỀ CHUYẾN ĐI</h3>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Địa điểm mong muốn</label>
+                                <input type="text" id="trip-destination" placeholder="Ví dụ: Hạ Long, Quảng Ninh, Phú Quốc..." class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Dự kiến số người</label>
+                                <input type="text" id="trip-people" placeholder="Ví dụ: 10 khách VIP, Đoàn 200 nhân viên..." class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Thời gian khởi hành dự kiến</label>
+                                <input type="date" id="trip-date" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Ngân sách dự chi (Nếu có)</label>
+                                <input type="text" id="trip-budget" placeholder="Để chúng tôi tối ưu dòng xe & resort phù hợp" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+                        <div class="flex justify-between pt-4">
+                            <button type="button" onclick="nextStep(1)" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold px-8 py-3.5 rounded-xl transition">
+                                <i class="fa-solid fa-arrow-left mr-2 text-xs"></i> Quay Lại
+                            </button>
+                            <button type="button" onclick="nextStep(3)" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-8 py-3.5 rounded-xl transition shadow-lg shadow-brand-deep/10">
+                                Tiếp Tục <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: CONTACT INFO -->
+                    <div id="wizard-step-3" class="wizard-step hidden space-y-6">
+                        <h3 class="text-lg font-bold text-brand-deep text-center mb-6">BƯỚC 3: THÔNG TIN LIÊN HỆ ĐỂ NHẬN PHẢN HỒI</h3>
+                        <div class="space-y-4 max-w-md mx-auto">
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Tên của bạn hoặc Doanh nghiệp</label>
+                                <input type="text" required id="contact-name" placeholder="Ví dụ: Anh Nhất / Công ty ABC" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Số điện thoại liên hệ (Có Zalo càng tốt)</label>
+                                <input type="tel" required id="contact-phone" placeholder="Để nhân viên tư vấn phản hồi nhanh" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-gray-500 uppercase tracking-widest mb-1">Email nhận kịch bản PDF</label>
+                                <input type="email" required id="contact-email" placeholder="example@gmail.com" class="w-full px-4 py-3 rounded-xl bg-gray-50 border border-gray-200 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+                        <div class="flex justify-between pt-4">
+                            <button type="button" onclick="nextStep(2)" class="bg-gray-100 hover:bg-gray-200 text-gray-700 font-extrabold px-8 py-3.5 rounded-xl transition">
+                                <i class="fa-solid fa-arrow-left mr-2 text-xs"></i> Quay Lại
+                            </button>
+                            <button type="submit" class="bg-brand-gold hover:bg-white text-brand-deep border-2 border-brand-gold font-extrabold px-10 py-4 rounded-xl transition duration-300 shadow-lg shadow-brand-gold/20 flex items-center justify-center">
+                                Gửi Yêu Cầu Chế Tác <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </</form>
+            </div>
+        </div>
+    </section>
+
+    <!-- TARGET CLIENTS / PARTNERS LOGO GRID -->
+    <section class="py-16 bg-white border-y border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <p class="text-center text-xs font-bold uppercase tracking-widest text-gray-400 mb-8">Đối Tượng Khách Hàng & Đối Tác Chiến Lược Của Hoa Sen Travel</p>
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-6 items-center justify-items-center opacity-60">
+                <div class="text-sm font-extrabold text-brand-deep tracking-wider uppercase"><i class="fa-solid fa-building-columns mr-1"></i> Ngân Hàng</div>
+                <div class="text-sm font-extrabold text-brand-deep tracking-wider uppercase"><i class="fa-solid fa-hospital-user mr-1"></i> Y Tế & Dược Phẩm</div>
+                <div class="text-sm font-extrabold text-brand-deep tracking-wider uppercase"><i class="fa-solid fa-industry mr-1"></i> Doanh Nghiệp FDI</div>
+                <div class="text-sm font-extrabold text-brand-deep tracking-wider uppercase"><i class="fa-solid fa-house-chimney-window mr-1"></i> Bất Động Sản</div>
+                <div class="text-sm font-extrabold text-brand-deep tracking-wider uppercase"><i class="fa-solid fa-building-shield mr-1"></i> Cơ Quan Nhà Nước</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH DETAILED LEGAL PROFILE -->
+    <footer class="bg-brand-dark text-gray-400 pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+            
+            <!-- Company Info & Logo -->
+            <div class="space-y-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-brand-gold rounded-xl flex items-center justify-center text-brand-deep">
+                        <svg viewBox="0 0 24 24" class="w-7 h-7 fill-current" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12,2C11.5,4 10,7 8,9C6,11 3.5,11.5 2,12C3.5,12.5 6,13 8,15C10,17 11.5,20 12,22C12.5,20 14,17 16,15C18,13 20.5,12.5 22,12C20.5,11.5 18,11 16,9C14,7 12.5,4 12,2Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block text-md font-extrabold text-white tracking-wider uppercase">Hoa Sen Travel</span>
+                        <span class="block text-xs text-brand-gold uppercase tracking-widest">Gắn kết trải nghiệm thuần khiết</span>
+                    </div>
+                </div>
+                <p class="text-sm font-light leading-relaxed">
+                    Hoa Sen Travel tự hào là một trong những đơn vị lữ hành đẳng cấp hàng đầu Việt Nam. Chúng tôi cam kết mang tới sự hài lòng tối đa trong từng hành trình.
                 </p>
+                <div class="pt-4 border-t border-white/10 space-y-2 text-xs">
+                    <p><strong class="text-white">Tên doanh nghiệp:</strong> CÔNG TY CỔ PHẦN XÂY DỰNG VÀ DỊCH VỤ HOA SEN</p>
+                    <p><strong class="text-white">Đại diện pháp luật:</strong> Ông Lý Hồng Nhất</p>
+                    <p><strong class="text-white">Mã số thuế:</strong> 0106914229</p>
+                    <p><strong class="text-white">Ngày hoạt động:</strong> 23/07/2015</p>
+                </div>
+            </div>
+
+            <!-- Offices & Locations -->
+            <div class="space-y-6">
+                <h3 class="text-md font-extrabold text-white uppercase tracking-widest border-l-4 border-brand-gold pl-3">Hệ thống văn phòng</h3>
+                <div class="space-y-4 text-sm font-light">
+                    <div>
+                        <span class="block font-bold text-white text-xs uppercase tracking-wider mb-1"><i class="fa-solid fa-map-pin text-brand-gold mr-1"></i> Trụ sở chính (Hà Nội):</span>
+                        <p>55/475 Nguyễn Trãi, phường Thanh Liệt, quận Thanh Xuân, TP Hà Nội</p>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-white text-xs uppercase tracking-wider mb-1"><i class="fa-solid fa-map-pin text-brand-gold mr-1"></i> Chi nhánh (Quảng Ninh):</span>
+                        <p>Điểm dừng nghỉ Eco - Tổ 94, khu Đồn Điền, phường Tuần Châu, TP Hạ Long, Quảng Ninh</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fast Contacts & News -->
+            <div class="space-y-6">
+                <h3 class="text-md font-extrabold text-white uppercase tracking-widest border-l-4 border-brand-gold pl-3">Kết nối trực tuyến</h3>
+                <div class="space-y-3 text-sm">
+                    <p class="font-light">Hãy để lại email để cập nhật sớm các chương trình ưu đãi tour và du thuyền mới nhất.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email của bạn" class="w-full bg-white/5 border border-white/10 rounded-l-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-gold">
+                        <button class="bg-brand-gold text-brand-deep font-bold px-4 rounded-r-xl hover:bg-white transition" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+                <div class="pt-4 flex space-x-4">
+                    <div class="bg-white/5 p-3 rounded-xl flex items-center space-x-3 w-full">
+                        <i class="fa-solid fa-phone text-xl text-brand-gold"></i>
+                        <div>
+                            <span class="block text-xs text-gray-500">Đặt chỗ nhanh</span>
+                            <a href="tel:0852566616" class="block font-bold text-white text-sm hover:text-brand-gold">085 256 6616</a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
         </div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-6 mt-8 border-t border-slate-800 text-center text-[10px] text-slate-500">
-            © 2026 CÔNG TY CỔ PHẦN XÂY DỰNG VÀ DỊCH VỤ HOA SEN. Bảo lưu mọi quyền.
+
+        <!-- Copyright section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs">
+            <p>&copy; 2026 CÔNG TY CỔ PHẦN XÂY DỰNG VÀ DỊCH VỤ HOA SEN. All rights reserved.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-brand-gold">Chính sách bảo mật</a>
+                <a href="#" class="hover:text-brand-gold">Điều khoản dịch vụ</a>
+                <a href="#" class="hover:text-brand-gold">Cam kết SLA dịch vụ</a>
+            </div>
         </div>
     </footer>
 
-    <!-- Scripting interactive elements, database simulations and calculator -->
+    <!-- CUSTOM MODAL DIALOG (No browser alert) -->
+    <div id="custom-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-brand-dark/60 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl border border-gray-100 text-center space-y-6 transform scale-95 transition-all">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="space-y-2">
+                <h3 class="text-2xl font-bold text-brand-deep" id="modal-title">Gửi thành công!</h3>
+                <p class="text-sm text-gray-500" id="modal-body">Yêu cầu thiết kế tour của bạn đã được tiếp nhận. Đội ngũ điều phối viên sẽ liên hệ lại ngay trong vòng 5 phút.</p>
+            </div>
+            <div>
+                <button onclick="closeModal()" class="w-full bg-brand-deep hover:bg-brand-primary text-white font-bold py-3 rounded-xl transition shadow-lg shadow-brand-deep/15">
+                    Đồng ý
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
     <script>
-        // Default state variables for Tour Planner (Phương án 1)
-        let plActiveDuration = 3; // default 3 days
-        let plActiveHotel = 4;    // default 4 stars
-        let plActiveTab = 'itinerary'; // default sub-tab
+        // Hamburger Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
 
-        // Base rate mapping (Pricing per person)
-        const plDestRates = {
-            "halong_tuanchau_coto": {
-                2: 1850000,
-                3: 2550000,
-                4: 3150000
-            },
-            "yentu_halong": {
-                2: 1650000,
-                3: 2350000,
-                4: 2950000
-            },
-            "sapa_fansipan": {
-                2: 1750000,
-                3: 2450000,
-                4: 3050000
+        // Close menu on link click
+        mobileMenu.addEventListener('click', (e) => {
+            if(e.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
             }
-        };
+        });
 
-        // Hotel stars pricing multipliers
-        const plHotelMult = {
-            3: 0.9,
-            4: 1.0,
-            5: 1.35
-        };
-
-        // Extra programs per person pricing
-        const plExtras = {
-            "teambuilding": 150000,
-            "gala": 250000
-        };
-
-        // Interactive Tour Outlines
-        const plOutlines = {
-            "halong_tuanchau_coto": {
-                name: "Hành Trình Đảo Ngọc Cô Tô - Hạ Long",
-                2: [
-                    "<strong>Ngày 1: Xe VIP đưa đón - Tàu cao tốc ra đảo Cô Tô:</strong> Đón đoàn tại cơ sở doanh nghiệp đi cảng Cái Rồng, tàu cao tốc đưa sang đảo Cô Tô.  Ăn trưa hải sản, chiều bùng cháy với chương trình <strong>Team Building gắn kết nhân sự</strong>.",
-                    "<strong>Ngày 1 (Tối) - Gala Dinner:</strong> Đêm tiệc mặn giao lưu đầy xúc cảm kết nối tinh thần đồng đội.",
-                    "<strong>Ngày 2: Chinh phục ngọn Hải Đăng - Tuần Châu:</strong> Sáng chiêm ngưỡng toàn cảnh biển từ đỉnh Hải Đăng. Ăn trưa, tàu cao tốc về đất liền, dừng chân nghỉ ngơi và tiễn đoàn về an toàn. "
-                ],
-                3: [
-                    "<strong>Ngày 1: Đón đoàn thực địa - Tàu cao tốc sang Cô Tô:</strong> Đội xe đời mới đưa đón đúng giờ tới cảng, tàu cao tốc đưa ra đảo ngọc Cô Tô.  Nhận phòng, tự do tắm biển bãi Vàn Chảy nguyên sơ bồi bổ sức khỏe.",
-                    "<strong>Ngày 2: Khám Phá Cô Tô - Đêm Tiệc Gala:</strong> Sáng chiêm bái tượng đài Bác Hồ, bãi đá Móng Rồng. Chiều bùng nổ <strong>Team Building thắt chặt tình đoàn kết</strong> bãi cát mịn Hồng Vàn.  Tối tham dự Gala Dinner ấm cúng.",
-                    "<strong>Ngày 3: Điểm Dừng Eco Tuần Châu - Hà Nội:</strong> Di chuyển tàu cao tốc về đất liền, xe đưa đoàn dùng cơm trưa tại hệ thống Nhà hàng Hoa Sen Tuần Châu, mua sắm đặc sản và tiễn đoàn về trụ sở an toàn ."
-                ],
-                4: [
-                    "<strong>Ngày 1: Đồng hành lữ hành ra Cô Tô:</strong> Xe VIP đưa đón tận nơi từ Hà Nội. Sang đảo Cô Tô nhận phòng nghỉ ngơi, thưởng thức bữa trưa hải sản tươi rói bồi dưỡng thể trạng .",
-                    "<strong>Ngày 2: Sôi động Team Building gắn kết:</strong> Sáng tham quan đảo Cô Tô con hoang sơ. Chiều tham gia các hoạt động gắn kết tập thể bãi biển.  Tối liên hoan tiệc mặn hải sản.",
-                    "<strong>Ngày 3: Khám phá đỉnh Hải Đăng & Đại tiệc Gala:</strong> Sáng chinh phục đỉnh Hải Đăng ngắm trọn biển đảo.  Tối bùng nổ đêm Gala Dinner tri ân ấm cúng.",
-                    "<strong>Ngày 4: Ghé Eco Tuần Châu - Trở về:</strong> Tàu cao tốc về đất liền, xe dừng chân nghỉ ngơi dùng bữa trưa tại điểm dừng nghỉ Eco Tuần Châu và đưa đoàn về văn phòng an toàn ."
-                ]
-            },
-            "yentu_halong": {
-                name: "Hành Trình Di Sản Tâm Linh Yên Tử - Hạ Long",
-                2: [
-                    "<strong>Ngày 1: Chinh phục đỉnh thiêng Chùa Đồng Yên Tử:</strong> Đón đoàn từ sáng sớm di chuyển tới Yên Tử, cáp treo chiêm bái Chùa Đồng linh thiêng, ăn trưa chay dưỡng sinh bồi bổ thể trạng.",
-                    "<strong>Ngày 1 (Tối) - Đêm trà đàm tri ân:</strong> Gala Dinner ấm cúng nâng niu sức khỏe cán bộ nhân sự và chia sẻ chân thành.",
-                    "<strong>Ngày 2: Về với vịnh biển Hạ Long:</strong> Khám phá kỳ quan vịnh Hạ Long bằng tàu du lịch, ăn trưa cơm hải sản tươi ngon, mua sắm đặc sản Quảng Ninh và xe đưa tiễn về mỏ. "
-                ],
-                3: [
-                    "<strong>Ngày 1: Khám phá cõi Phật thiêng liêng Yên Tử:</strong> Xe VIP đón đoàn di chuyển an toàn tới chân núi.  Cáp treo lên chùa Hoa Yên, chiêm bái Chùa Đồng cầu bình an tài lộc cho doanh nghiệp. Tối dùng tiệc cơm chay thanh tịnh.",
-                    "<strong>Ngày 2: Về với Vịnh di sản & Gala Dinner:</strong> Di chuyển về Hạ Long nghỉ ngơi. Chiều tổ chức <strong>Team Building bãi biển nhẹ nhàng hồi phục sức khỏe</strong>.  Tối bùng nổ tiệc Gala Dinner hải sản gắn kết sâu sắc.",
-                    "<strong>Ngày 3: Trải nghiệm Siêu Du Thuyền 5★:</strong> Du ngoạn thuyền rồng tham quan vịnh kỳ quan, ăn trưa hải sản, mua sắm đặc sản vùng vịnh tại điểm dừng nghỉ Eco Tuần Châu và tiễn đoàn về an toàn ."
-                ],
-                4: [
-                    "<strong>Ngày 1: Thiền trà Yên Tử thanh tịnh:</strong> Đón đoàn di chuyển tới chân núi.  Trải nghiệm thiền trà, thanh lọc thể trạng và tĩnh tâm sau những tháng ngày làm việc vất vả. Đêm nghỉ dưỡng chân núi.",
-                    "<strong>Ngày 2: Hành hương Chùa Đồng - Về vịnh Hạ Long:</strong> Sáng hành hương chiêm bái cầu an.  Chiều di chuyển về nhận phòng biển Hạ Long tắm biển hồi phục sức khỏe. Đêm liên hoan nhẹ nhàng.",
-                    "<strong>Ngày 3: Du ngoạn Vịnh Kỳ Quan & Đêm Gala:</strong> Du thuyền khám phá hang động kỳ vĩ.  Tối tham dự <strong>Đại Tiệc Gala Dinner Vinh Danh Cán Bộ Xuất Sắc</strong> hoành tráng, tri ân cống hiến.",
-                    "<strong>Ngày 4: Tự do mua sắm - Tiễn đoàn:</strong> Sáng tự do tắm biển, tham quan, mua sắm hải sản Quảng Ninh tại điểm dừng chân Eco và xe đưa tiễn đoàn trở lại điểm đón an toàn ."
-                ]
-            },
-            "sapa_fansipan": {
-                name: "Hành Trình Mây Ngàn Sapa - Fansipan",
-                2: [
-                    "<strong>Ngày 1: Đón đoàn đi cao tốc Lào Cai - Bản Cát Cát:</strong> Xe VIP đưa đón xuyên suốt cao tốc lên Sapa, check-in ăn trưa đặc sản vùng cao. Chiều tham quan bản Cát Cát mộng mơ, khám phá văn hóa bản địa.",
-                    "<strong>Ngày 1 (Tối) - Gala Dinner Gặp Gỡ Sapa:</strong> Tiệc Gala ấm cúng giao lưu văn hóa nghệ thuật Tây Bắc độc đáo.",
-                    "<strong>Ngày 2: Chinh phục Nóc nhà Đông Dương Fansipan:</strong> Sáng trải nghiệm cáp treo lên đỉnh Fansipan mây ngàn. Ăn trưa đặc sản, tự do dạo phố mua sắm quà cáp và lên xe về điểm đón kết thúc hành trình."
-                ],
-                3: [
-                    "<strong>Ngày 1: Đón đoàn thực địa - Check-in thị trấn mây ngàn Sapa:</strong> Xe đón đoàn từ sớm đưa tới Sapa an toàn. Nhận phòng khách sạn, dùng bữa trưa. Chiều khám phá bản Cát Cát Tây Bắc nguyên sơ.",
-                    "<strong>Ngày 2: Đỉnh thiêng Fansipan - Đêm Hội Gala:</strong> Sáng vượt cáp treo ba dây chiêm bái đỉnh Fansipan kỳ vĩ. Chiều bùng nổ chương trình <strong>Team Building thắt chặt tình đồng chí</strong> bãi cỏ trung tâm.  Tối tiệc Gala Dinner ấm áp.",
-                    "<strong>Ngày 3: Cầu Kính Rồng Mây - Tiễn đoàn:</strong> Sáng tham quan Cầu Kính Rồng Mây ngoạn mục, ăn trưa đặc sản lợn bản nướng, check-out mua quà cáp và xe đưa tiễn đoàn về văn phòng an toàn."
-                ],
-                4: [
-                    "<strong>Ngày 1: Xe VIP đưa đón an toàn lên Sapa:</strong> Chào đón đoàn khởi hành lên Tây Bắc. Nhận phòng ăn trưa đặc sản. Chiều dạo quanh thị trấn mây ngàn, tham gia giao lưu lửa trại Tây Bắc.",
-                    "<strong>Ngày 2: Sôi động Team Building gắn kết:</strong> Chiều bùng nổ hoạt động Team Building gắn kết tập thể.  Tối tổ chức đêm BBQ nướng lợn mán đặc sản.",
-                    "<strong>Ngày 3: Cáp treo Fansipan & Đêm Gala Hoành Tráng:</strong> Sáng chinh phục Fansipan mây phủ.  Tối tham dự <strong>Đại Tiệc Gala Dinner vinh danh chiến binh xuất sắc</strong> của doanh nghiệp.",
-                    "<strong>Ngày 4: Thung Lũng Mường Hoa - Tiễn đoàn:</strong> Sáng tham quan thung lũng Mường Hoa đẹp như tranh vẽ, check-out dùng bữa trưa và xe lữ hành đưa đoàn trở về điểm hẹn an toàn."
-                ]
-            }
-        };
-
-        // Interactive Tour Menu Levels
-        const plMenus = {
-            3: [
-                "🍲 Lẩu hải sản tươi sống bồi bổ sức khỏe",
-                "🦐 Tôm rồng hấp sả bia ngọt đậm đà",
-                "🐚 Hàu sữa biển nướng mỡ hành béo ngậy chuẩn vị",
-                "🐟 Cá mú sốt ngũ vị giòn giòn bùi bùi",
-                "🥗 Nộm sứa sần sật bồi bổ cơ thể",
-                "🍚 Cơm cháy hải sâm dồi dào năng lượng",
-                "🍉 Trái cây dưa hấu tráng miệng tươi mát",
-                "🍵 Trà sen bồi bổ tinh thần"
-            ],
-            4: [
-                "🍲 Súp hải sâm bào ngư khai vị thượng vị",
-                "🦐 Ghẹ xanh Tuần Châu hấp bia ngọt thịt",
-                "🦪 Hàu sữa nướng phô mai đút lò hảo hạng",
-                "🦞 Tôm hùm nướng tỏi ăn kèm bánh mì giòn",
-                "🐟 Cá song hấp xì dầu chuẩn vị Nhà hàng Hoa Sen ",
-                "🐙 Mực tươi nhảy nướng muối ớt sần sật",
-                "🍚 Cơm niêu hải sản bồi bổ thể chất dồi dào",
-                "🍧 Kem tuyết trái cây mát lạnh dịu ngọt"
-            ],
-            5: [
-                "🍲 Súp bào ngư vây cá mập cao cấp thượng hạng",
-                "🦞 Tôm hùm bông nướng phô mai đút lò thương gia ",
-                "🦪 Sò điệp Nhật Bản áp chảo sốt bơ chanh sang trọng",
-                "🦀 Cua gạch Quảng Ninh hấp đậm đà ngọt thịt",
-                "🐟 Cá mú đỏ chưng tương kiểu Hồng Kông dai béo bùi",
-                "🐙 Mực một nắng nướng muối ớt cay giòn đặc sản",
-                "🍚 Cơm cháy hải sâm cung đình phục hồi sức khỏe",
-                "🍨 Kem tuyết trái cây nhập khẩu thượng hạng"
-            ]
-        };
-
-        // Simulated Executed Portfolios Database (HST-SEEDING Core)
-        let executedDatabase = [
-            {
-                title: "Tập Đoàn Điện Tử Samsung Việt Nam",
-                meta: "Tháng 05/2026 • Quy mô: 450 nhân sự",
-                desc: "Kỳ nghỉ hè MICE hoành tráng 3 Ngày 2 Đêm tại Hạ Long. Bùng nổ với thử thách Team Building đồng đội gắn kết sâu sắc và đêm Gala Dinner vinh danh chiến binh xuất sắc ngập tràn cảm xúc .",
-                img: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                title: "Bệnh Viện Đa Khoa Quốc Tế Hà Nội",
-                meta: "Tháng 06/2026 • Quy mô: 180 cán bộ y tế",
-                desc: "Chương trình nghỉ dưỡng bồi dưỡng thể chất, chăm sóc phục hồi sức khỏe dưỡng sinh dưới chân núi thiêng Yên Tử, kết hợp đêm Gala tri ân ấm cúng bồi bổ năng lượng thấu hiểu tận tâm .",
-                img: "https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=600&q=80"
-            },
-            {
-                title: "Ngân Hàng Ngoại Thương Vietcombank",
-                meta: "Tháng 04/2026 • Quy mô: 90 nhân sự VIP",
-                desc: "Hành trình di sản độc bản trên siêu du thuyền chuẩn 5★. Đơn vị lữ hành Hoa Sen trực tiếp điều phối toàn bộ khâu ẩm thực tôm hùm thượng vị, di chuyển limousine sang trọng an toàn tuyệt đối .",
-                img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=600&q=80"
-            }
-        ];
-
-        // Function: Update slider qty value labels
-        function updateWorkersDisplay() {
-            const qty = document.getElementById('rng-workers').value;
-            document.getElementById('lbl-qty-workers').innerText = `${qty} người`;
-        }
-
-        // Set Planner duration and recalculate
-        function setPlannerDuration(days, activeBtn) {
-            plActiveDuration = days;
-            const buttons = document.querySelectorAll('.planner-dur-btn');
-            buttons.forEach(btn => {
-                btn.className = "planner-dur-btn py-2.5 rounded-xl text-xs font-bold transition border border-slate-200 text-slate-600 bg-white";
-            });
-            activeBtn.className = "planner-dur-btn py-2.5 rounded-xl text-xs font-bold transition border-2 border-hsv-blue bg-hsv-blue/10 text-hsv-blue";
-            runLiveCalculation();
-        }
-
-        // Set Hotel stars and recalculate
-        function setPlannerHotel(stars, activeBtn) {
-            plActiveHotel = stars;
-            const buttons = document.querySelectorAll('.planner-hot-btn');
-            buttons.forEach(btn => {
-                btn.className = "planner-hot-btn py-2.5 rounded-xl text-xs font-bold transition border border-slate-200 text-slate-600 bg-white";
-            });
-            activeBtn.className = "planner-hot-btn py-2.5 rounded-xl text-xs font-bold transition border-2 border-hsv-blue bg-hsv-blue/10 text-hsv-blue";
-            runLiveCalculation();
-        }
-
-        // THE PRIMARY CALCULATION & OUTLINE GENERATOR
-        function runLiveCalculation() {
-            const dest = document.getElementById('sel-dest').value;
-            const quantity = parseInt(document.getElementById('rng-workers').value) || 0;
-
-            const baseRate = plDestRates[dest][plActiveDuration];
-            const hotelMultiplier = plHotelMult[plActiveHotel];
-
-            let pricePerWorker = baseRate * hotelMultiplier;
-
-            if (document.getElementById('chk-teambuilding').checked) {
-                pricePerWorker += plExtras["teambuilding"];
-            }
-            if (document.getElementById('chk-gala').checked) {
-                pricePerWorker += plExtras["gala"];
-            }
-
-            // Progressive discount
-            let discountRate = 0;
-            let discountText = "";
-            if (quantity >= 300) {
-                discountRate = 0.12;
-                discountText = "Đoàn lớn >300 khách: Đã chiết khấu 12%, miễn phí thiết kế Backdrop bãi cát & MC Gala chuyên nghiệp.";
-            } else if (quantity >= 150) {
-                discountRate = 0.08;
-                discountText = "Quy mô >150 khách: Đã chiết khấu 8%, tặng thiết kế kịch bản bùng nổ, tặng 02 suất lữ hành miễn phí.";
-            } else if (quantity >= 50) {
-                discountRate = 0.05;
-                discountText = "Đoàn >50 khách: Đã chiết khấu 5%, tặng cờ bãi biển, hỗ trợ tờ trình mẫu phê duyệt nhanh chóng .";
-            } else {
-                discountText = "Đoàn lữ hành: Áp dụng giá gốc trực tiếp hậu cần (Tối ưu nhất, không qua bất cứ bên trung gian nào) .";
-            }
-
-            document.getElementById('lbl-perk-desc').innerText = discountText;
-
-            let baseTotal = pricePerWorker * quantity;
-            let finalDiscountedTotal = baseTotal * (1 - discountRate);
-            let finalPerPerson = finalDiscountedTotal / quantity;
-
-            const currencyFormatter = new Intl.NumberFormat('vi-VN', {
-                style: 'currency',
-                currency: 'VND',
-                maximumFractionDigits: 0
-            });
-
-            document.getElementById('lbl-total-budget').innerText = currencyFormatter.format(finalDiscountedTotal);
-            document.getElementById('lbl-per-worker').innerText = `${currencyFormatter.format(finalPerPerson)}/khách`;
-
-            renderTourPlannerOutline();
-            renderTourPlannerMenu();
-        }
-
-        // Render generated Tour Steps
-        function renderTourPlannerOutline() {
-            const dest = document.getElementById('sel-dest').value;
-            const stepsContainer = document.getElementById('list-pl-itinerary');
-            const titleContainer = document.getElementById('lbl-pl-itinerary-title');
-
-            const currentOutline = plOutlines[dest];
-            titleContainer.innerHTML = `Dự thảo chương trình: <strong>${currentOutline.name} (${plActiveDuration} Ngày ${plActiveDuration - 1} Đêm)</strong>`;
-
-            stepsContainer.innerHTML = '';
-            currentOutline[plActiveDuration].forEach(step => {
-                stepsContainer.innerHTML += `
-                    <div class="relative pb-1 text-left">
-                        <div class="absolute -left-[21px] mt-1.5 w-2.5 h-2.5 rounded-full bg-hsv-blue border-2 border-white"></div>
-                        <p class="text-xs text-slate-600 leading-relaxed">${step}</p>
-                    </div>
-                `;
-            });
-        }
-
-        // Render dynamic dishes
-        function renderTourPlannerMenu() {
-            const dishesContainer = document.getElementById('list-pl-menu');
-            const levelLabel = document.getElementById('lbl-pl-menu-tier');
-
-            levelLabel.innerText = `Ăn Tiêu Chuẩn ${plActiveHotel}★`;
-            dishesContainer.innerHTML = '';
-
-            plMenus[plActiveHotel].forEach(dish => {
-                dishesContainer.innerHTML += `
-                    <div class="flex items-center gap-2.5 p-2.5 rounded-xl bg-slate-50 border border-slate-200/40 text-left">
-                        <span class="text-xs text-slate-700 font-semibold">${dish}</span>
-                    </div>
-                `;
-            });
-        }
-
-        // Switch tab inside planner card
-        function switchPlannerTab(tab, activeBtn) {
-            plActiveTab = tab;
-            const tabButtons = document.querySelectorAll('.planner-tab-btn');
-            tabButtons.forEach(btn => {
-                btn.className = "planner-tab-btn px-4 py-1.5 text-slate-600 hover:bg-white rounded-lg text-xs font-bold transition";
-            });
-            activeBtn.className = "planner-tab-btn px-4 py-1.5 bg-white text-hsv-blue rounded-lg text-xs font-bold shadow-sm border border-slate-200/50";
-
-            const panelItinerary = document.getElementById('planner-panel-itinerary');
-            const panelMenu = document.getElementById('planner-panel-menu');
-
-            if (tab === 'itinerary') {
-                panelItinerary.classList.remove('hidden');
-                panelMenu.classList.add('hidden');
-            } else {
-                panelItinerary.classList.add('hidden');
-                panelMenu.classList.remove('hidden');
-            }
-        }
-
-        // Filter Tour Packages (B2C/B2B dynamic grid)
-        function filterPackages(category, activeBtn) {
-            // Visual active toggling
-            const buttons = document.querySelectorAll('.pkg-filter-btn');
-            buttons.forEach(btn => {
-                btn.className = "pkg-filter-btn px-4 py-2 bg-white text-slate-600 hover:bg-slate-50 rounded-xl text-xs font-bold transition border border-slate-200";
-            });
-            activeBtn.className = "pkg-filter-btn px-4 py-2 bg-hsv-blue text-white rounded-xl text-xs font-bold shadow-sm transition";
-
-            // Grid cards filtering
-            const cards = document.querySelectorAll('#packages-grid > div');
-            cards.forEach(card => {
-                if (category === 'all' || card.getAttribute('data-category') === category) {
-                    card.classList.remove('hidden');
-                    card.classList.add('flex');
-                } else {
-                    card.classList.remove('flex');
-                    card.classList.add('hidden');
-                }
-            });
-        }
-
-        // Render Executed programs dynamically
-        function renderExecutedFeed() {
-            const container = document.getElementById('executed-grid');
-            container.innerHTML = '';
-            executedDatabase.forEach(item => {
-                container.innerHTML += `
-                    <div class="bg-slate-50 rounded-3xl overflow-hidden border border-slate-200/50 hover-lift flex flex-col justify-between">
-                        <div>
-                            <div class="h-48 bg-slate-200 relative overflow-hidden">
-                                <img src="${item.img}" class="w-full h-full object-cover" alt="Portfolio photo">
-                                <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
-                                <div class="absolute bottom-4 left-4 right-4 text-left">
-                                    <span class="bg-hsv-gold text-hsv-darkBlue text-[9px] font-bold px-2.5 py-0.5 rounded-full uppercase tracking-wider">Hành trình thực tế</span>
-                                    <h4 class="font-serif text-base font-bold text-white mt-1.5">${item.title}</h4>
-                                </div>
-                            </div>
-                            <div class="p-6 space-y-2">
-                                <span class="text-[9px] text-slate-400 font-bold uppercase tracking-widest block">${item.meta}</span>
-                                <p class="text-xs text-slate-500 leading-relaxed text-left">${item.desc}</p>
-                            </div>
-                        </div>
-                        <div class="px-6 pb-6 pt-2 border-t border-slate-200/40 flex items-center justify-between text-[11px]">
-                            <span class="text-hsv-blue font-bold">Lữ hành chất lượng cao</span>
-                            <span class="text-slate-400">By Hoa Sen Travel </span>
-                        </div>
-                    </div>
-                `;
-            });
-        }
-
-        // Admin control panel drawer (HST-SEEDING demo)
-        function toggleAdminPanel() {
-            const drawer = document.getElementById('admin-panel-drawer');
-            if (drawer.classList.contains('hidden')) {
-                drawer.classList.remove('hidden');
-                setTimeout(() => {
-                    drawer.classList.remove('translate-y-full');
-                }, 50);
-            } else {
-                drawer.classList.add('translate-y-full');
-                setTimeout(() => {
-                    drawer.classList.add('hidden');
-                }, 300);
-            }
-        }
-
-        function addMockDiaryEntry(event) {
-            event.preventDefault();
-            const title = document.getElementById('adm-title').value;
-            const meta = document.getElementById('adm-meta').value;
-            const desc = document.getElementById('adm-desc').value;
-
-            executedDatabase.unshift({
-                title: title,
-                meta: meta,
-                desc: desc,
-                img: "https://images.unsplash.com/photo-1544644181-1484b3fdfc62?auto=format&fit=crop&w=600&q=80"
-            });
-
-            renderExecutedFeed();
-            document.getElementById('frm-mock-admin').reset();
-            toggleAdminPanel();
-
-            document.getElementById('executed-section').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Search Bar logic
-        function handleQuickSearch() {
-            const dest = document.getElementById('search-dest').value;
-            const type = document.getElementById('search-type').value;
-
-            // Simple responsive UI redirection
-            document.getElementById('packages-section').scrollIntoView({ behavior: 'smooth' });
-
-            // Automatically switch packages filter matching choice
-            if (type === 'corporate') {
-                filterPackages('mice', document.querySelectorAll('.pkg-filter-btn')[1]);
-            } else if (type === 'family') {
-                filterPackages('combo', document.querySelectorAll('.pkg-filter-btn')[2]);
-            } else if (type === 'cruise') {
-                filterPackages('cruise', document.querySelectorAll('.pkg-filter-btn')[3]);
-            } else {
-                filterPackages('all', document.querySelectorAll('.pkg-filter-btn')[0]);
-            }
-        }
-
-        // Accordion logic FAQs
-        function toggleAccordion(btn) {
-            const p = btn.nextElementSibling;
-            const icon = btn.querySelector('i');
-            if (p.classList.contains('hidden')) {
-                p.classList.remove('hidden');
-                icon.style.transform = 'rotate(45deg)';
-            } else {
-                p.classList.add('hidden');
-                icon.style.transform = 'rotate(0deg)';
-            }
-        }
-
-        // AI Chatbox simulation
-        function toggleAIChat() {
-            const box = document.getElementById('ai-chatbox');
-            const icon = document.getElementById('btn-chat-icon');
-            if (box.classList.contains('hidden')) {
-                box.classList.remove('hidden');
-                setTimeout(() => box.classList.remove('scale-95'), 50);
-                icon.setAttribute('data-lucide', 'x');
-            } else {
-                box.classList.add('scale-95');
-                setTimeout(() => box.classList.add('hidden'), 200);
-                icon.setAttribute('data-lucide', 'message-square');
-            }
-            lucide.createIcons();
-        }
-
-        function selectChatSuggestion(key, label) {
-            appendChatMessage('user', label);
-            let response = "";
-            if (key === 'co_to_3n2d') {
-                response = "<strong>Gói Đảo Ngọc Cô Tô 3 Ngày 2 Đêm</strong> đang được trợ giá trực tiếp bởi hệ sinh thái Hoa Sen chỉ còn <strong>2.550.000đ/Khách</strong> trọn gói ! Đã bao gồm xe Universe 45 đời mới khứ hồi, cao tốc Cái Rồng, lưu trú khách sạn, 5 bữa hải sản tươi, và full kịch bản teambuilding / tiệc Gala Dinner .";
-            } else if (key === 'uu_dai_mice') {
-                response = "Với các cơ quan mỏ than & tập đoàn lớn, Hoa Sen áp dụng chiết khấu sâu: Đoàn trên 150 khách chiết khấu 8% & Tặng cờ bãi cát, còi điều hành, kịch bản sân khấu và MC Gala . Đoàn trên 300 khách chiết khấu lên đến 12%!";
-            } else {
-                response = "Dạ, tôi đã soạn sẵn <strong>Mẫu Tờ Trình Đệ Trình Công Đoàn xin phê duyệt kế hoạch tham quan nghỉ dưỡng</strong> cực chuẩn chỉ pháp lý . Anh/chị vui lòng để lại số Zalo ngay khung chat này, chuyên viên sẽ kết nối gửi tài liệu bản cứng PDF mộc đỏ cho anh chị trong 5 phút .";
-            }
-            setTimeout(() => appendChatMessage('ai', response), 600);
-        }
-
-        function handleChatSubmit(event) {
-            event.preventDefault();
-            const input = document.getElementById('chat-input-field');
-            const question = input.value.trim();
-            if (!question) return;
-
-            appendChatMessage('user', question);
-            input.value = '';
-
-            let response = "Cám ơn anh/chị đã quan tâm đến dịch vụ lữ hành của Hoa Sen Travel. Để được tư vấn chi tiết nhất và nhận mẫu tờ trình, anh/chị vui lòng cung cấp Số điện thoại (Zalo) để chuyên viên gửi ngay dự thảo chi phí đóng dấu đỏ của TGĐ Lý Hồng Nhất qua Zalo ngay nhé !";
-            if (question.toLowerCase().includes('phone') || question.toLowerCase().includes('0') || question.toLowerCase().includes('zalo') || question.toLowerCase().includes('sđt')) {
-                response = "Tuyệt vời ạ! Trợ lý lữ hành Hoa Sen đã ghi nhận liên hệ và chuyên viên sẽ kết nối trực tiếp qua Zalo của anh chị ngay lập tức để gửi hồ sơ tờ trình mẫu kèm lịch trình chi tiết !";
-            }
-            setTimeout(() => appendChatMessage('ai', response), 650);
-        }
-
-        function appendChatMessage(sender, text) {
-            const area = document.getElementById('chat-messages-area');
-            const bubble = document.createElement('div');
-            bubble.className = "flex items-start gap-2 " + (sender === 'user' ? 'justify-end' : '');
+        // Hero Background Carousel
+        let currentBgIndex = 1;
+        const totalBgs = 3;
+        setInterval(() => {
+            const currentBg = document.getElementById(`hero-bg-${currentBgIndex}`);
+            currentBg.classList.replace('opacity-100', 'opacity-0');
             
-            if (sender === 'user') {
-                bubble.innerHTML = `
-                    <div class="bg-hsv-blue text-white p-3 rounded-2xl shadow-sm max-w-[80%] leading-relaxed text-right">
-                        ${text}
-                    </div>
-                    <div class="w-6 h-6 rounded-full bg-slate-200 flex items-center justify-center font-bold text-[10px] text-slate-600">Me</div>
-                `;
-            } else {
-                bubble.innerHTML = `
-                    <div class="w-6 h-6 rounded-full bg-hsv-blue/10 flex items-center justify-center text-hsv-blue font-bold text-[10px]">HS</div>
-                    <div class="bg-white p-3 rounded-2xl shadow-sm border border-slate-100 max-w-[80%] leading-relaxed text-slate-600 text-left">
-                        ${text}
-                    </div>
-                `;
+            currentBgIndex = currentBgIndex === totalBgs ? 1 : currentBgIndex + 1;
+            
+            const nextBg = document.getElementById(`hero-bg-${currentBgIndex}`);
+            nextBg.classList.replace('opacity-0', 'opacity-100');
+        }, 6000);
+
+        // Ecosystem Tab Switch Logic
+        function switchTab(tabId) {
+            // Hide all tab contents
+            document.querySelectorAll('.tab-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            // Show active tab
+            document.getElementById(tabId).classList.remove('hidden');
+
+            // Reset all buttons to default style
+            document.querySelectorAll('.tab-btn').forEach(btn => {
+                btn.className = "tab-btn bg-gray-100 text-gray-700 hover:bg-gray-200 px-6 py-3.5 rounded-2xl font-semibold text-sm transition flex items-center space-x-2";
+            });
+
+            // Set clicked button to active
+            const activeBtn = document.getElementById(`btn-${tabId}`);
+            activeBtn.className = "tab-btn active bg-brand-deep text-white shadow-md px-6 py-3.5 rounded-2xl font-semibold text-sm transition flex items-center space-x-2";
+        }
+
+        // Multi-step Wizard Form Logic
+        let currentStep = 1;
+        function nextStep(stepNumber) {
+            // Simple validation before going forward
+            if (stepNumber > currentStep) {
+                if (currentStep === 1) {
+                    const selectedService = document.querySelector('input[name="service-type"]:checked');
+                    if (!selectedService) return;
+                }
             }
-            area.appendChild(bubble);
-            area.scrollTop = area.scrollHeight;
+
+            // Hide all steps
+            document.querySelectorAll('.wizard-step').forEach(step => {
+                step.classList.add('hidden');
+            });
+
+            // Show active step
+            document.getElementById(`wizard-step-${stepNumber}`).classList.remove('hidden');
+            currentStep = stepNumber;
+
+            // Update Progress bar & Nodes
+            const progressWidth = ((stepNumber - 1) / 2) * 100;
+            document.getElementById('step-line').style.width = `${progressWidth}%`;
+
+            for (let i = 1; i <= 3; i++) {
+                const node = document.getElementById(`step-node-${i}`);
+                if (i <= stepNumber) {
+                    node.className = "w-10 h-10 rounded-full bg-brand-primary text-white flex items-center justify-center font-bold z-10 transition";
+                } else {
+                    node.className = "w-10 h-10 rounded-full bg-gray-200 text-gray-500 flex items-center justify-center font-bold z-10 transition";
+                }
+            }
         }
 
-        // Modals Lead Captures
-        function triggerPlannerModal() {
-            const modal = document.getElementById('planner-lead-modal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function closePlannerModal() {
-            document.getElementById('planner-lead-modal').classList.add('hidden');
-            document.getElementById('planner-lead-modal').classList.remove('flex');
-            document.getElementById('frm-register-lead').reset();
-        }
-
-        function submitPlannerLead(event) {
+        // Handle Wizard Submit (Chế tác Tour)
+        function handleWizardSubmit(event) {
             event.preventDefault();
-            const orgName = document.getElementById('lead-org-name').value;
-            const contactName = document.getElementById('lead-contact-name').value;
+            const serviceType = document.querySelector('input[name="service-type"]:checked').value;
+            const destination = document.getElementById('trip-destination').value || "Không yêu cầu";
+            const people = document.getElementById('trip-people').value || "Chưa xác định";
+            const date = document.getElementById('trip-date').value || "Chưa chọn";
+            const budget = document.getElementById('trip-budget').value || "Chưa chọn";
+            const name = document.getElementById('contact-name').value;
+            const phone = document.getElementById('contact-phone').value;
+            const email = document.getElementById('contact-email').value;
 
-            document.getElementById('out-org-name').innerText = orgName;
-            document.getElementById('out-contact-name').innerText = contactName;
+            // Open custom modal
+            openModal(
+                "Yêu cầu được gửi thành công!",
+                `Kính gửi ${name}, hệ thống lữ hành Hoa Sen Travel đã ghi nhận yêu cầu tư vấn gói dịch vụ: ${serviceType}. Chi tiết lịch trình sẽ được biên soạn và gửi về hòm thư ${email} hoặc Zalo ${phone} trong vòng 5 phút!`
+            );
 
-            closePlannerModal();
-
-            const succ = document.getElementById('success-output-modal');
-            succ.classList.remove('hidden');
-            succ.classList.add('flex');
-            lucide.createIcons();
+            // Reset form & go back to step 1
+            document.getElementById('bespoke-wizard-form').reset();
+            nextStep(1);
         }
 
-        function closeSuccessOutputModal() {
-            document.getElementById('success-output-modal').classList.add('hidden');
-            document.getElementById('success-output-modal').classList.remove('flex');
-        }
-
-        function triggerBookingModal(packageName) {
-            document.getElementById('booking-modal-package-name').innerText = packageName;
-            const modal = document.getElementById('booking-modal');
-            modal.classList.remove('hidden');
-            modal.classList.add('flex');
-        }
-
-        function closeBookingModal() {
-            document.getElementById('booking-modal').classList.add('hidden');
-            document.getElementById('booking-modal').classList.remove('flex');
-            document.getElementById('frm-register-booking').reset();
-        }
-
-        function submitBookingLead(event) {
+        // Handle Restaurant Booking
+        function handleRestaurantBooking(event) {
             event.preventDefault();
-            const orgName = document.getElementById('booking-org-name').value;
-            const contactName = document.getElementById('booking-contact-name').value;
+            const name = document.getElementById('rest-name').value;
+            const phone = document.getElementById('rest-phone').value;
+            const guests = document.getElementById('rest-guests').value;
+            const time = document.getElementById('rest-time').value;
+            const note = document.getElementById('rest-note').value || "Không có yêu cầu";
 
-            document.getElementById('out-org-name').innerText = orgName;
-            document.getElementById('out-contact-name').innerText = contactName;
+            openModal(
+                "Đăng ký bàn tiệc thành công!",
+                `Kính chào ${name}, Nhà Hàng Hoa Sen đã giữ bàn thành công cho đoàn ${guests} người vào lúc ${time.replace('T', ' ')}. Người quản lý sảnh tiệc của chúng tôi sẽ liên hệ lại qua số điện thoại ${phone} để thống nhất phương án thực đơn!`
+            );
 
-            closeBookingModal();
-
-            const succ = document.getElementById('success-output-modal');
-            succ.classList.remove('hidden');
-            succ.classList.add('flex');
-            lucide.createIcons();
+            document.getElementById('restaurant-booking-form').reset();
         }
 
-        // Initialize Web Workspaces
-        window.onload = function () {
-            runLiveCalculation();
-            renderExecutedFeed();
-            lucide.createIcons();
+        // Custom Modal Actions
+        function openModal(title, text) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-body').innerText = text;
+            const modal = document.getElementById('custom-modal');
+            modal.classList.remove('hidden');
+            modal.firstElementChild.classList.remove('scale-95');
+            modal.firstElementChild.classList.add('scale-100');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('custom-modal');
+            modal.firstElementChild.classList.remove('scale-100');
+            modal.firstElementChild.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 150);
         }
     </script>
 </body>
