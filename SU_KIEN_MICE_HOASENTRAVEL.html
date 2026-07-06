@@ -1,0 +1,1122 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoa Sen Travel - Giải Pháp Sự Kiện MICE & Teambuilding Doanh Nghiệp</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <!-- FontAwesome for Premium Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom Style & Tailwind Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        brand: {
+                            deep: '#0F2C59',      /* Xanh dương đậm nhận diện logo */
+                            primary: '#1E40AF',   /* Xanh dương chính */
+                            orange: '#F97316',    /* Màu cam năng lượng teambuilding */
+                            gold: '#DAC0A3',      /* Vàng gold đẳng cấp */
+                            dark: '#0B132B',      /* Nền tối sâu thẳm */
+                            light: '#F8FAFC'      /* Nền xám sáng */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        /* Modern Gradients & Shadow Effects for Corporate feeling */
+        .corporate-gradient {
+            background: linear-gradient(135deg, #0F2C59 0%, #1E40AF 50%, #0B132B 100%);
+        }
+        .orange-gradient-text {
+            background: linear-gradient(90deg, #F97316 0%, #FBBF24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(16px);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+        }
+        .glass-dark {
+            background: rgba(15, 23, 42, 0.8);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased overflow-x-hidden">
+
+    <!-- PRE-HEADER CONTACT BAR -->
+    <div class="bg-brand-deep text-white text-xs py-2.5 px-4 md:px-12 flex justify-between items-center border-b border-white/10 relative z-30">
+        <div class="flex items-center space-x-6">
+            <span class="flex items-center"><i class="fa-solid fa-phone mr-2 text-brand-orange animate-bounce"></i> Hotline Doanh Nghiệp: <a href="tel:0852566616" class="hover:text-brand-orange transition ml-1 font-bold">085 256 6616</a></span>
+            <span class="hidden lg:inline-flex items-center"><i class="fa-solid fa-envelope mr-2 text-brand-orange"></i> Email RFP: <a href="mailto:admin.hoasentravel@gmail.com" class="hover:text-brand-orange transition ml-1">admin.hoasentravel@gmail.com</a></span>
+        </div>
+        <div class="flex items-center space-x-4">
+            <span class="hidden md:inline text-slate-300">MST: 0106914229 | Cam kết chất lượng chuẩn SLA</span>
+            <div class="flex space-x-3 border-l border-white/20 pl-4">
+                <a href="#" class="hover:text-brand-orange transition" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-brand-orange transition" aria-label="LinkedIn"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-md transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex justify-between items-center">
+            <!-- Brand Logo -->
+            <a href="#" class="flex items-center space-x-3 group">
+                <div class="w-12 h-12 bg-gradient-to-tr from-brand-deep to-brand-primary rounded-xl flex items-center justify-center text-white shadow-lg shadow-brand-primary/20">
+                    <svg viewBox="0 0 24 24" class="w-8 h-8 fill-current text-brand-orange" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12,2C11.5,4 10,7 8,9C6,11 3.5,11.5 2,12C3.5,12.5 6,13 8,15C10,17 11.5,20 12,22C12.5,20 14,17 16,15C18,13 20.5,12.5 22,12C20.5,11.5 18,11 16,9C14,7 12.5,4 12,2Z"/>
+                    </svg>
+                </div>
+                <div>
+                    <span class="block text-lg font-black text-brand-deep tracking-wider uppercase leading-none">Hoa Sen</span>
+                    <span class="block text-[10px] font-extrabold text-brand-orange uppercase tracking-widest mt-1">MICE & Event Specialist</span>
+                </div>
+            </a>
+
+            <!-- Menu Links optimized for Corporate clients -->
+            <nav class="hidden lg:flex space-x-8 text-sm font-bold text-brand-deep">
+                <a href="#giai-phap-nganh" class="hover:text-brand-primary transition">Giải Pháp Ngành</a>
+                <a href="#case-studies" class="hover:text-brand-primary transition">Dự Án Đã Làm</a>
+                <a href="#concept-generator" class="hover:text-brand-primary transition">Trình Tạo Ý Tưởng</a>
+                <a href="#cam-ket-sla" class="hover:text-brand-primary transition">Cam Kết SLA</a>
+                <a href="#rfp-quote" class="hover:text-brand-primary transition">Gửi Yêu Cầu RFP</a>
+            </nav>
+
+            <!-- Call to Action -->
+            <div class="hidden lg:flex items-center">
+                <a href="#rfp-quote" class="bg-brand-orange hover:bg-brand-deep hover:text-white text-white px-6 py-3 rounded-xl font-extrabold text-sm transition-all duration-300 transform hover:scale-105 shadow-md shadow-brand-orange/20 flex items-center">
+                    Nhận Kịch Bản & Báo Giá <i class="fa-solid fa-file-invoice-dollar ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Hamburger Button -->
+            <button id="mobile-menu-btn" class="lg:hidden text-brand-deep hover:text-brand-primary focus:outline-none" aria-label="Toggle Navigation Menu">
+                <i class="fa-solid fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden lg:hidden bg-brand-deep text-white border-t border-white/10 absolute left-0 right-0 py-6 px-4 space-y-4 shadow-xl">
+            <a href="#giai-phap-nganh" class="block py-2 text-slate-200 hover:text-brand-orange transition font-bold">Giải Pháp Theo Ngành</a>
+            <a href="#case-studies" class="block py-2 text-slate-200 hover:text-brand-orange transition font-bold">Dự Án Tiêu Biểu</a>
+            <a href="#concept-generator" class="block py-2 text-slate-200 hover:text-brand-orange transition font-bold">Tạo Ý Tưởng Teambuilding</a>
+            <a href="#cam-ket-sla" class="block py-2 text-slate-200 hover:text-brand-orange transition font-bold">Cam Kết Dịch Vụ</a>
+            <a href="#rfp-quote" class="block py-2 text-slate-200 hover:text-brand-orange transition font-bold">Gửi Yêu Cầu Báo Giá</a>
+            <div class="pt-4 border-t border-white/10">
+                <a href="#rfp-quote" class="block text-center bg-brand-orange text-white font-extrabold py-3.5 rounded-xl transition">
+                    Nhận Báo Giá SLA Trong 5 Phút
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION WITH ROTATING BG AND CORPORATE TEXT -->
+    <section class="relative min-h-[90vh] flex items-center justify-center corporate-gradient text-white overflow-hidden">
+        <!-- Interactive Carousel Backgrounds -->
+        <div class="absolute inset-0 z-0">
+            <div id="hero-bg-1" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-100" style="background-image: linear-gradient(rgba(11, 19, 43, 0.7), rgba(11, 19, 43, 0.9)), url('https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=1920');"></div>
+            <div id="hero-bg-2" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: linear-gradient(rgba(11, 19, 43, 0.7), rgba(11, 19, 43, 0.9)), url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=1920');"></div>
+            <div id="hero-bg-3" class="absolute inset-0 bg-cover bg-center transition-opacity duration-1000 opacity-0" style="background-image: linear-gradient(rgba(11, 19, 43, 0.7), rgba(11, 19, 43, 0.9)), url('https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?auto=format&fit=crop&q=80&w=1920');"></div>
+        </div>
+
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 text-center">
+            <!-- Animated Badge -->
+            <span class="inline-flex items-center space-x-2 bg-brand-orange/20 border border-brand-orange/35 rounded-full px-5 py-2 text-xs font-black text-brand-orange uppercase tracking-widest mb-6 animate-pulse">
+                <i class="fa-solid fa-fire mr-1.5"></i> GẮN KẾT - TRẢI NGHIỆM - VƯƠN XA
+            </span>
+            
+            <!-- Dynamic Bold Tagline -->
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-extrabold tracking-tight mb-6 uppercase leading-tight">
+                <span class="block text-white">Gắn Kết Hôm Nay</span>
+                <span class="block mt-2 orange-gradient-text">Thành Công Ngày Mai</span>
+            </h1>
+
+            <p class="max-w-3xl mx-auto text-lg sm:text-xl text-slate-300 font-light mb-12 leading-relaxed">
+                Đồng hành cùng hàng trăm Tập đoàn, Bệnh viện và Doanh nghiệp thiết kế kịch bản Team Building bùng nổ, đêm Gala Dinner đầy cảm xúc và chuỗi sự kiện MICE đẳng cấp chuẩn SLA quốc tế.
+            </p>
+
+            <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="#concept-generator" class="w-full sm:w-auto bg-brand-orange hover:bg-white hover:text-brand-deep text-white font-extrabold px-8 py-4.5 rounded-xl transition duration-300 transform hover:scale-105 shadow-xl shadow-brand-orange/25 flex items-center justify-center">
+                    Tự Tạo Ý Tưởng Sự Kiện <i class="fa-solid fa-wand-magic-sparkles ml-2"></i>
+                </a>
+                <a href="#rfp-quote" class="w-full sm:w-auto bg-white/10 hover:bg-white/20 border border-white/25 text-white font-extrabold px-8 py-4.5 rounded-xl transition duration-300 flex items-center justify-center">
+                    Gửi Yêu Cầu RFP & Báo Giá <i class="fa-solid fa-paper-plane ml-2"></i>
+                </a>
+            </div>
+
+            <!-- Trust Stats Badge -->
+            <div class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto text-slate-400">
+                <div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5">
+                    <span class="text-3xl font-black text-white" id="stat-hero-years">9+ Năm</span>
+                    <span class="text-xs uppercase font-semibold tracking-wider text-slate-300 mt-1">Kinh Nghiệm Thực Tế</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5">
+                    <span class="text-3xl font-black text-brand-orange" id="stat-hero-events">500+</span>
+                    <span class="text-xs uppercase font-semibold tracking-wider text-slate-300 mt-1">Sự Kiện MICE / Năm</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5">
+                    <span class="text-3xl font-black text-white" id="stat-hero-clients">10K+</span>
+                    <span class="text-xs uppercase font-semibold tracking-wider text-slate-300 mt-1">Thượng Khách Đồng Hành</span>
+                </div>
+                <div class="flex flex-col items-center justify-center p-3 rounded-2xl bg-white/5 border border-white/5">
+                    <span class="text-3xl font-black text-brand-orange" id="stat-hero-satisfy">98%</span>
+                    <span class="text-xs uppercase font-semibold tracking-wider text-slate-300 mt-1">Hài Lòng Tuyệt Đối</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Angular Separator Wave -->
+        <div class="absolute bottom-0 left-0 right-0 overflow-hidden leading-none z-10">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none" class="relative block w-full h-[40px] fill-slate-50">
+                <path d="M1200,0L0,120L1200,120Z"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE INDUSTRY SOLUTIONS SECTION -->
+    <section id="giai-phap-nganh" class="py-24 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <span class="text-brand-primary text-xs font-black uppercase tracking-widest bg-blue-50 px-4 py-2 rounded-full border border-blue-100">Thiết Kế Chuyên Biệt Theo Ngành</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-brand-deep mt-4 tracking-tight">Giải Pháp Teambuilding & MICE Tối Ưu</h2>
+                <p class="text-slate-600 mt-4 text-base sm:text-lg font-light">Chúng tôi thấu hiểu sâu sắc đặc trưng văn hóa của từng mô hình kinh doanh để xây dựng kịch bản gắn kết hoàn mỹ nhất cho doanh nghiệp.</p>
+            </div>
+
+            <!-- Industry Selector Tabs -->
+            <div class="grid grid-cols-2 md:grid-cols-5 gap-3 mb-10">
+                <button onclick="selectIndustry('ind-medical')" id="btn-ind-medical" class="ind-btn active bg-brand-deep text-white shadow-lg p-5 rounded-2xl font-bold text-sm transition duration-300 flex flex-col items-center justify-center space-y-3">
+                    <i class="fa-solid fa-hospital-user text-2xl text-brand-orange"></i>
+                    <span class="text-center">Khối Y Tế & Dược Phẩm</span>
+                </button>
+                <button onclick="selectIndustry('ind-fdi')" id="btn-ind-fdi" class="ind-btn bg-white hover:bg-slate-100 text-slate-700 p-5 rounded-2xl font-bold text-sm transition duration-300 border border-slate-200/60 flex flex-col items-center justify-center space-y-3">
+                    <i class="fa-solid fa-industry text-2xl text-slate-400"></i>
+                    <span class="text-center">Doanh Nghiệp FDI</span>
+                </button>
+                <button onclick="selectIndustry('ind-finance')" id="btn-ind-finance" class="ind-btn bg-white hover:bg-slate-100 text-slate-700 p-5 rounded-2xl font-bold text-sm transition duration-300 border border-slate-200/60 flex flex-col items-center justify-center space-y-3">
+                    <i class="fa-solid fa-building-columns text-2xl text-slate-400"></i>
+                    <span class="text-center">Ngân Hàng & Tài Chính</span>
+                </button>
+                <button onclick="selectIndustry('ind-property')" id="btn-ind-property" class="ind-btn bg-white hover:bg-slate-100 text-slate-700 p-5 rounded-2xl font-bold text-sm transition duration-300 border border-slate-200/60 flex flex-col items-center justify-center space-y-3">
+                    <i class="fa-solid fa-house-chimney-window text-2xl text-slate-400"></i>
+                    <span class="text-center">Bất Động Sản & BH</span>
+                </button>
+                <button onclick="selectIndustry('ind-corp')" id="btn-ind-corp" class="ind-btn bg-white hover:bg-slate-100 text-slate-700 p-5 rounded-2xl font-bold text-sm transition duration-300 border border-slate-200/60 flex flex-col items-center justify-center space-y-3">
+                    <i class="fa-solid fa-users text-2xl text-slate-400"></i>
+                    <span class="text-center">Tập Đoàn Lớn & SME</span>
+                </button>
+            </div>
+
+            <!-- Solutions Dynamic View Area -->
+            <div class="bg-white rounded-3xl p-8 sm:p-12 shadow-xl border border-slate-100/80 min-h-[480px] flex items-center relative">
+                
+                <!-- Medical / Pharmaceutical Solution -->
+                <div id="ind-medical" class="ind-content grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-emerald-50 text-emerald-700 font-extrabold text-xs px-3.5 py-1.5 rounded-lg border border-emerald-100 uppercase tracking-wider">
+                            <i class="fa-solid fa-heart-pulse"></i> <span>Giải Pháp Ngành Y Tế</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight leading-tight">Gắn Kết Y Đức - Tiếp Thêm Năng Lượng Chữa Lành</h3>
+                        <p class="text-slate-600 leading-relaxed font-light">Chúng tôi thiết kế các lịch trình mang tính chất thư giãn sâu kết hợp chăm sóc sức khỏe thể chất và tinh thần. Thích hợp cho các y bác sĩ, điều dưỡng viên chịu nhiều áp lực công việc có thời gian phục hồi năng lượng tinh sạch.</p>
+                        <div class="grid grid-cols-2 gap-4 text-xs font-bold text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-shield-halved text-brand-orange mr-2"></i> Bảo hiểm & y tế dự phòng đầy đủ</div>
+                            <div class="flex items-center"><i class="fa-solid fa-utensils text-brand-orange mr-2"></i> Dinh dưỡng tinh tế thanh mát</div>
+                            <div class="flex items-center"><i class="fa-solid fa-spa text-brand-orange mr-2"></i> Liệu pháp tái tạo tinh thần</div>
+                            <div class="flex items-center"><i class="fa-solid fa-people-arrows text-brand-orange mr-2"></i> Trò chơi gắn kết nhẹ nhàng</div>
+                        </div>
+                        <div class="pt-4 flex space-x-4">
+                            <a href="#rfp-quote" onclick="prefillIndustry('Y Tế - Dược Phẩm')" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-6 py-3.5 rounded-xl transition inline-flex items-center text-sm shadow-md shadow-brand-deep/15">
+                                Đăng Ký Nhận Kịch Bản Y Tế <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?auto=format&fit=crop&q=80&w=800" alt="Y tế" class="rounded-2xl w-full h-[320px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/f97316?text=MICE+Y+T%E1%BA%BF'">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-emerald-100 text-emerald-600 flex items-center justify-center text-xl"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <span class="block font-black text-sm text-brand-deep">Đã tổ chức thành công</span>
+                                <span class="block text-xs text-slate-500 font-medium">Summer Trip 2026 - Bệnh Viện Việt Pháp</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FDI Enterprise Solution -->
+                <div id="ind-fdi" class="ind-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-blue-50 text-blue-700 font-extrabold text-xs px-3.5 py-1.5 rounded-lg border border-blue-100 uppercase tracking-wider">
+                            <i class="fa-solid fa-globe"></i> <span>Giải Pháp Cho Doanh Nghiệp FDI</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight leading-tight">Global Standard - Local Soul: Tiêu Chuẩn Quốc Tế</h3>
+                        <p class="text-slate-600 leading-relaxed font-light">Bản sắc đa văn hóa, quy trình vận hành kiểm soát an toàn tuyệt đối và kịch bản song ngữ Anh - Việt. Chúng tôi đáp ứng các tiêu chuẩn khắt khe nhất về SLA dịch vụ, báo cáo tài chính minh bạch cho các công ty nước ngoài.</p>
+                        <div class="grid grid-cols-2 gap-4 text-xs font-bold text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-microphone-lines text-brand-orange mr-2"></i> MC / Điều phối song ngữ Anh-Việt</div>
+                            <div class="flex items-center"><i class="fa-solid fa-receipt text-brand-orange mr-2"></i> Chứng từ kế toán, kiểm toán chuẩn chỉ</div>
+                            <div class="flex items-center"><i class="fa-solid fa-hard-hat text-brand-orange mr-2"></i> Cam kết an toàn lao động tuyệt đối</div>
+                            <div class="flex items-center"><i class="fa-solid fa-diagram-project text-brand-orange mr-2"></i> Quy trình báo cáo chuyên nghiệp</div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#rfp-quote" onclick="prefillIndustry('Doanh Nghiệp FDI')" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-6 py-3.5 rounded-xl transition inline-flex items-center text-sm shadow-md shadow-brand-deep/15">
+                                Đăng Ký Nhận Kịch Bản FDI <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-152202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=800" alt="FDI" class="rounded-2xl w-full h-[320px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/f97316?text=FDI+S%E1%BB%B1+Ki%E1%BB%87n'">
+                        <div class="absolute -bottom-6 -left-6 bg-white p-5 rounded-2xl shadow-xl border border-slate-100 flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 text-blue-600 flex items-center justify-center text-xl"><i class="fa-solid fa-circle-check"></i></div>
+                            <div>
+                                <span class="block font-black text-sm text-brand-deep">Chuẩn mực quốc tế</span>
+                                <span class="block text-xs text-slate-500 font-medium">Đối tác tin cậy của FDI Hàn, Nhật, Mỹ</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Finance & Banking Solution -->
+                <div id="ind-finance" class="ind-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-amber-50 text-amber-700 font-extrabold text-xs px-3.5 py-1.5 rounded-lg border border-amber-100 uppercase tracking-wider">
+                            <i class="fa-solid fa-coins"></i> <span>Giải Pháp Ngân Hàng - Tài Chính</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight leading-tight">Chế Tác Đại Tiệc Tri Ân Đẳng Cấp Thượng Lưu</h3>
+                        <p class="text-slate-600 leading-relaxed font-light">Phù hợp cho các hoạt động tri ân khách hàng VIP, khách hàng Private Banking và các chương trình bùng nổ chỉ tiêu của các phòng ban giao dịch ngân hàng. Không gian sang trọng, dịch vụ chuyên nghiệp tuyệt đối bảo mật.</p>
+                        <div class="grid grid-cols-2 gap-4 text-xs font-bold text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-wine-glass text-brand-orange mr-2"></i> Không gian sảnh tiệc VIP đẳng cấp</div>
+                            <div class="flex items-center"><i class="fa-solid fa-gem text-brand-orange mr-2"></i> Quà tặng thượng lưu bespoke tinh tế</div>
+                            <div class="flex items-center"><i class="fa-solid fa-key text-brand-orange mr-2"></i> Đảm bảo tính bảo mật và độc bản</div>
+                            <div class="flex items-center"><i class="fa-solid fa-champagne-glasses text-brand-orange mr-2"></i> Thực đơn ẩm thực tinh hoa Á - Âu</div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#rfp-quote" onclick="prefillIndustry('Ngân Hàng - Tài Chính')" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-6 py-3.5 rounded-xl transition inline-flex items-center text-sm shadow-md shadow-brand-deep/15">
+                                Đăng Ký Nhận Kịch Bản VIP <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&q=80&w=800" alt="Tài chính" class="rounded-2xl w-full h-[320px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/f97316?text=VIP+Gala+MICE'">
+                    </div>
+                </div>
+
+                <!-- Property / Insurance Solution -->
+                <div id="ind-property" class="ind-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-orange-50 text-orange-700 font-extrabold text-xs px-3.5 py-1.5 rounded-lg border border-orange-100 uppercase tracking-wider">
+                            <i class="fa-solid fa-bolt"></i> <span>Giải Pháp BĐS & Bảo Hiểm</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight leading-tight">Đánh Thức Chiến Binh - Kích Hoạt Doanh Số</h3>
+                        <p class="text-slate-600 leading-relaxed font-light">Những kịch bản Teambuilding bùng nổ, thách thức cực đại nhằm khơi dậy khát vọng chiến thắng, tinh thần đồng đội rực lửa cho các "chiến binh" sales bất động sản và các đại lý bảo hiểm.</p>
+                        <div class="grid grid-cols-2 gap-4 text-xs font-bold text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-trophy text-brand-orange mr-2"></i> Trò chơi đối kháng kích thích ý chí</div>
+                            <div class="flex items-center"><i class="fa-solid fa-bullhorn text-brand-orange mr-2"></i> Truyền thông nội bộ bùng nổ</div>
+                            <div class="flex items-center"><i class="fa-solid fa-medal text-brand-orange mr-2"></i> Hệ thống vinh danh rực rỡ cảm xúc</div>
+                            <div class="flex items-center"><i class="fa-solid fa-fire-flame-curved text-brand-orange mr-2"></i> Lửa trại & Gala truyền cảm hứng</div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#rfp-quote" onclick="prefillIndustry('Bất Động Sản - Bảo Hiểm')" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-6 py-3.5 rounded-xl transition inline-flex items-center text-sm shadow-md shadow-brand-deep/15">
+                                Đăng Ký Kịch Bản Rực Lửa <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1542744094-3a31f103e35f?auto=format&fit=crop&q=80&w=800" alt="BĐS" class="rounded-2xl w-full h-[320px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/f97316?text=B%C4%90S+Teambuilding'">
+                    </div>
+                </div>
+
+                <!-- Big Corporates / SMEs Solution -->
+                <div id="ind-corp" class="ind-content hidden grid grid-cols-1 lg:grid-cols-2 gap-12 items-center w-full">
+                    <div class="space-y-6">
+                        <div class="inline-flex items-center space-x-2 bg-purple-50 text-purple-700 font-extrabold text-xs px-3.5 py-1.5 rounded-lg border border-purple-100 uppercase tracking-wider">
+                            <i class="fa-solid fa-crown"></i> <span>Giải Pháp Cho Tập Đoàn & Doanh Nghiệp</span>
+                        </div>
+                        <h3 class="text-2xl sm:text-4xl font-extrabold text-brand-deep tracking-tight leading-tight">Gắn Kết Trọn Vẹn - Vững Bước Tương Lai</h3>
+                        <p class="text-slate-600 leading-relaxed font-light">Sự kết hợp hoàn mỹ giữa du lịch trải nghiệm di sản độc bản và đào tạo nội bộ. Gắn kết tình đồng đội sâu sắc, xóa bỏ khoảng cách giữa các ban bệ và phòng ban kế toán, kinh doanh, nhân sự.</p>
+                        <div class="grid grid-cols-2 gap-4 text-xs font-bold text-slate-700">
+                            <div class="flex items-center"><i class="fa-solid fa-shuffle text-brand-orange mr-2"></i> Trò chơi kết nối phá vỡ tảng băng</div>
+                            <div class="flex items-center"><i class="fa-solid fa-comments text-brand-orange mr-2"></i> Chia sẻ, lắng nghe và thấu hiểu</div>
+                            <div class="flex items-center"><i class="fa-solid fa-people-group text-brand-orange mr-2"></i> Phù hợp cho mọi độ tuổi nhân sự</div>
+                            <div class="flex items-center"><i class="fa-solid fa-star text-brand-orange mr-2"></i> Đa dạng sự lựa chọn từ 3-5 sao</div>
+                        </div>
+                        <div class="pt-4">
+                            <a href="#rfp-quote" onclick="prefillIndustry('Tập Đoàn Lớn & SME')" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-6 py-3.5 rounded-xl transition inline-flex items-center text-sm shadow-md shadow-brand-deep/15">
+                                Đăng Ký Kịch Bản Gắn Kết <i class="fa-solid fa-chevron-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="relative">
+                        <img src="https://images.unsplash.com/photo-1511578314322-379afb476865?auto=format&fit=crop&q=80&w=800" alt="Corp" class="rounded-2xl w-full h-[320px] object-cover shadow-2xl" onerror="this.src='https://placehold.co/800x600/0b132b/f97316?text=Corporate+MICE'">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE CASE STUDIES SECTION -->
+    <section id="case-studies" class="py-24 bg-white border-y border-slate-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end mb-16">
+                <div class="max-w-2xl space-y-4">
+                    <span class="text-brand-primary text-xs font-black uppercase tracking-widest bg-blue-50 px-4 py-2 rounded-full border border-blue-100">Minh Chứng Năng Lực</span>
+                    <h2 class="text-3xl sm:text-5xl font-black text-brand-deep tracking-tight">Chiến Dịch Sự Kiện Tiêu Biểu</h2>
+                    <p class="text-slate-500 font-light text-base sm:text-lg">Tham khảo các sự kiện lớn thực tế được Hoa Sen Travel tổ chức trọn gói vô cùng thành công.</p>
+                </div>
+                <div class="mt-6 md:mt-0 flex space-x-3">
+                    <button onclick="prevCase()" class="w-12 h-12 rounded-full bg-slate-100 hover:bg-brand-deep hover:text-white text-slate-700 transition flex items-center justify-center border border-slate-200" aria-label="Previous Case Study"><i class="fa-solid fa-arrow-left"></i></button>
+                    <button onclick="nextCase()" class="w-12 h-12 rounded-full bg-slate-100 hover:bg-brand-deep hover:text-white text-slate-700 transition flex items-center justify-center border border-slate-200" aria-label="Next Case Study"><i class="fa-solid fa-arrow-right"></i></button>
+                </div>
+            </div>
+
+            <!-- Case Studies Slides Holder -->
+            <div class="relative overflow-hidden">
+                <div id="case-slider" class="flex transition-transform duration-500 ease-in-out gap-8" style="transform: translateX(0%);">
+                    
+                    <!-- CASE STUDY 1: VIET PHAP HOSPITAL -->
+                    <div class="min-w-full md:min-w-[48%] bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 shadow-lg flex flex-col justify-between p-6">
+                        <div class="space-y-4">
+                            <div class="relative h-[220px] rounded-2xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1544735716-392fe2489ffa?auto=format&fit=crop&q=80&w=800" alt="Bệnh viện Việt Pháp" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/0b132b/f97316?text=B%E1%BB%87nh+Vi%E1%BB%87n+Vi%E1%BB%87t+Ph%C3%A1p'">
+                                <span class="absolute top-4 left-4 bg-emerald-600 text-white font-black text-[10px] px-3 py-1.5 rounded-full uppercase tracking-wider">Summer Trip 2026</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-deep leading-snug">Bệnh Viện Việt Pháp Hà Nội - Hành Trình Trà Cổ Móng Cái</h3>
+                            <p class="text-slate-500 text-sm font-light leading-relaxed">Du lịch hè gắn kết cho đội ngũ cán bộ, y bác sĩ Bệnh viện Việt Pháp Hà Nội tại vùng địa đầu Tổ Quốc đầy thiêng liêng và ý nghĩa.</p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-slate-200/60 grid grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <span class="block text-slate-400 font-medium">Quy Mô Sự Kiện</span>
+                                <span class="font-extrabold text-brand-deep text-sm">200+ Nhân Sự VIP</span>
+                            </div>
+                            <div>
+                                <span class="block text-slate-400 font-medium">Địa Điểm Tổ Chức</span>
+                                <span class="font-extrabold text-brand-deep text-sm">Trà Cổ - Móng Cái</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CASE STUDY 2: TKV GROUP -->
+                    <div class="min-w-full md:min-w-[48%] bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 shadow-lg flex flex-col justify-between p-6">
+                        <div class="space-y-4">
+                            <div class="relative h-[220px] rounded-2xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1469854523086-cc02fe5d8800?auto=format&fit=crop&q=80&w=800" alt="Tập đoàn TKV" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/0b132b/f97316?text=T%E1%BA%ADp+%C4%90o%C3%A0n+TKV'">
+                                <span class="absolute top-4 left-4 bg-amber-600 text-white font-black text-[10px] px-3 py-1.5 rounded-full uppercase tracking-wider">MICE 2026</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-deep leading-snug">Tập Đoàn TKV - Du Lịch Khám Phá Di Sản Quảng Bình</h3>
+                            <p class="text-slate-500 text-sm font-light leading-relaxed">Đồng hành cùng Tập đoàn tổ chức chương trình tham quan nghỉ dưỡng kết hợp teambuilding rực lửa bãi biển và đêm Gala Dinner đẳng cấp.</p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-slate-200/60 grid grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <span class="block text-slate-400 font-medium">Quy Mô Sự Kiện</span>
+                                <span class="font-extrabold text-brand-deep text-sm">500+ Cán Bộ CNV</span>
+                            </div>
+                            <div>
+                                <span class="block text-slate-400 font-medium">Địa Điểm Tổ Chức</span>
+                                <span class="font-extrabold text-brand-deep text-sm">Quảng Bình - Resort 5 Sao</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CASE STUDY 3: HA LONG CRUISE INCENTIVE -->
+                    <div class="min-w-full md:min-w-[48%] bg-slate-50 rounded-3xl overflow-hidden border border-slate-100 shadow-lg flex flex-col justify-between p-6">
+                        <div class="space-y-4">
+                            <div class="relative h-[220px] rounded-2xl overflow-hidden">
+                                <img src="https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&q=80&w=800" alt="Du thuyền Hạ Long" class="w-full h-full object-cover" onerror="this.src='https://placehold.co/800x600/0b132b/f97316?text=Incentive+H%E1%BA%A1+Long'">
+                                <span class="absolute top-4 left-4 bg-blue-600 text-white font-black text-[10px] px-3 py-1.5 rounded-full uppercase tracking-wider">Luxury Incentive</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-brand-deep leading-snug">Đại Tiệc Trên Siêu Du Thuyền Di Sản Hạ Long</h3>
+                            <p class="text-slate-500 text-sm font-light leading-relaxed">Chuyến du lịch đặc quyền cao cấp (Incentive Trip) tri ân nhà phân phối xuất sắc của khối đối tác tài chính ngân hàng.</p>
+                        </div>
+                        <div class="pt-6 mt-6 border-t border-slate-200/60 grid grid-cols-2 gap-4 text-xs">
+                            <div>
+                                <span class="block text-slate-400 font-medium">Quy Mô Sự Kiện</span>
+                                <span class="font-extrabold text-brand-deep text-sm">120 Thượng Khách VIP</span>
+                            </div>
+                            <div>
+                                <span class="block text-slate-400 font-medium">Phương Tiện Đặc Quyền</span>
+                                <span class="font-extrabold text-brand-deep text-sm">Siêu Du Thuyền 5 Sao</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- INTERACTIVE TEAMBUILDING CONCEPT GENERATOR (Interactive Mini-App) -->
+    <section id="concept-generator" class="py-24 bg-slate-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary text-xs font-black uppercase tracking-widest bg-blue-50 px-4 py-2 rounded-full border border-blue-100">Công Cụ Độc Quyền</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-brand-deep mt-4 tracking-tight">Thiết Kế Concept Teambuilding</h2>
+                <p class="text-slate-500 mt-3 font-light">Lên ý tưởng nhanh và sơ bộ cho chuyến đi của doanh nghiệp trong 1 giây!</p>
+            </div>
+
+            <!-- Quiz Generator Box -->
+            <div class="bg-white rounded-3xl p-6 sm:p-10 shadow-xl border border-slate-100/80 relative">
+                <div class="absolute top-4 right-4 text-brand-orange/15 text-6xl"><i class="fa-solid fa-wand-magic-sparkles"></i></div>
+                
+                <h3 class="text-xl font-bold text-brand-deep mb-6 flex items-center border-b border-slate-100 pb-4">
+                    <i class="fa-solid fa-clipboard-question text-brand-orange mr-3"></i> Nhập thông số mong muốn
+                </h3>
+
+                <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 mb-8">
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">1. Quy mô đoàn nhân sự</label>
+                        <select id="gen-size" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            <option value="small">Dưới 50 nhân sự</option>
+                            <option value="medium" selected>Từ 50 đến 150 nhân sự</option>
+                            <option value="large">Trên 150 nhân sự</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">2. Mục tiêu chính</label>
+                        <select id="gen-goal" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            <option value="energize">Bùng nổ, truyền lửa & bứt phá</option>
+                            <option value="connect" selected>Gắn kết, thấu hiểu sâu sắc</option>
+                            <option value="luxury">Thư giãn tinh tế, tri ân đẳng cấp</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">3. Địa hình mong muốn</label>
+                        <select id="gen-terrain" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            <option value="beach">Bãi biển lộng gió</option>
+                            <option value="resort" selected>Resort 5 sao biệt lập</option>
+                            <option value="heritage">Khám phá di sản/văn hóa</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="text-center">
+                    <button onclick="generateConcept()" class="bg-brand-orange hover:bg-brand-deep hover:text-white text-white font-extrabold px-10 py-4 rounded-xl transition duration-300 shadow-lg shadow-brand-orange/20 inline-flex items-center">
+                        XUẤT Ý TƯỞNG NGAY <i class="fa-solid fa-gears ml-2"></i>
+                    </button>
+                </div>
+
+                <!-- Generated Output Panel -->
+                <div id="concept-output" class="mt-8 p-6 bg-slate-50 border border-slate-200/60 rounded-2xl hidden space-y-4 animate-fade-in">
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <span class="text-[10px] font-black text-brand-orange uppercase tracking-widest block mb-1">CHỦ ĐỀ ĐỀ XUẤT</span>
+                            <h4 id="output-title" class="text-2xl font-black text-brand-deep">GẮN KẾT ĐỂ VƯƠN XA</h4>
+                        </div>
+                        <div class="bg-brand-deep text-brand-gold font-bold text-xs px-3.5 py-1.5 rounded-lg border border-white/10 uppercase tracking-wider flex items-center">
+                            <i class="fa-solid fa-ribbon mr-1 text-brand-orange"></i> Độc Quyền Hoa Sen
+                        </div>
+                    </div>
+                    <p id="output-desc" class="text-sm text-slate-600 leading-relaxed font-light">Sự kết hợp hoàn hảo giữa các hoạt động gắn kết chiều sâu trong không gian tĩnh lặng của Resort sang trọng...</p>
+                    
+                    <div class="bg-white p-4 rounded-xl border border-slate-100 space-y-2">
+                        <span class="text-xs font-bold text-slate-400 uppercase tracking-wider block">Gợi ý kịch bản Gala Dinner tương thích</span>
+                        <p id="output-gala" class="text-sm text-brand-deep font-semibold"><i class="fa-solid fa-microphone mr-2 text-brand-orange"></i> Đêm tiệc "Aura of Night" - Tràn ngập cảm xúc tri ân.</p>
+                    </div>
+
+                    <div class="pt-4 border-t border-slate-200/60 flex flex-col sm:flex-row justify-between items-center gap-4">
+                        <span class="text-xs text-slate-500 font-medium">Báo giá chuẩn SLA sẽ được gửi kèm đầy đủ chi tiết!</span>
+                        <a href="#rfp-quote" onclick="applyGeneratedConceptToForm()" class="w-full sm:w-auto bg-brand-deep hover:bg-brand-primary text-white text-center font-bold px-6 py-3 rounded-lg text-xs transition shadow-md">
+                            Áp Dụng Cho Báo Giá <i class="fa-solid fa-arrow-right-long ml-1.5"></i>
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- SERVICE LEVEL AGREEMENT (SLA) CAM KẾT DỊCH VỤ -->
+    <section id="cam-ket-sla" class="py-24 bg-brand-deep text-white relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- SLA Text Details -->
+                <div class="space-y-6">
+                    <span class="text-brand-orange text-xs font-black uppercase tracking-widest bg-brand-orange/15 border border-brand-orange/25 px-4 py-2 rounded-full">SLA Cam Kết Chất Lượng</span>
+                    <h2 class="text-3xl sm:text-5xl font-black tracking-tight leading-tight">Quy Trình Chuẩn Hoá<br><span class="orange-gradient-text">Cam Kết Đồng Hành Khắt Khe</span></h2>
+                    <p class="text-slate-300 font-light leading-relaxed text-base sm:text-lg">
+                        Tại Hoa Sen Travel, chất lượng dịch vụ không phải là lời hứa suông. Chúng tôi là đơn vị lữ hành MICE tiên phong số hóa quy trình vận hành và ban hành bộ Tiêu chuẩn Cam kết Chất lượng (SLA) nghiêm ngặt nhất đối với đối tác lưu trú, vận tải và ẩm thực.
+                    </p>
+
+                    <!-- SLA Items list -->
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-1"><i class="fa-solid fa-check text-xs"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Phản hồi thần tốc trong 5 phút</h4>
+                                <p class="text-xs text-slate-400 mt-1">Đội ngũ điều phối tiếp nhận thông tin và tư vấn ban đầu 24/7 không quản ngày đêm.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-1"><i class="fa-solid fa-check text-xs"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Chế tác kịch bản độc quyền</h4>
+                                <p class="text-xs text-slate-400 mt-1">Không trùng lặp ý tưởng. Kịch bản được thiết kế riêng tối ưu theo đặc thù văn hóa của từng doanh nghiệp.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <div class="w-6 h-6 rounded-full bg-brand-orange/20 text-brand-orange flex items-center justify-center shrink-0 mt-1"><i class="fa-solid fa-check text-xs"></i></div>
+                            <div>
+                                <h4 class="font-bold text-white text-sm">Chỉ số an toàn & bảo mật hàng đầu</h4>
+                                <p class="text-xs text-slate-400 mt-1">Cam kết bảo mật toàn bộ dữ liệu sự kiện doanh nghiệp, an toàn bảo hiểm tối đa trên mọi hành trình.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Graphic/Visual Columns representing SLA checklist -->
+                <div class="bg-white/5 border border-white/10 rounded-3xl p-8 sm:p-12 glass-panel space-y-6">
+                    <h3 class="text-xl font-bold text-white border-b border-white/10 pb-4 flex items-center">
+                        <i class="fa-solid fa-shield-halved text-brand-orange mr-3"></i> Bộ Chỉ Số Kiểm Soát Sự Kiện
+                    </h3>
+                    
+                    <div class="space-y-4">
+                        <div>
+                            <div class="flex justify-between text-xs font-bold text-slate-300 mb-1">
+                                <span>Khảo Sát & Lọc Đối Tác Khách Sạn (Hạng 5 Sao)</span>
+                                <span class="text-brand-orange">100% Khớp Hợp Đồng</span>
+                            </div>
+                            <div class="w-full bg-white/10 rounded-full h-2">
+                                <div class="bg-brand-orange h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold text-slate-300 mb-1">
+                                <span>Kiểm Tra Đưa Đón Vận Chuyển VIP (Dcar Limousine)</span>
+                                <span class="text-brand-orange">Đời Mới 100%</span>
+                            </div>
+                            <div class="w-full bg-white/10 rounded-full h-2">
+                                <div class="bg-brand-orange h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold text-slate-300 mb-1">
+                                <span>Đội Ngũ MC & Hướng Dẫn Viên Thực Địa</span>
+                                <span class="text-brand-orange">Chuyên Nghiệp Am Hiểu Lễ Nghi</span>
+                            </div>
+                            <div class="w-full bg-white/10 rounded-full h-2">
+                                <div class="bg-brand-orange h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                        <div>
+                            <div class="flex justify-between text-xs font-bold text-slate-300 mb-1">
+                                <span>Vệ Sinh An Toàn Thực Phẩm Nhà Hàng</span>
+                                <span class="text-brand-orange">Chuẩn Quốc Tế</span>
+                            </div>
+                            <div class="w-full bg-white/10 rounded-full h-2">
+                                <div class="bg-brand-orange h-2 rounded-full" style="width: 100%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="pt-4 text-center">
+                        <span class="inline-block text-xs text-slate-400 font-light italic">"Uy tín, Chất lượng, Nhanh chóng, Giá hợp lý" - Kim chỉ nam của Hoa Sen Travel.</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- RFP / REQUEST FOR PROPOSAL & QUOTE BUILDER -->
+    <section id="rfp-quote" class="py-24 bg-slate-50 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <span class="text-brand-primary text-xs font-black uppercase tracking-widest bg-blue-50 px-4 py-2 rounded-full border border-blue-100">Báo Giá Siêu Tốc</span>
+                <h2 class="text-3xl sm:text-5xl font-black text-brand-deep mt-4 tracking-tight">Cổng Đăng Ký Nhận Hồ Sơ Thiết Kế & Báo Giá</h2>
+                <p class="text-slate-500 mt-3 font-light">Đơn giản hóa quy trình đề xuất sự kiện của doanh nghiệp bạn. Nhận kịch bản chi tiết PDF hoàn toàn miễn phí!</p>
+            </div>
+
+            <!-- Wizard Multistep Form Panel -->
+            <div class="bg-white rounded-3xl p-6 sm:p-12 shadow-xl border border-slate-100/80 relative">
+                
+                <!-- Steps Nodes and Lines -->
+                <div class="flex justify-between items-center mb-10 max-w-md mx-auto relative">
+                    <div class="absolute h-1 bg-slate-100 left-0 right-0 top-1/2 -translate-y-1/2 z-0"></div>
+                    <div id="rfp-progress-line" class="absolute h-1 bg-brand-orange left-0 top-1/2 -translate-y-1/2 z-0 transition-all duration-300 w-0"></div>
+                    
+                    <div id="rfp-node-1" class="w-10 h-10 rounded-full bg-brand-orange text-white flex items-center justify-center font-bold z-10 transition">1</div>
+                    <div id="rfp-node-2" class="w-10 h-10 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-bold z-10 transition">2</div>
+                    <div id="rfp-node-3" class="w-10 h-10 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-bold z-10 transition">3</div>
+                </div>
+
+                <!-- THE DYNAMIC MULTISTEP FORM -->
+                <form id="rfp-wizard-form" onsubmit="handleRfpSubmit(event)">
+                    
+                    <!-- STEP 1: EVENT DETAILS -->
+                    <div id="rfp-step-1" class="rfp-step space-y-6">
+                        <h3 class="text-lg font-bold text-brand-deep text-center mb-6">BƯỚC 1: CÁC THÔNG SỐ VỀ SỰ KIỆN DOANH NGHIỆP</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Loại hình sự kiện mong muốn</label>
+                                <select id="rfp-service-type" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                                    <option value="Team Building & Tour MICE">Du Lịch Teambuilding & Tour MICE Trọn Gói</option>
+                                    <option value="Gala Dinner & Event">Hội Nghị, Đêm Hội Gala Dinner Cao Cấp</option>
+                                    <option value="Du Thuyền Hạ Long">Đại Tiệc & Incentive Trên Siêu Du Thuyền Hạ Long</option>
+                                    <option value="Vận Chuyển VIP">Đưa Đón VIP Hạng Thương Gia (Limousine)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Ngành nghề doanh nghiệp của bạn</label>
+                                <input type="text" id="rfp-industry" placeholder="Ví dụ: Khối Y tế, Ngân hàng, FDI..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Số lượng khách dự kiến</label>
+                                <input type="text" required id="rfp-guests" placeholder="Ví dụ: Đoàn 150 nhân sự" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Địa điểm tổ chức mong muốn</label>
+                                <input type="text" required id="rfp-location" placeholder="Ví dụ: Hạ Long, Quảng Bình, Nha Trang..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-end pt-4">
+                            <button type="button" onclick="nextRfpStep(2)" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-8 py-3.5 rounded-xl transition shadow-lg">
+                                Tiếp Tục <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 2: QUALITY EXPECTATIONS -->
+                    <div id="rfp-step-2" class="rfp-step hidden space-y-6">
+                        <h3 class="text-lg font-bold text-brand-deep text-center mb-6">BƯỚC 2: YÊU CẦU CHẤT LƯỢNG & NGÂN SÁCH</h3>
+                        
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Tiêu chuẩn lưu trú</label>
+                                <select id="rfp-stars" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                                    <option value="5-star">Resort / Khách Sạn 5 Sao Sang Trọng</option>
+                                    <option value="4-star" selected>Khách Sạn 4 Sao Cao Cấp</option>
+                                    <option value="3-star">Khách Sạn 3 Sao Chuẩn Mực</option>
+                                    <option value="custom">Chưa Xác Định (Cần Tư Vấn Thêm)</option>
+                                </select>
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Hạng xe đưa đón mong muốn</label>
+                                <select id="rfp-transport" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                                    <option value="limousine">Limousine Hạng Thương Gia & VIP</option>
+                                    <option value="standard">Xe Du Lịch Đời Mới Máy Lạnh Cao Cấp</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Ngân sách dự kiến cho sự kiện</label>
+                                <input type="text" id="rfp-budget" placeholder="Để chúng tôi tối ưu kịch bản tối đa..." class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Ngày dự kiến khởi hành</label>
+                                <input type="date" id="rfp-date" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between pt-4">
+                            <button type="button" onclick="nextRfpStep(1)" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold px-8 py-3.5 rounded-xl transition">
+                                <i class="fa-solid fa-arrow-left mr-2 text-xs"></i> Quay Lại
+                            </button>
+                            <button type="button" onclick="nextRfpStep(3)" class="bg-brand-deep hover:bg-brand-primary text-white font-extrabold px-8 py-3.5 rounded-xl transition shadow-lg">
+                                Tiếp Tục <i class="fa-solid fa-arrow-right ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- STEP 3: CONTACT INFORMATION -->
+                    <div id="rfp-step-3" class="rfp-step hidden space-y-6">
+                        <h3 class="text-lg font-bold text-brand-deep text-center mb-6">BƯỚC 3: THÔNG TIN LIÊN HỆ ĐỐI TÁC</h3>
+                        
+                        <div class="space-y-4 max-w-md mx-auto">
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Tên Doanh nghiệp & Người liên hệ</label>
+                                <input type="text" required id="rfp-name" placeholder="Ví dụ: Anh Nhất - Công ty Hoa Sen" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Số điện thoại / Zalo để nhận báo giá nhanh</label>
+                                <input type="tel" required id="rfp-phone" placeholder="Để điều phối viên gửi Zalo kịch bản" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                            <div>
+                                <label class="block text-xs font-bold text-slate-400 uppercase tracking-wider mb-2">Email nhận đề xuất kịch bản PDF</label>
+                                <input type="email" required id="rfp-email" placeholder="example@company.com" class="w-full px-4 py-3 rounded-xl bg-slate-50 border border-slate-200/80 focus:outline-none focus:border-brand-primary text-sm font-semibold">
+                            </div>
+                        </div>
+
+                        <div class="flex justify-between pt-4">
+                            <button type="button" onclick="nextRfpStep(2)" class="bg-slate-100 hover:bg-slate-200 text-slate-700 font-extrabold px-8 py-3.5 rounded-xl transition">
+                                <i class="fa-solid fa-arrow-left mr-2 text-xs"></i> Quay Lại
+                            </button>
+                            <button type="submit" class="bg-brand-orange hover:bg-brand-deep hover:text-white text-white border-2 border-brand-orange font-extrabold px-10 py-4 rounded-xl transition duration-300 shadow-lg shadow-brand-orange/20 flex items-center justify-center">
+                                GỬI YÊU CẦU BÁO GIÁ <i class="fa-solid fa-paper-plane ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER WITH DETAILED LEGAL PROFILE -->
+    <footer class="bg-brand-dark text-slate-400 pt-20 pb-10 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 lg:grid-cols-3 gap-12 mb-16">
+            
+            <!-- Company Info & Logo -->
+            <div class="space-y-6">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-brand-orange rounded-xl flex items-center justify-center text-white">
+                        <svg viewBox="0 0 24 24" class="w-7 h-7 fill-current" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12,2C11.5,4 10,7 8,9C6,11 3.5,11.5 2,12C3.5,12.5 6,13 8,15C10,17 11.5,20 12,22C12.5,20 14,17 16,15C18,13 20.5,12.5 22,12C20.5,11.5 18,11 16,9C14,7 12.5,4 12,2Z"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <span class="block text-md font-black text-white tracking-wider uppercase">Hoa Sen MICE & Travel</span>
+                        <span class="block text-xs text-brand-orange uppercase tracking-widest font-extrabold">Gắn kết trải nghiệm thuần khiết</span>
+                    </div>
+                </div>
+                <p class="text-sm font-light leading-relaxed">
+                    Đơn vị lữ hành MICE, Teambuilding & du lịch nghỉ dưỡng chất lượng cao chuyên nghiệp hàng đầu Việt Nam. Đối tác tin cậy phát triển lâu dài của mọi doanh nghiệp.
+                </p>
+                <div class="pt-4 border-t border-white/10 space-y-2 text-xs font-light">
+                    <p><strong class="text-white">Doanh nghiệp:</strong> CÔNG TY CỔ PHẦN XÂY DỰNG VÀ DỊCH VỤ HOA SEN</p>
+                    <p><strong class="text-white">Đại diện pháp luật:</strong> Ông Lý Hồng Nhất</p>
+                    <p><strong class="text-white">Mã số thuế:</strong> 0106914229</p>
+                    <p><strong class="text-white">Ngày hoạt động:</strong> 23/07/2015</p>
+                </div>
+            </div>
+
+            <!-- Offices & Locations -->
+            <div class="space-y-6">
+                <h3 class="text-md font-extrabold text-white uppercase tracking-widest border-l-4 border-brand-orange pl-3">Hệ thống văn phòng</h3>
+                <div class="space-y-4 text-sm font-light">
+                    <div>
+                        <span class="block font-bold text-white text-xs uppercase tracking-wider mb-1"><i class="fa-solid fa-map-pin text-brand-orange mr-1"></i> Trụ sở chính (Hà Nội):</span>
+                        <p>55/475 Nguyễn Trãi, phường Thanh Liệt, quận Thanh Xuân, TP Hà Nội</p>
+                    </div>
+                    <div>
+                        <span class="block font-bold text-white text-xs uppercase tracking-wider mb-1"><i class="fa-solid fa-map-pin text-brand-orange mr-1"></i> Chi nhánh (Quảng Ninh):</span>
+                        <p>Điểm dừng nghỉ Eco - Tổ 94, khu Đồn Điền, phường Tuần Châu, TP Hạ Long, Quảng Ninh</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Fast Contacts & News -->
+            <div class="space-y-6">
+                <h3 class="text-md font-extrabold text-white uppercase tracking-widest border-l-4 border-brand-orange pl-3">Kết nối nhanh</h3>
+                <div class="space-y-3 text-sm">
+                    <p class="font-light">Hãy để lại email để cập nhật sớm các xu hướng Teambuilding & MICE mới nhất 2026 hoàn toàn miễn phí.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Email nhận tin" class="w-full bg-white/5 border border-white/10 rounded-l-xl px-4 py-3 text-sm focus:outline-none focus:border-brand-orange">
+                        <button class="bg-brand-orange text-white font-bold px-4 rounded-r-xl hover:bg-white hover:text-brand-deep transition" aria-label="Subscribe email"><i class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+                <div class="pt-4 flex space-x-4">
+                    <div class="bg-white/5 p-3 rounded-xl flex items-center space-x-3 w-full border border-white/5">
+                        <i class="fa-solid fa-headset text-2xl text-brand-orange"></i>
+                        <div>
+                            <span class="block text-[10px] text-slate-400">Đại diện bộ phận MICE</span>
+                            <a href="tel:0852566616" class="block font-black text-white text-sm hover:text-brand-orange">085 256 6616</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Copyright section -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8 border-t border-white/5 flex flex-col md:flex-row justify-between items-center text-xs font-light">
+            <p>&copy; 2026 CÔNG TY CỔ PHẦN XÂY DỰNG VÀ DỊCH VỤ HOA SEN. Bảo lưu mọi quyền.</p>
+            <div class="flex space-x-6 mt-4 md:mt-0">
+                <a href="#" class="hover:text-brand-orange">Chính sách bảo mật</a>
+                <a href="#" class="hover:text-brand-orange">Điều khoản dịch vụ</a>
+                <a href="#" class="hover:text-brand-orange">Cam kết chất lượng dịch vụ</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CUSTOM MODAL DIALOG (No browser alert) -->
+    <div id="custom-modal" class="hidden fixed inset-0 z-[100] flex items-center justify-center bg-brand-dark/60 backdrop-blur-sm">
+        <div class="bg-white rounded-3xl p-8 max-w-md w-full mx-4 shadow-2xl border border-slate-100 text-center space-y-6 transform scale-95 transition-all">
+            <div class="w-16 h-16 bg-emerald-100 text-emerald-600 rounded-full flex items-center justify-center mx-auto text-3xl">
+                <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="space-y-2">
+                <h3 class="text-2xl font-bold text-brand-deep" id="modal-title">Gửi thành công!</h3>
+                <p class="text-sm text-slate-500 font-light" id="modal-body">Yêu cầu của bạn đã được tiếp nhận. Đội ngũ lữ hành MICE của chúng tôi sẽ liên hệ lại ngay trong vòng 5 phút.</p>
+            </div>
+            <div>
+                <button onclick="closeModal()" class="w-full bg-brand-deep hover:bg-brand-primary text-white font-bold py-3 rounded-xl transition shadow-lg shadow-brand-deep/15">
+                    Xác nhận
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- JAVASCRIPT LOGIC -->
+    <script>
+        // Hamburger Menu Toggle
+        const mobileBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu on link click
+        mobileMenu.addEventListener('click', (e) => {
+            if(e.target.tagName === 'A') {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
+        // Hero Background Carousel
+        let currentBgIndex = 1;
+        const totalBgs = 3;
+        setInterval(() => {
+            const currentBg = document.getElementById(`hero-bg-${currentBgIndex}`);
+            currentBg.classList.replace('opacity-100', 'opacity-0');
+            
+            currentBgIndex = currentBgIndex === totalBgs ? 1 : currentBgIndex + 1;
+            
+            const nextBg = document.getElementById(`hero-bg-${currentBgIndex}`);
+            nextBg.classList.replace('opacity-0', 'opacity-100');
+        }, 5000);
+
+        // Selector Industry Solution Switcher
+        function selectIndustry(industryId) {
+            // Hide all tab contents
+            document.querySelectorAll('.ind-content').forEach(tab => {
+                tab.classList.add('hidden');
+            });
+            // Show active tab
+            document.getElementById(industryId).classList.remove('hidden');
+
+            // Reset all buttons to default style
+            document.querySelectorAll('.ind-btn').forEach(btn => {
+                btn.className = "ind-btn bg-white hover:bg-slate-100 text-slate-700 p-5 rounded-2xl font-bold text-sm transition duration-300 border border-slate-200/60 flex flex-col items-center justify-center space-y-3";
+                // Reset icon colors
+                const icon = btn.querySelector('i');
+                icon.className = icon.className.replace('text-brand-orange', 'text-slate-400');
+            });
+
+            // Set clicked button to active
+            const activeBtn = document.getElementById(`btn-${industryId}`);
+            activeBtn.className = "ind-btn active bg-brand-deep text-white shadow-lg p-5 rounded-2xl font-bold text-sm transition duration-300 flex flex-col items-center justify-center space-y-3";
+            const activeIcon = activeBtn.querySelector('i');
+            activeIcon.className = activeIcon.className.replace('text-slate-400', 'text-brand-orange');
+        }
+
+        // Prefill industry on form click
+        function prefillIndustry(industryName) {
+            document.getElementById('rfp-industry').value = industryName;
+        }
+
+        // Case studies slider logic
+        let currentCaseIdx = 0;
+        const caseSlider = document.getElementById('case-slider');
+        const caseCount = document.querySelectorAll('#case-slider > div').length;
+
+        function updateCaseSlider() {
+            let offset = currentCaseIdx * -51; // offset based on min-w and gap
+            if (window.innerWidth < 768) {
+                offset = currentCaseIdx * -104; // full width on mobile
+            }
+            caseSlider.style.transform = `translateX(${offset}%)`;
+        }
+
+        function nextCase() {
+            // we have 3 cases, can move max depending on screensize
+            const limit = window.innerWidth < 768 ? caseCount - 1 : caseCount - 2;
+            if (currentCaseIdx < limit) {
+                currentCaseIdx++;
+            } else {
+                currentCaseIdx = 0;
+            }
+            updateCaseSlider();
+        }
+
+        function prevCase() {
+            if (currentCaseIdx > 0) {
+                currentCaseIdx--;
+            } else {
+                const limit = window.innerWidth < 768 ? caseCount - 1 : caseCount - 2;
+                currentCaseIdx = limit;
+            }
+            updateCaseSlider();
+        }
+
+        // Resizing event to ensure slider offset matches responsiveness
+        window.addEventListener('resize', updateCaseSlider);
+
+        // Teambuilding Concept Quiz Generator
+        const concepts = {
+            connect: {
+                beach: {
+                    title: "SỨ MỆNH ĐẠI DƯƠNG - VỮNG VÀNG VƯƠN XA",
+                    desc: "Hành trình mạo hiểm bãi biển đầy phấn khích, vượt qua sóng gió. Xóa bỏ hoàn toàn khoảng cách cấp bậc và gắn kết sâu sắc từng thành viên.",
+                    gala: "Đêm tiệc Gala Dinner 'Aura of Ocean' - Đêm tôn vinh sự cống hiến vượt bậc."
+                },
+                resort: {
+                    title: "KIẾN TẠO NIỀM TIN - BỀN VỮNG TƯƠNG LAI",
+                    desc: "Hành trình nâng tầm trải nghiệm trong resort 5 sao tĩnh lặng, tập trung vào các thử thách thấu hiểu tâm lý đồng đội và giải quyết mâu thuẫn nội bộ nhẹ nhàng.",
+                    gala: "Đêm tiệc Gala Dinner ấm cúng 'Gắn Kết Trọn Vẹn' - Lắng nghe, chia sẻ chân thành."
+                },
+                heritage: {
+                    title: "BẢN SẮC HOA SEN - KHÁM PHÁ KỲ QUAN",
+                    desc: "Thử thách mật thư di sản, khám phá văn hóa địa phương kết hợp chụp ảnh tập thể hoành tráng. Tôn vinh giá trị văn hóa và tinh thần đồng đội gắn bó.",
+                    gala: "Đêm tiệc Gala Dinner 'Nét Đẹp Bản Địa' với thực đơn hải sản tinh hoa đặc quyền."
+                }
+            },
+            energize: {
+                beach: {
+                    title: "CHIẾN BINH BÙNG NỔ - KÍCH HOẠT VÔ CỰC",
+                    desc: "Thử thách đối kháng cực đại bãi biển, đòi hỏi thể lực, chiến thuật và tinh thần quyết thắng đến phút cuối cùng. Rực lửa khát khao dẫn đầu doanh số.",
+                    gala: "Đêm tiệc Gala Dinner 'Fire & Ice' hoành tráng - Vinh danh chiến binh rực rỡ cảm xúc."
+                },
+                resort: {
+                    title: "ĐÁNH THỨC CHIẾN BINH - BỨT PHÁ GIỚI HẠN",
+                    desc: "Chương trình huấn luyện nâng cấp kỹ năng lãnh đạo đỉnh cao phối hợp chuỗi trạm thử thách độc đáo rải rác toàn khu Resort 5 sao.",
+                    gala: "Đêm tiệc Gala Dinner 'The Champion Night' - Sân khấu bùng nổ năng lượng rực lửa."
+                },
+                heritage: {
+                    title: "CUỘC ĐUA DI SẢN - CHINH PHỤC ĐỈNH CAO",
+                    desc: "Amazing Race hồi hộp kịch tính, yêu cầu giải mã mật thư và chinh phục các hang động di sản. Kích hoạt tư duy nhạy bén vượt chướng ngại vật.",
+                    gala: "Đêm tiệc Gala Dinner 'Hải Trình Kỳ Quan' trên Siêu Du Thuyền lộng gió giữa lòng di sản."
+                }
+            },
+            luxury: {
+                beach: {
+                    title: "HẢI TRÌNH TINH KHIẾT - THƯỢNG KHÁCH ĐẶC QUYỀN",
+                    desc: "Nghỉ dưỡng tĩnh lặng kết hợp sành ẩm thực hải sản bãi biển cao cấp. Trải nghiệm tinh tế dành riêng cho các khách hàng VIP hoặc đối tác đặc biệt.",
+                    gala: "Đại tiệc Gala Dinner hải sản tươi ngon cao cấp, kết hợp thưởng rượu vang đỏ sang trọng."
+                },
+                resort: {
+                    title: "AURA OF RESORT - TRẢI NGHIỆM ĐỘC BẢN",
+                    desc: "Kỳ nghỉ dưỡng chữa lành thể chất & tinh thần sâu sắc trong resort biệt lập. Tái tạo năng lượng hiệu quả nhất với các tiện ích chuẩn 5 sao.",
+                    gala: "Đêm tiệc Gala Dinner lãng mạn dưới nến, âm nhạc cổ điển giao hòa Á - Âu đẳng cấp."
+                },
+                heritage: {
+                    title: "LIÊN MINH DI SẢN - SIÊU DU THUYỀN HẠ LONG",
+                    desc: "Kỳ nghỉ dưỡng thượng lưu trên siêu du thuyền di sản Hạ Long. Ngắm hoàng hôn đại dương, tham quan các đảo hoang sơ tuyệt mỹ.",
+                    gala: "Đại tiệc Fine-Dining chuẩn đầu bếp danh tiếng giữa lòng vịnh kỳ quan lộng gió."
+                }
+            }
+        };
+
+        function generateConcept() {
+            const size = document.getElementById('gen-size').value;
+            const goal = document.getElementById('gen-goal').value;
+            const terrain = document.getElementById('gen-terrain').value;
+
+            const selection = concepts[goal][terrain];
+
+            // Set generated values
+            document.getElementById('output-title').innerText = selection.title;
+            document.getElementById('output-desc').innerText = selection.desc;
+            document.getElementById('output-gala').innerHTML = `<i class="fa-solid fa-microphone mr-2 text-brand-orange"></i> ${selection.gala}`;
+
+            // Show output box
+            const outputBox = document.getElementById('concept-output');
+            outputBox.classList.remove('hidden');
+        }
+
+        // Apply generated content to RFP Form to help user fill easily
+        function applyGeneratedConceptToForm() {
+            const title = document.getElementById('output-title').innerText;
+            const service = document.getElementById('rfp-service-type');
+            
+            // prefill destination based on selection terrain
+            const terrain = document.getElementById('gen-terrain').value;
+            let targetLoc = "Hạ Long";
+            if (terrain === 'beach') targetLoc = "Quảng Bình / Móng Cái";
+            if (terrain === 'resort') targetLoc = "Resort 5 Sao";
+            
+            document.getElementById('rfp-location').value = targetLoc;
+            document.getElementById('rfp-guests').value = "Đoàn " + (document.getElementById('gen-size').value === 'large' ? "hơn 150" : "100") + " nhân sự";
+            
+            // Prefill customized notes internally or visually
+            const industryInput = document.getElementById('rfp-industry');
+            if(!industryInput.value) {
+                industryInput.value = "Teambuilding Concept: " + title;
+            }
+        }
+
+        // Multistep RFP Wizard Form Logic
+        let currentRfpStep = 1;
+        function nextRfpStep(stepNumber) {
+            // Hide all steps
+            document.querySelectorAll('.rfp-step').forEach(step => {
+                step.classList.add('hidden');
+            });
+
+            // Show active step
+            document.getElementById(`rfp-step-${stepNumber}`).classList.remove('hidden');
+            currentRfpStep = stepNumber;
+
+            // Update progress line & step nodes
+            const progressWidth = ((stepNumber - 1) / 2) * 100;
+            document.getElementById('rfp-progress-line').style.width = `${progressWidth}%`;
+
+            for (let i = 1; i <= 3; i++) {
+                const node = document.getElementById(`rfp-node-${i}`);
+                if (i <= stepNumber) {
+                    node.className = "w-10 h-10 rounded-full bg-brand-orange text-white flex items-center justify-center font-bold z-10 transition";
+                } else {
+                    node.className = "w-10 h-10 rounded-full bg-slate-100 text-slate-500 flex items-center justify-center font-bold z-10 transition";
+                }
+            }
+        }
+
+        // Handle RFP Form Submission
+        function handleRfpSubmit(event) {
+            event.preventDefault();
+            const serviceType = document.getElementById('rfp-service-type').value;
+            const guests = document.getElementById('rfp-guests').value;
+            const location = document.getElementById('rfp-location').value;
+            const name = document.getElementById('rfp-name').value;
+            const phone = document.getElementById('rfp-phone').value;
+            const email = document.getElementById('rfp-email').value;
+
+            openModal(
+                "Đã nhận yêu cầu RFP thành công!",
+                `Kính gửi ${name}, hệ thống lữ hành Hoa Sen Travel đã tiếp nhận thành công yêu cầu thiết kế đề xuất sự kiện: ${serviceType}. Bộ phận kịch bản & báo giá chuẩn SLA đang biên soạn file PDF và sẽ gửi ngay về hòm thư điện tử ${email} hoặc liên hệ trực tiếp qua số Zalo ${phone} trong vòng 5 phút nữa!`
+            );
+
+            // Reset form and go back to step 1
+            document.getElementById('rfp-wizard-form').reset();
+            nextRfpStep(1);
+        }
+
+        // Custom Modal Actions (Standard UI fallback)
+        function openModal(title, text) {
+            document.getElementById('modal-title').innerText = title;
+            document.getElementById('modal-body').innerText = text;
+            const modal = document.getElementById('custom-modal');
+            modal.classList.remove('hidden');
+            modal.firstElementChild.classList.remove('scale-95');
+            modal.firstElementChild.classList.add('scale-100');
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('custom-modal');
+            modal.firstElementChild.classList.remove('scale-100');
+            modal.firstElementChild.classList.add('scale-95');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 150);
+        }
+    </script>
+</body>
+</html>
